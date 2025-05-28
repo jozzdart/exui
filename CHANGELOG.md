@@ -1,3 +1,13 @@
+## 0.0.18
+
+- Added `Positioned` widget extensions for Flutter widgets
+- Implemented flexible positioning methods with customizable coordinates
+- Added convenient position getters for top, left, right, and bottom
+- Included support for width and height positioning
+- Added `IntrinsicWidth` and `IntrinsicHeight` widget extensions
+- Implemented intrinsic sizing methods with customizable step dimensions
+- Added convenient getters for intrinsic width and height
+
 ## 0.0.17
 
 - Added `BoxFit` widget extensions for Flutter widgets
