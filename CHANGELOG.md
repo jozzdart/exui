@@ -1,3 +1,14 @@
+## 0.0.10
+
+- Added `ClipRect` widget extensions for Flutter widgets
+- Implemented circular clipping with customizable radius
+- Added circle clipping with optional custom clipper
+- Included squircle clipping with adjustable radius factor
+- Added `DecoratedBox` widget extensions for Flutter widgets
+- Implemented flexible decoration methods with customizable properties
+- Added convenient methods for image, gradient, and shadow decorations
+- Included support for borders, shapes, and circular borders
+
 ## 0.0.9
 
 - Added `SizedBox` widget extensions for Flutter widgets
