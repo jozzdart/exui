@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension DecoratedBoxWidgetExtension on Widget {
-  Widget inDecoratedBox({
+  Widget decoratedBox({
     required BoxDecoration decoration,
     DecorationPosition position = DecorationPosition.background,
   }) =>
@@ -11,28 +11,28 @@ extension DecoratedBoxWidgetExtension on Widget {
         child: this,
       );
 
-  Widget inImageBox(
+  Widget imageBox(
     DecorationImage image,
   ) =>
-      inDecoratedBox(
+      decoratedBox(
         decoration: BoxDecoration(
           image: image,
         ),
       );
 
-  Widget inGradientBox(
+  Widget gradientBox(
     Gradient gradient,
   ) =>
-      inDecoratedBox(
+      decoratedBox(
         decoration: BoxDecoration(
           gradient: gradient,
         ),
       );
 
-  Widget inShadowedBox(
+  Widget boxShadow(
     BoxShadow boxShadow,
   ) =>
-      inDecoratedBox(
+      decoratedBox(
         decoration: BoxDecoration(
           boxShadow: [boxShadow],
         ),
@@ -42,21 +42,21 @@ extension DecoratedBoxWidgetExtension on Widget {
     required BoxBorder border,
     BorderRadiusGeometry? borderRadius,
   }) =>
-      inDecoratedBox(
+      decoratedBox(
         decoration: BoxDecoration(
           border: border,
           borderRadius: borderRadius,
         ),
       );
 
-  Widget inShapedBox(
+  Widget shapedBox(
     BoxShape shape,
   ) =>
-      inDecoratedBox(
+      decoratedBox(
         decoration: BoxDecoration(shape: shape),
       );
 
-  Widget inCircularBorderBox({
+  Widget circularBorderBox({
     required double radius,
     required Color color,
     required double width,

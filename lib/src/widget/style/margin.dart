@@ -1,48 +1,47 @@
 import 'package:flutter/widgets.dart';
 
 extension MarginWidgetExtension on Widget {
-  Widget withMargin(EdgeInsets margin) => Container(
+  Widget margin(EdgeInsets margin) => Container(
         margin: margin,
         child: this,
       );
 
-  Widget withMarginAll(double margin) => withMargin(EdgeInsets.all(margin));
+  Widget marginAll(double margin) => this.margin(EdgeInsets.all(margin));
 
-  Widget withMarginOnly({
+  Widget marginOnly({
     double? top,
     double? left,
     double? right,
     double? bottom,
   }) =>
-      withMargin(EdgeInsets.only(
+      margin(EdgeInsets.only(
         top: top ?? 0,
         left: left ?? 0,
         right: right ?? 0,
         bottom: bottom ?? 0,
       ));
 
-  Widget withMarginSymmetric({
+  Widget marginSymmetric({
     double horizontal = 0,
     double vertical = 0,
   }) =>
-      withMargin(
+      margin(
         EdgeInsets.symmetric(
           horizontal: horizontal,
           vertical: vertical,
         ),
       );
 
-  Widget withMarginHorizontal(double horizontal) =>
-      withMarginSymmetric(horizontal: horizontal);
+  Widget marginHorizontal(double horizontal) =>
+      marginSymmetric(horizontal: horizontal);
 
-  Widget withMarginVertical(double vertical) =>
-      withMarginSymmetric(vertical: vertical);
+  Widget marginVertical(double vertical) => marginSymmetric(vertical: vertical);
 
-  Widget withMarginTop(double top) => withMarginOnly(top: top);
+  Widget marginTop(double top) => marginOnly(top: top);
 
-  Widget withMarginLeft(double left) => withMarginOnly(left: left);
+  Widget marginLeft(double left) => marginOnly(left: left);
 
-  Widget withMarginRight(double right) => withMarginOnly(right: right);
+  Widget marginRight(double right) => marginOnly(right: right);
 
-  Widget withMarginBottom(double bottom) => withMarginOnly(bottom: bottom);
+  Widget marginBottom(double bottom) => marginOnly(bottom: bottom);
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 extension ColoredBoxExtension on Widget {
-  Widget inColoredBox(
+  Widget coloredBox(
     Color color,
   ) =>
       ColoredBox(
@@ -9,63 +9,63 @@ extension ColoredBoxExtension on Widget {
         child: this,
       );
 
-  Widget get inRedBox => inColoredBox(Colors.red);
+  Widget get redBox => coloredBox(Colors.red);
 
-  Widget get inRedAccentBox => inColoredBox(Colors.redAccent);
+  Widget get redAccentBox => coloredBox(Colors.redAccent);
 
-  Widget get inGreenBox => inColoredBox(Colors.green);
+  Widget get greenBox => coloredBox(Colors.green);
 
-  Widget get inGreenAccentBox => inColoredBox(Colors.greenAccent);
+  Widget get greenAccentBox => coloredBox(Colors.greenAccent);
 
-  Widget get inBlueBox => inColoredBox(Colors.blue);
+  Widget get blueBox => coloredBox(Colors.blue);
 
-  Widget get inBlueAccentBox => inColoredBox(Colors.blueAccent);
+  Widget get blueAccentBox => coloredBox(Colors.blueAccent);
 
-  Widget get inYellowBox => inColoredBox(Colors.yellow);
+  Widget get yellowBox => coloredBox(Colors.yellow);
 
-  Widget get inYellowAccentBox => inColoredBox(Colors.yellowAccent);
+  Widget get yellowAccentBox => coloredBox(Colors.yellowAccent);
 
-  Widget get inOrangeBox => inColoredBox(Colors.orange);
+  Widget get orangeBox => coloredBox(Colors.orange);
 
-  Widget get inOrangeAccentBox => inColoredBox(Colors.orangeAccent);
+  Widget get orangeAccentBox => coloredBox(Colors.orangeAccent);
 
-  Widget get inPurpleBox => inColoredBox(Colors.purple);
+  Widget get purpleBox => coloredBox(Colors.purple);
 
-  Widget get inPurpleAccentBox => inColoredBox(Colors.purpleAccent);
+  Widget get purpleAccentBox => coloredBox(Colors.purpleAccent);
 
-  Widget get inDeepPurpleBox => inColoredBox(Colors.deepPurple);
+  Widget get deepPurpleBox => coloredBox(Colors.deepPurple);
 
-  Widget get inDeepPurpleAccentBox => inColoredBox(Colors.deepPurpleAccent);
+  Widget get deepPurpleAccentBox => coloredBox(Colors.deepPurpleAccent);
 
-  Widget get inPinkBox => inColoredBox(Colors.pink);
+  Widget get pinkBox => coloredBox(Colors.pink);
 
-  Widget get inPinkAccentBox => inColoredBox(Colors.pinkAccent);
+  Widget get pinkAccentBox => coloredBox(Colors.pinkAccent);
 
-  Widget get inBrownBox => inColoredBox(Colors.brown);
+  Widget get brownBox => coloredBox(Colors.brown);
 
-  Widget get inTealBox => inColoredBox(Colors.teal);
+  Widget get tealBox => coloredBox(Colors.teal);
 
-  Widget get inTealAccentBox => inColoredBox(Colors.tealAccent);
+  Widget get tealAccentBox => coloredBox(Colors.tealAccent);
 
-  Widget get inCyanBox => inColoredBox(Colors.cyan);
+  Widget get cyanBox => coloredBox(Colors.cyan);
 
-  Widget get inCyanAccentBox => inColoredBox(Colors.cyanAccent);
+  Widget get cyanAccentBox => coloredBox(Colors.cyanAccent);
 
-  Widget get inLightBlueBox => inColoredBox(Colors.lightBlue);
+  Widget get lightBlueBox => coloredBox(Colors.lightBlue);
 
-  Widget get inLightBlueAccentBox => inColoredBox(Colors.lightBlueAccent);
+  Widget get lightBlueAccentBox => coloredBox(Colors.lightBlueAccent);
 
-  Widget get inLightGreenBox => inColoredBox(Colors.lightGreen);
+  Widget get lightGreenBox => coloredBox(Colors.lightGreen);
 
-  Widget get inLightGreenAccentBox => inColoredBox(Colors.lightGreenAccent);
+  Widget get lightGreenAccentBox => coloredBox(Colors.lightGreenAccent);
 
-  Widget get inLimeBox => inColoredBox(Colors.lime);
+  Widget get limeBox => coloredBox(Colors.lime);
 
-  Widget get inLimeAccentBox => inColoredBox(Colors.limeAccent);
+  Widget get limeAccentBox => coloredBox(Colors.limeAccent);
 
-  Widget get inGreyBox => inColoredBox(Colors.grey);
+  Widget get greyBox => coloredBox(Colors.grey);
 
-  Widget get inBlackBox => inColoredBox(Colors.black);
+  Widget get blackBox => coloredBox(Colors.black);
 
-  Widget get inWhiteBox => inColoredBox(Colors.white);
+  Widget get whiteBox => coloredBox(Colors.white);
 }

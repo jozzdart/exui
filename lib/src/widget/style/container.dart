@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension ContainerWidgetExtension on Widget {
-  Widget inContainer({
+  Widget container({
     Key? key,
     double? width,
     double? height,
