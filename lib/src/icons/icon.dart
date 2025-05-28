@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-extension IconExtension<T extends Icon> on T {
-  T _copyWith({
+extension IconExtension on Icon {
+  Icon _copyWith({
     double? size,
     double? fill,
     double? weight,
@@ -29,30 +29,30 @@ extension IconExtension<T extends Icon> on T {
         textDirection: textDirection,
         applyTextScaling: applyTextScaling,
         blendMode: blendMode,
-      ) as T;
+      );
 
-  T sized(double size) => _copyWith(size: size);
+  Icon sized(double size) => _copyWith(size: size);
 
-  T filled(double fill) => _copyWith(fill: fill);
+  Icon filled(double fill) => _copyWith(fill: fill);
 
-  T weight(double weight) => _copyWith(weight: weight);
+  Icon weight(double weight) => _copyWith(weight: weight);
 
-  T grade(double grade) => _copyWith(grade: grade);
+  Icon grade(double grade) => _copyWith(grade: grade);
 
-  T opticalSize(double opticalSize) => _copyWith(opticalSize: opticalSize);
+  Icon opticalSize(double opticalSize) => _copyWith(opticalSize: opticalSize);
 
-  T colored(Color color) => _copyWith(color: color);
+  Icon colored(Color color) => _copyWith(color: color);
 
-  T shadowed(List<Shadow> shadows) => _copyWith(shadows: shadows);
+  Icon shadowed(List<Shadow> shadows) => _copyWith(shadows: shadows);
 
-  T semanticLabeled(String semanticLabel) =>
+  Icon semanticLabeled(String semanticLabel) =>
       _copyWith(semanticLabel: semanticLabel);
 
-  T textDirectioned(TextDirection textDirection) =>
+  Icon textDirectioned(TextDirection textDirection) =>
       _copyWith(textDirection: textDirection);
 
-  T applyTextScaling(bool applyTextScaling) =>
+  Icon applyTextScaling(bool applyTextScaling) =>
       _copyWith(applyTextScaling: applyTextScaling);
 
-  T blendMode(BlendMode blendMode) => _copyWith(blendMode: blendMode);
+  Icon blendMode(BlendMode blendMode) => _copyWith(blendMode: blendMode);
 }
