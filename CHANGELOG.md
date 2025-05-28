@@ -1,3 +1,9 @@
+## 0.0.14
+
+- Added `Hero` widget extensions for Flutter widgets
+- Implemented simple hero animation method with customizable tag
+- Added support for seamless widget transitions between routes
+
 ## 0.0.13
 
 - Added `ConstrainedBox` widget extensions for Flutter widgets
