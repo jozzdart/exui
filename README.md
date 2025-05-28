@@ -21,15 +21,11 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 Text("Click me")
   .paddingAll(12)
   .inRedBox
-  .rounded
+  .clipCircular()
   .onTap(() => print("Tapped!"));
 ```
 
 From prototyping to production, `exui` helps you build better UIs—effortlessly. Use it in every project.
-
-#### Table of Contents
-
-- [Features](#-features)
 
 ---
 
