@@ -1,3 +1,10 @@
+## 0.0.11
+
+- Added `Row` widget extensions for Flutter widgets
+- Implemented flexible row methods for both single widgets and widget lists
+- Added `Column` widget extensions for Flutter widgets
+- Implemented flexible column methods for both single widgets and widget lists
+
 ## 0.0.10
 
 - Added `ClipRect` widget extensions for Flutter widgets
