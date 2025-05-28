@@ -1,3 +1,10 @@
+## 0.0.17
+
+- Added `BoxFit` widget extensions for Flutter widgets
+- Implemented flexible box fitting methods with customizable alignment and clip behavior
+- Added convenient fit getters for all BoxFit types (contain, cover, fill, none, scaleDown)
+- Included support for width-only and height-only fitting options
+
 ## 0.0.16
 
 - Added `Icon` widget extensions for Flutter widgets
