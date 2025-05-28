@@ -1,3 +1,8 @@
+## 0.0.12
+
+- Added `String` text extensions for Flutter widgets
+- Implemented `.text` and `.styledText` methods for converting strings to `Text` widgets with customizable styles
+
 ## 0.0.11
 
 - Added `Row` widget extensions for Flutter widgets
