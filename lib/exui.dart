@@ -1,3 +1,3 @@
 library;
 
-export 'src/src.dart';
+export 'src/exui.dart';
