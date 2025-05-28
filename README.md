@@ -3,8 +3,8 @@
 <h3 align="center"><i>Everything your widgets wish they had.</i></h3>
 
 <p align="center">
-  <img src="https://img.shields.io/codefactor/grade/github/jozz/exui/main?style=flat-square">
-  <img src="https://img.shields.io/github/license/jozz/exui?style=flat-square">
+  <img src="https://img.shields.io/codefactor/grade/github/jozzdart/exui/main?style=flat-square">
+  <img src="https://img.shields.io/github/license/jozzdart/exui?style=flat-square">
   <img src="https://img.shields.io/pub/points/package?style=flat-square">
   <img src="https://img.shields.io/pub/v/package?style=flat-square">
 </p>
@@ -14,6 +14,8 @@
     <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Support (:-blue?logo=buymeacoffee&style=flat-square" />
   </a>
 </p>
+
+# ⚠️ WORK IN PROGRESS ⚠️
 
 Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. With over **200 extensions**, it’s 20× more powerful than `styled_widget`, actively maintained, and lighter—no custom widget wrappers, just pure Flutter.
 
