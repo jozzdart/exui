@@ -1,3 +1,12 @@
+## 0.0.16
+
+- Added `Icon` widget extensions for Flutter widgets
+- Implemented comprehensive icon customization methods
+- Added support for size, fill, weight, grade, and optical size adjustments
+- Included color, shadow, and semantic label customization
+- Added `IconData` extensions for direct icon creation
+- Implemented convenient methods for creating icons with common properties
+
 ## 0.0.15
 
 - Added `Opacity` widget extensions for Flutter widgets
