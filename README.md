@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://buymeacoffee.com/yosefd99v" target="https://buymeacoffee.com/yosefd99v">
-    <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Support 😄-blue?logo=buymeacoffee&style=flat-square" />
+    <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Support (:-blue?logo=buymeacoffee&style=flat-square" />
   </a>
 </p>
 
@@ -20,8 +20,8 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 ```dart
 Text("Click me")
   .paddingAll(12)
-  .backgroundColor(Colors.teal)
-  .rounded()
+  .inRedBox
+  .rounded
   .onTap(() => print("Tapped!"));
 ```
 
@@ -35,7 +35,7 @@ From prototyping to production, `exui` helps you build better UIs—effortlessly
 
 ### ✅ Features
 
-- **200+ extensions** — 20× more than `styled_widget`.
+- **200+ extensions** — for all Flutter widgets.
 - **Lightweight and efficient** — wraps existing widgets without creating new classes.
 - **Actively maintained** — Production-ready and continuously evolving.
 - **Zero dependencies** - Pure Dart. No bloat. Add it to any project safely.
