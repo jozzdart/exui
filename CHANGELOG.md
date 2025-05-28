@@ -1,3 +1,8 @@
+## 0.0.15
+
+- Added `Opacity` widget extensions for Flutter widgets
+- Added `hide` getter for quick widget hiding
+
 ## 0.0.14
 
 - Added `Hero` widget extensions for Flutter widgets
