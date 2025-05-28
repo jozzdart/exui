@@ -1,3 +1,10 @@
+## 0.0.13
+
+- Added `ConstrainedBox` widget extensions for Flutter widgets
+- Implemented flexible constraint methods with customizable width and height limits
+- Added convenient methods for setting minimum and maximum dimensions
+- Included support for width-only and height-only constraints
+
 ## 0.0.12
 
 - Added `String` text extensions for Flutter widgets
