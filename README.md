@@ -1,39 +1,45 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+![exui logo](https://i.imgur.com/aNY62o9.png)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+<h3 align="center"><i>Everything your widgets wish they had.</i></h3>
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+<p align="center">
+  <img src="https://img.shields.io/codefactor/grade/github/jozz/exui/main?style=flat-square">
+  <img src="https://img.shields.io/github/license/jozz/exui?style=flat-square">
+  <img src="https://img.shields.io/pub/points/package?style=flat-square">
+  <img src="https://img.shields.io/pub/v/package?style=flat-square">
+</p>
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+<p align="center">
+  <a href="https://buymeacoffee.com/yosefd99v" target="https://buymeacoffee.com/yosefd99v">
+    <img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Support 😄-blue?logo=buymeacoffee&style=flat-square" />
+  </a>
+</p>
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. With over **200 extensions**, it’s 20× more powerful than `styled_widget`, actively maintained, and lighter—no custom widget wrappers, just pure Flutter.
 
 ```dart
-const like = 'sample';
+Text("Click me")
+  .paddingAll(12)
+  .backgroundColor(Colors.teal)
+  .rounded()
+  .onTap(() => print("Tapped!"));
 ```
 
-## Additional information
+From prototyping to production, `exui` helps you build better UIs—effortlessly. Use it in every project.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+#### Table of Contents
+
+- [Features](#-features)
+
+---
+
+### ✅ Features
+
+- **200+ extensions** — 20× more than `styled_widget`.
+- **Lightweight and efficient** — wraps existing widgets without creating new classes.
+- **Actively maintained** — Production-ready and continuously evolving.
+- **Zero dependencies** - Pure Dart. No bloat. Add it to any project safely.
+- **Exceptional documentation** — every extension is well documented with clear examples and fast navigation.
+- **Gesture extensions** — `.onTap`, `.onLongPress`, `.detectGestures`, and more!
+- **Layout shorthands** — `.paddingAll`, `.centered`, `.expanded`, `.sizedBox`, and more!
+- **Styling utilities** — `.backgroundColor`, `.rounded`, `.border`, `.blur`, and more!

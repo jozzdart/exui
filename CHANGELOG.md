@@ -1,3 +1,69 @@
+## 0.0.9
+
+- Added `SizedBox` widget extensions for Flutter widgets
+- Implemented flexible sizing methods with customizable width and height
+- Added convenient methods for setting only width or only height
+
+## 0.0.8
+
+- Added `visible` widget extensions for Flutter widgets
+- Implemented conditional visibility methods with boolean conditions
+- Added convenient visibility toggles for null checks
+- Included support for positive and negative condition checks
+- Added shorthand methods for common visibility patterns
+
+## 0.0.7
+
+- Added `Padding` widget extensions for Flutter widgets
+- Implemented comprehensive padding methods for all directions
+- Added convenient padding getters for common spacing patterns
+- Included support for symmetric and asymmetric padding
+- Added individual padding methods for each direction (left, right, top, bottom)
+
+## 0.0.6
+
+- Added `Expanded` widget extensions for Flutter widgets
+- Implemented flexible expansion methods with customizable flex factors
+- Added convenient expansion getters for common flex ratios (1-8)
+- Added `Flexible` widget extensions for Flutter widgets
+- Implemented flexible sizing methods with customizable fit behavior
+- Added convenient flex getters for common flex ratios (1-8)
+
+## 0.0.5
+
+- Added `Container` widget extensions for Flutter widgets
+- Implemented flexible container methods with customizable properties
+- Added `margin` widget extensions for Flutter widgets
+- Implemented comprehensive margin methods for all directions
+- Added convenient margin getters for common spacing patterns
+- Included support for symmetric and asymmetric margins
+
+## 0.0.4
+
+- Added `ColoredBox` widget extensions for Flutter widgets
+- Implemented base `inColoredBox` method with color parameter
+- Added convenient color getters for all Material colors
+- Included support for primary and accent color variants
+
+## 0.0.3
+
+- Added `Align` widget extensions for Flutter widgets
+- Implemented flexible alignment methods with customizable factors
+- Added convenient alignment getters for common positions
+- Included support for center, top, bottom, left, and right alignments
+
+## 0.0.2
+
+- Added `Center` widget extensions for Flutter widgets
+- Implemented `center`, `centerWidth`, and `centerHeight` extension methods
+- Added convenient centered getter for quick centering
+- Included support for width and height factor customization
+
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Added `GestureDetector` widget extensions for Flutter widgets
+- Implemented support for all standard Flutter gesture callbacks
+- Added support for tap, double tap, long press, drag, pan, and scale gestures
+- Included secondary and tertiary gesture support
+- Added force press gesture support for iOS devices
+- Implemented customizable behavior and device support options
