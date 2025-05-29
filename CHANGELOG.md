@@ -7,6 +7,8 @@
 - Introduced `SquircleClipper` for modern UI design with adjustable corner radius
 - Added `SuperellipseClipper` with parametric shape control and performance optimization
 - Implemented caching mechanism for improved performance in complex clipping operations
+- Separated material and cupertino specific code from the core exui
+- Ensured exui is now purely dependent on flutter/widgets
 
 ## 0.0.18
 
