@@ -1,6 +1,9 @@
+export 'clip/clip.dart';
+export 'containers/containers.dart';
+export 'icons/icons.dart';
 export 'interact/interact.dart';
 export 'layout/layout.dart';
-export 'style/style.dart';
-export 'spacing/spacing.dart';
-export 'containers/containers.dart';
 export 'navigation/navigation.dart';
+export 'spacing/spacing.dart';
+export 'style/style.dart';
+export 'text/text.dart';

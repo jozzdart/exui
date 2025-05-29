@@ -1,2 +1,2 @@
-export 'clip_rect.dart';
+export 'opacity.dart';
 export 'visible.dart';

@@ -16,21 +16,21 @@ extension AlignedWidgetExtension on Widget {
         child: this,
       );
 
-  Widget get alignCenter => align(alignment: Alignment.center);
+  Widget alignCenter() => align(alignment: Alignment.center);
 
-  Widget get alignCenterLeft => align(alignment: Alignment.centerLeft);
+  Widget alignCenterLeft() => align(alignment: Alignment.centerLeft);
 
-  Widget get alignCenterRight => align(alignment: Alignment.centerRight);
+  Widget alignCenterRight() => align(alignment: Alignment.centerRight);
 
-  Widget get alignTopCenter => align(alignment: Alignment.topCenter);
+  Widget alignTopCenter() => align(alignment: Alignment.topCenter);
 
-  Widget get alignTopLeft => align(alignment: Alignment.topLeft);
+  Widget alignTopLeft() => align(alignment: Alignment.topLeft);
 
-  Widget get alignTopRight => align(alignment: Alignment.topRight);
+  Widget alignTopRight() => align(alignment: Alignment.topRight);
 
-  Widget get alignBottomLeft => align(alignment: Alignment.bottomLeft);
+  Widget alignBottomLeft() => align(alignment: Alignment.bottomLeft);
 
-  Widget get alignBottomCenter => align(alignment: Alignment.bottomCenter);
+  Widget alignBottomCenter() => align(alignment: Alignment.bottomCenter);
 
-  Widget get alignBottomRight => align(alignment: Alignment.bottomRight);
+  Widget alignBottomRight() => align(alignment: Alignment.bottomRight);
 }

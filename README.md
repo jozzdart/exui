@@ -41,3 +41,29 @@ From prototyping to production, `exui` helps you build better UIs—effortlessly
 - **Gesture extensions** — `.onTap`, `.onLongPress`, `.detectGestures`, and more!
 - **Layout shorthands** — `.paddingAll`, `.centered`, `.expanded`, `.sizedBox`, and more!
 - **Styling utilities** — `.backgroundColor`, `.rounded`, `.border`, `.blur`, and more!
+
+---
+
+# Examples:
+
+## Bottom Navigation Bar
+
+### With `exui`
+
+```dart
+Icons.home.icon().bottomNavigationItem('home'),
+Icons.pages.icon().bottomNavigationItem('page2'),
+```
+
+### Without `exui`
+
+```dart
+BottomNavigationBarItem(
+  icon: Icon(Icons.home),
+  label: 'Home',
+),
+BottomNavigationBarItem(
+  icon: Icon(Icons.pages),
+  label: 'Page 2',
+),
+```
