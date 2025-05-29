@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:exui/src/widget/containers/colored_box.dart';
 
-extension BoxColorsExtension on Widget {
+extension CupertinoBoxColorsExtension on Widget {
   Widget redBox() => coloredBox(CupertinoColors.systemRed);
 
   Widget destructiveRedBox() => coloredBox(CupertinoColors.destructiveRed);

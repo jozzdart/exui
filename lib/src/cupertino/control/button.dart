@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-extension ButtonWidgetExtensions on Widget {
+extension CupertinoButtonWidgetExtensions on Widget {
   Widget cupertinoButton({
     CupertinoButtonSize sizeStyle = CupertinoButtonSize.large,
     EdgeInsetsGeometry? padding,
