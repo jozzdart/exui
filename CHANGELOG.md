@@ -1,3 +1,22 @@
+## 0.0.19
+
+- Completely revamped clip extensions with comprehensive coverage
+- Added `ClipPath` widget extensions with customizable clipper and clip behavior
+- Implemented `ClipRRect` extensions with flexible border radius and clipping options
+- Added `ClipOval` and `ClipCircle` extensions for circular clipping
+- Introduced `SquircleClipper` for modern UI design with adjustable corner radius
+- Added `SuperellipseClipper` with parametric shape control and performance optimization
+- Implemented caching mechanism for improved performance in complex clipping operations
+- Separated material and cupertino specific code from the core exui
+- Ensured exui is now purely dependent on flutter/widgets
+- Refactored `BoxFit` widget extensions to use methods instead of getters for improved consistency
+- Updated `DecoratedBox` widget extensions with renamed methods for clarity
+- Modified `SizedBox` widget extensions to use `sized` method for better readability
+- Changed `GestureDetector` imports to use `flutter/widgets.dart` for consistency
+- Enhanced `AlignedWidgetExtension` with method-based alignment for better API design
+- Added `opacityPercent`, `opacityHalf`, and `opacityQuarter` methods to `OpacityWidgetExtension` for flexible opacity control
+- Introduced `boxShrink`, `hide`, and `invisible` methods in `VisibleWidgetExtension` for improved visibility handling
+
 ## 0.0.18
 
 - Added `Positioned` widget extensions for Flutter widgets

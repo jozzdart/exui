@@ -5,8 +5,8 @@
 <p align="center">
   <img src="https://img.shields.io/codefactor/grade/github/jozzdart/exui/main?style=flat-square">
   <img src="https://img.shields.io/github/license/jozzdart/exui?style=flat-square">
-  <img src="https://img.shields.io/pub/points/package?style=flat-square">
-  <img src="https://img.shields.io/pub/v/package?style=flat-square">
+  <img src="https://img.shields.io/pub/points/exui?style=flat-square">
+  <img src="https://img.shields.io/pub/v/exui?style=flat-square">
 </p>
 
 <p align="center">
@@ -41,3 +41,29 @@ From prototyping to production, `exui` helps you build better UIs—effortlessly
 - **Gesture extensions** — `.onTap`, `.onLongPress`, `.detectGestures`, and more!
 - **Layout shorthands** — `.paddingAll`, `.centered`, `.expanded`, `.sizedBox`, and more!
 - **Styling utilities** — `.backgroundColor`, `.rounded`, `.border`, `.blur`, and more!
+
+---
+
+# Examples:
+
+## Bottom Navigation Bar
+
+### With `exui`
+
+```dart
+Icons.home.icon().bottomNavigationItem('home'),
+Icons.pages.icon().bottomNavigationItem('page2'),
+```
+
+### Without `exui`
+
+```dart
+BottomNavigationBarItem(
+  icon: Icon(Icons.home),
+  label: 'Home',
+),
+BottomNavigationBarItem(
+  icon: Icon(Icons.pages),
+  label: 'Page 2',
+),
+```

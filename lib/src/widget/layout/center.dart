@@ -20,6 +20,4 @@ extension CenterWidgetExtension on Widget {
     double? heightFactor,
   }) =>
       center(heightFactor: heightFactor);
-
-  Widget get centered => center();
 }

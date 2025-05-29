@@ -1,4 +1,8 @@
 export 'aling.dart';
 export 'center.dart';
+export 'column.dart';
 export 'expanded.dart';
 export 'flexible.dart';
+export 'intrinsic.dart';
+export 'positioned.dart';
+export 'row.dart';
