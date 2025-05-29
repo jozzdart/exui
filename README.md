@@ -46,24 +46,42 @@ From prototyping to production, `exui` helps you build better UIs—effortlessly
 
 # Examples:
 
-## Bottom Navigation Bar
-
-### With `exui`
-
-```dart
-Icons.home.icon().bottomNavigationItem('home'),
-Icons.pages.icon().bottomNavigationItem('page2'),
-```
-
-### Without `exui`
+### 0% - Without `exui`
 
 ```dart
 BottomNavigationBarItem(
   icon: Icon(Icons.home),
-  label: 'Home',
+  label: 'Page 1',
 ),
 BottomNavigationBarItem(
   icon: Icon(Icons.pages),
   label: 'Page 2',
 ),
+```
+
+### 25% - With a bit of `exui`
+
+```dart
+BottomNavigationBarItem(
+  icon: Icons.home.icon(),
+  label: 'Page 1',
+),
+BottomNavigationBarItem(
+  icon: Icons.pages.icon(),
+  label: 'Page 2',
+),
+```
+
+### 50% - With a bit more of `exui`
+
+```dart
+Icons.home.icon().bottomNavigationItem('Page 1'),
+Icons.pages.icon().bottomNavigationItem('Page 2'),
+```
+
+### 100% - With full `exui`
+
+```dart
+Icons.home.bottomNavigationItem('Page 1'),
+Icons.pages.bottomNavigationItem('Page 2'),
 ```

@@ -13,11 +13,9 @@ extension IconDataExtension on IconData {
     TextDirection? textDirection,
     bool? applyTextScaling,
     BlendMode? blendMode,
-    Key? key,
   }) =>
       Icon(
         this,
-        key: key,
         size: size,
         fill: fill,
         weight: weight,

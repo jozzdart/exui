@@ -1,4 +1,5 @@
 import 'package:exui/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,35 +16,74 @@ class ExampleApp extends StatefulWidget {
 class _ExampleAppState extends State<ExampleApp> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = [
-    'This is text'
-        .styledText(color: Colors.white, fontSize: 24)
-        .paddingAll(16)
-        .redBox()
-        .clipSquircle()
-        .center(),
-    'Second page here'
-        .styledText(color: Colors.white, fontSize: 24)
-        .paddingAll(16)
-        .blueBox()
-        .clipSquircle()
-        .center(),
-  ];
-
   @override
   Widget build(BuildContext context) {
+    final pages = [
+      const Page1(),
+      const Page2(),
+      const Page3(),
+    ];
+
     return MaterialApp(
       home: Scaffold(
-        body: _pages[_currentIndex],
+        body: pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           onTap: (index) => setState(() => _currentIndex = index),
           items: [
-            Icons.home.icon().bottomNavigationItem('home'),
-            Icons.pages.icon().bottomNavigationItem('page2'),
+            Icons.home.bottomNavigationItem('page1'),
+            Icons.pages.bottomNavigationItem('page2'),
+            Icons.person.bottomNavigationItem('page3'),
           ],
         ),
       ),
     );
+  }
+}
+
+class Page1 extends StatelessWidget {
+  const Page1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return 'This is text'
+        .styledText(color: Colors.white, fontSize: 24)
+        .paddingAll(16)
+        .redBox()
+        .clipSquircle()
+        .center();
+  }
+}
+
+class Page2 extends StatelessWidget {
+  const Page2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return 'Second page here'
+        .styledText(color: Colors.white, fontSize: 24)
+        .paddingAll(16)
+        .blueBox()
+        .clipSquircle()
+        .center();
+  }
+}
+
+class Page3 extends StatelessWidget {
+  const Page3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return 'Third page here'
+        .styledText(
+          color: Colors.white,
+          fontSize: 24,
+        )
+        .cupertinoTintedButton(
+          onPressed: () {},
+          sizeStyle: CupertinoButtonSize.large,
+          color: CupertinoColors.black,
+        )
+        .center();
   }
 }
