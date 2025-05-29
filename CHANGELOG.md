@@ -1,6 +1,7 @@
 ## NEXT
 
 - Renamed `boxFit` method to `fittedBox` in `BoxFitWidgetExtensions` for improved clarity
+- Refactored `TextExtensions` to use methods instead of getters for styling text attributes
 
 ## 0.0.19
 
