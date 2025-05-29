@@ -1,3 +1,7 @@
+## NEXT
+
+- Renamed `boxFit` method to `fittedBox` in `BoxFitWidgetExtensions` for improved clarity
+
 ## 0.0.19
 
 - Completely revamped clip extensions with comprehensive coverage
