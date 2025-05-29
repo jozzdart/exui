@@ -9,6 +9,13 @@
 - Implemented caching mechanism for improved performance in complex clipping operations
 - Separated material and cupertino specific code from the core exui
 - Ensured exui is now purely dependent on flutter/widgets
+- Refactored `BoxFit` widget extensions to use methods instead of getters for improved consistency
+- Updated `DecoratedBox` widget extensions with renamed methods for clarity
+- Modified `SizedBox` widget extensions to use `sized` method for better readability
+- Changed `GestureDetector` imports to use `flutter/widgets.dart` for consistency
+- Enhanced `AlignedWidgetExtension` with method-based alignment for better API design
+- Added `opacityPercent`, `opacityHalf`, and `opacityQuarter` methods to `OpacityWidgetExtension` for flexible opacity control
+- Introduced `boxShrink`, `hide`, and `invisible` methods in `VisibleWidgetExtension` for improved visibility handling
 
 ## 0.0.18
 

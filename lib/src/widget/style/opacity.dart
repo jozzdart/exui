@@ -7,4 +7,10 @@ extension OpacityWidgetExtension on Widget {
         alwaysIncludeSemantics: alwaysIncludeSemantics,
         child: this,
       );
+
+  Widget opacityPercent(double percent) => opacity(percent / 100);
+
+  Widget opacityHalf() => opacity(0.5);
+
+  Widget opacityQuarter() => opacity(0.25);
 }

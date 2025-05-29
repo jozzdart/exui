@@ -13,17 +13,17 @@ extension BoxFitWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget get fitContain => boxFit(fit: BoxFit.contain);
+  Widget fitContain() => boxFit(fit: BoxFit.contain);
 
-  Widget get fitCover => boxFit(fit: BoxFit.cover);
+  Widget fitCover() => boxFit(fit: BoxFit.cover);
 
-  Widget get fitFill => boxFit(fit: BoxFit.fill);
+  Widget fitFill() => boxFit(fit: BoxFit.fill);
 
-  Widget get fitNone => boxFit(fit: BoxFit.none);
+  Widget fitNone() => boxFit(fit: BoxFit.none);
 
-  Widget get fitScaleDown => boxFit(fit: BoxFit.scaleDown);
+  Widget fitScaleDown() => boxFit(fit: BoxFit.scaleDown);
 
-  Widget get fitWidth => boxFit(fit: BoxFit.fitWidth);
+  Widget fitWidth() => boxFit(fit: BoxFit.fitWidth);
 
-  Widget get fitHeight => boxFit(fit: BoxFit.fitHeight);
+  Widget fitHeight() => boxFit(fit: BoxFit.fitHeight);
 }

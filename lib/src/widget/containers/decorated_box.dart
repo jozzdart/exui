@@ -29,7 +29,7 @@ extension DecoratedBoxWidgetExtension on Widget {
         ),
       );
 
-  Widget boxShadow(
+  Widget shadowedBox(
     BoxShadow boxShadow,
   ) =>
       decoratedBox(
@@ -38,7 +38,7 @@ extension DecoratedBoxWidgetExtension on Widget {
         ),
       );
 
-  Widget inBorderedBox({
+  Widget borderedBox({
     required BoxBorder border,
     BorderRadiusGeometry? borderRadius,
   }) =>
@@ -61,7 +61,7 @@ extension DecoratedBoxWidgetExtension on Widget {
     required Color color,
     required double width,
   }) =>
-      inBorderedBox(
+      borderedBox(
         border: Border.all(
           color: color,
           width: width,
