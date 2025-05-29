@@ -1,3 +1,13 @@
+## NEXT
+
+- Completely revamped clip extensions with comprehensive coverage
+- Added `ClipPath` widget extensions with customizable clipper and clip behavior
+- Implemented `ClipRRect` extensions with flexible border radius and clipping options
+- Added `ClipOval` and `ClipCircle` extensions for circular clipping
+- Introduced `SquircleClipper` for modern UI design with adjustable corner radius
+- Added `SuperellipseClipper` with parametric shape control and performance optimization
+- Implemented caching mechanism for improved performance in complex clipping operations
+
 ## 0.0.18
 
 - Added `Positioned` widget extensions for Flutter widgets

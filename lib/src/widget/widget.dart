@@ -1,3 +1,4 @@
+export 'clip/clip.dart';
 export 'containers/containers.dart';
 export 'icons/icons.dart';
 export 'interact/interact.dart';

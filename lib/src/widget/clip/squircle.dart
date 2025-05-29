@@ -2,29 +2,35 @@ import 'dart:math';
 
 import 'package:flutter/widgets.dart';
 
-extension ClipRectWidgetExtensions on Widget {
-  /// Clip the widget with a rounded rectangle.
-  Widget clipCircular([double radius = 12]) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(radius),
-      child: this,
-    );
-  }
-
-  Widget clipCircle({
-    CustomClipper<Rect>? clipper,
+/// Extension to clip any widget into a squircle (rounded square) shape.
+///
+/// A squircle is a shape between a square and a circle, commonly used
+/// in modern UI design (e.g., iOS app icons). This method wraps the widget
+/// in a [ClipPath] using a custom [_SquircleClipper] for visually appealing,
+/// smoothly rounded corners.
+///
+/// The [radiusFactor] controls how round the corners appear:
+/// - Lower values (e.g., 2.0) produce more circular corners.
+/// - Higher values (e.g., 4.0) produce more squared corners.
+/// A typical value for balanced appearance is `2.5`.
+///
+/// The [clipBehavior] defaults to [Clip.antiAlias] for smooth edges,
+/// but can be customized for performance-sensitive cases.
+///
+/// Example:
+/// ```dart
+/// Container(color: Colors.blue).clipSquircle(2.5);
+/// ```
+///
+extension SquircleWidgetExtensions on Widget {
+  /// Clips the widget using a squircle shape.
+  Widget clipSquircle([
+    double radiusFactor = 2.5,
     Clip clipBehavior = Clip.antiAlias,
-  }) {
-    return ClipOval(
-      clipBehavior: clipBehavior,
-      child: this,
-    );
-  }
-
-  /// Clip the widget with a squircle.
-  Widget clipSquircle([double radiusFactor = 2.5]) {
+  ]) {
     return ClipPath(
       clipper: _SquircleClipper(radiusFactor),
+      clipBehavior: clipBehavior,
       child: this,
     );
   }
