@@ -1,4 +1,4 @@
-## NEXT
+## 0.0.19
 
 - Completely revamped clip extensions with comprehensive coverage
 - Added `ClipPath` widget extensions with customizable clipper and clip behavior
