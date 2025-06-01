@@ -15,11 +15,9 @@ extension StringTextExtensions on String {
     TextWidthBasis? textWidthBasis,
     TextHeightBehavior? textHeightBehavior,
     Color? selectionColor,
-    Key? key,
   }) {
     return Text(
       this,
-      key: key,
       style: style,
       textAlign: textAlign,
       overflow: overflow,
@@ -73,11 +71,9 @@ extension StringTextExtensions on String {
     Color? selectionColor,
     bool inherit = true,
     String? package,
-    Key? key,
   }) {
     return Text(
       this,
-      key: key,
       style: TextStyle(
         color: color,
         backgroundColor: backgroundColor,

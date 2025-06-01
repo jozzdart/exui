@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension BoxFitWidgetExtensions on Widget {
-  Widget boxFit({
+  Widget fittedBox({
     BoxFit fit = BoxFit.contain,
     AlignmentGeometry alignment = Alignment.center,
     Clip clipBehavior = Clip.none,
@@ -13,17 +13,17 @@ extension BoxFitWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget fitContain() => boxFit(fit: BoxFit.contain);
+  Widget fitContain() => fittedBox(fit: BoxFit.contain);
 
-  Widget fitCover() => boxFit(fit: BoxFit.cover);
+  Widget fitCover() => fittedBox(fit: BoxFit.cover);
 
-  Widget fitFill() => boxFit(fit: BoxFit.fill);
+  Widget fitFill() => fittedBox(fit: BoxFit.fill);
 
-  Widget fitNone() => boxFit(fit: BoxFit.none);
+  Widget fitNone() => fittedBox(fit: BoxFit.none);
 
-  Widget fitScaleDown() => boxFit(fit: BoxFit.scaleDown);
+  Widget fitScaleDown() => fittedBox(fit: BoxFit.scaleDown);
 
-  Widget fitWidth() => boxFit(fit: BoxFit.fitWidth);
+  Widget fitWidth() => fittedBox(fit: BoxFit.fitWidth);
 
-  Widget fitHeight() => boxFit(fit: BoxFit.fitHeight);
+  Widget fitHeight() => fittedBox(fit: BoxFit.fitHeight);
 }

@@ -167,20 +167,20 @@ extension TextExtensions on Text {
   Text leadingDistribution(TextLeadingDistribution distribution) =>
       styled(leadingDistribution: distribution);
 
-  Text get bold => styled(fontWeight: FontWeight.bold);
+  Text bold() => styled(fontWeight: FontWeight.bold);
 
-  Text get italic => styled(fontStyle: FontStyle.italic);
+  Text italic() => styled(fontStyle: FontStyle.italic);
 
-  Text get underline => styled(decoration: TextDecoration.underline);
+  Text underline() => styled(decoration: TextDecoration.underline);
 
-  Text get strikethrough => styled(decoration: TextDecoration.lineThrough);
+  Text strikethrough() => styled(decoration: TextDecoration.lineThrough);
 
-  Text get boldItalic =>
+  Text boldItalic() =>
       styled(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
 
-  Text get boldUnderline =>
+  Text boldUnderline() =>
       styled(fontWeight: FontWeight.bold, decoration: TextDecoration.underline);
 
-  Text get boldStrikethrough => styled(
+  Text boldStrikethrough() => styled(
       fontWeight: FontWeight.bold, decoration: TextDecoration.lineThrough);
 }

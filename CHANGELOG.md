@@ -1,3 +1,12 @@
+## 0.0.20
+
+- Renamed `boxFit` method to `fittedBox` in `BoxFitWidgetExtensions` for improved clarity
+- Refactored `TextExtensions` to use methods instead of getters for styling text attributes
+- Added button extensions for both Cupertino and Material platforms
+- Implemented `cupertinoButton`, `cupertinoFilledButton`, and `cupertinoTintedButton` for Cupertino widgets
+- Added `elevatedButton`, `filledButton`, `outlinedButton`, and `textButton` extensions for Material widgets
+- Included icon button variations for both platforms with customizable properties
+
 ## 0.0.19
 
 - Completely revamped clip extensions with comprehensive coverage
