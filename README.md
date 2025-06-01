@@ -20,9 +20,10 @@
 Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. With over **200 extensions**, it’s 20× more powerful than `styled_widget`, actively maintained, and lighter—no custom widget wrappers, just pure Flutter.
 
 ```dart
-Text("Click me")
+"Click me"
+  .text()
   .paddingAll(12)
-  .inRedBox
+  .redBox()
   .clipCircular()
   .onTap(() => print("Tapped!"));
 ```
@@ -46,7 +47,9 @@ From prototyping to production, `exui` helps you build better UIs—effortlessly
 
 # Examples:
 
-### 0% - Without `exui`
+## Bottom Navigation Bar
+
+### Without `exui`
 
 ```dart
 BottomNavigationBarItem(
@@ -59,29 +62,9 @@ BottomNavigationBarItem(
 ),
 ```
 
-### 25% - With a bit of `exui`
-
-```dart
-BottomNavigationBarItem(
-  icon: Icons.home.icon(),
-  label: 'Page 1',
-),
-BottomNavigationBarItem(
-  icon: Icons.pages.icon(),
-  label: 'Page 2',
-),
-```
-
-### 50% - With a bit more of `exui`
+### With `exui`
 
 ```dart
 Icons.home.icon().bottomNavigationItem('Page 1'),
 Icons.pages.icon().bottomNavigationItem('Page 2'),
-```
-
-### 100% - With full `exui`
-
-```dart
-Icons.home.bottomNavigationItem('Page 1'),
-Icons.pages.bottomNavigationItem('Page 2'),
 ```
