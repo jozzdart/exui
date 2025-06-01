@@ -21,7 +21,7 @@ class _ExampleAppState extends State<ExampleApp> {
     final pages = [
       const Page1(),
       const Page2(),
-      const Page3(),
+      const Page1Long(),
     ];
 
     return MaterialApp(
@@ -31,9 +31,9 @@ class _ExampleAppState extends State<ExampleApp> {
           currentIndex: _currentIndex,
           onTap: (index) => setState(() => _currentIndex = index),
           items: [
-            Icons.home.bottomNavigationItem('page1'),
-            Icons.pages.bottomNavigationItem('page2'),
-            Icons.person.bottomNavigationItem('page3'),
+            Icons.home.icon().bottomNavigationItem('page1'),
+            Icons.pages.icon().bottomNavigationItem('page2'),
+            Icons.person.icon().bottomNavigationItem('page4'),
           ],
         ),
       ),
@@ -50,8 +50,29 @@ class Page1 extends StatelessWidget {
         .styledText(color: Colors.white, fontSize: 24)
         .paddingAll(16)
         .redBox()
-        .clipSquircle()
         .center();
+  }
+}
+
+class Page1Long extends StatelessWidget {
+  const Page1Long({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ClipOval(
+        child: ColoredBox(
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              'This is text',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
 
