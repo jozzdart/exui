@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 
 extension IntrinsicWidthWidgetExtensions on Widget {
-  Widget get intrinsicHeight => IntrinsicHeight(child: this);
+  Widget intrinsicHeight() => IntrinsicHeight(child: this);
 
-  Widget get intrinsicWidth => intrinsicWidthWith();
+  Widget intrinsicWidth() => intrinsicWidthWith();
 
   Widget intrinsicWidthWith({
     double? stepWidth,
@@ -14,4 +14,10 @@ extension IntrinsicWidthWidgetExtensions on Widget {
         stepHeight: stepHeight,
         child: this,
       );
+
+  Widget intrinsicWidthStepHeight(double stepHeight) =>
+      intrinsicWidthWith(stepHeight: stepHeight);
+
+  Widget intrinsicWidthStepWidth(double stepWidth) =>
+      intrinsicWidthWith(stepWidth: stepWidth);
 }
