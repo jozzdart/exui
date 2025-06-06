@@ -11,13 +11,8 @@ extension CenterWidgetExtension on Widget {
         child: this,
       );
 
-  Widget centerWidth({
-    double? widthFactor,
-  }) =>
-      center(widthFactor: widthFactor);
+  Widget centerWidth(double? widthFactor) => center(widthFactor: widthFactor);
 
-  Widget centerHeight({
-    double? heightFactor,
-  }) =>
+  Widget centerHeight(double? heightFactor) =>
       center(heightFactor: heightFactor);
 }
