@@ -1,3 +1,10 @@
+## 0.0.21
+
+- Added extensive new documentation for all widget extensions
+- Implemented new stack extensions for enhanced widget stacking capabilities
+- Improved method parameters of `expanded`, `flexible`, and `center` extensions
+- Added intrinsicWidth step extensions
+
 ## 0.0.20
 
 - Renamed `boxFit` method to `fittedBox` in `BoxFitWidgetExtensions` for improved clarity
