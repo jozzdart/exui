@@ -15,31 +15,14 @@
   </a>
 </p>
 
-Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. With over **200 extensions**, it’s 20× more powerful than `styled_widget`, actively maintained, and lighter—no custom widget wrappers, just pure Flutter.
+> **Want to 10× your Flutter UI development speed?**  
+> Use `exui`. It’s the fastest way to build clean, maintainable UIs, no wrappers, no boilerplate.
 
-```dart
-"Click me"
-  .text()
-  .paddingAll(12)
-  .redBox()
-  .clipCircular()
-  .onTap(() => print("Tapped!"));
-```
+Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. It provides expressive, chainable extensions for **every single Flutter widget**—with no reliance on Material, Cupertino, or external libraries. Just pure Dart and Flutter, designed to work seamlessly in any project.
 
-From prototyping to production, `exui` helps you build better UIs—effortlessly. Use it in every project.
+## ✅ Features
 
-#### Table of Contents
-
-- [Features](#-features)
-- [Libraries](#-libraries)
-- [Vision](#exui-vision)
-- [All Extensions](#-all-exui-extensions)
-
----
-
-### ✅ Features
-
-- **200+ extensions** — for all Flutter widgets.
+- **Extensions — for all Flutter widgets.**
 - **Lightweight and efficient** — wraps existing widgets without creating new classes.
 - **Actively maintained** — Production-ready and continuously evolving.
 - **Zero dependencies** - Pure Dart. No bloat. Add it to any project safely.
@@ -47,6 +30,35 @@ From prototyping to production, `exui` helps you build better UIs—effortlessly
 - **Gesture extensions** — `.onTap`, `.onLongPress`, `.detectGestures`, and more!
 - **Layout shorthands** — `.paddingAll`, `.centered`, `.expanded`, `.sizedBox`, and more!
 - **Styling utilities** — `.backgroundColor`, `.rounded`, `.border`, `.blur`, and more!
+
+---
+
+### ✨ All `exui` Extensions:
+
+`exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group.
+
+- [📝 `text()` — Convert Strings to `Text` Widgets](#-text--turn-any-string-into-a-text-widget)
+- [🎛️ `text.styled()` — Style and Enhance `Text` Widgets](#️-textstyled--modify-and-style-text-widgets-easily)
+- [👁️ `visible` — Conditional Visibility for Widgets](#️-visible--conditional-visibility-for-widgets)
+- [🌫️ `opacity` — Control Widget Transparency](#️-opacity--control-widget-transparency)
+- [🔣 `icon` — Quickly Create and Style Icons](#-icon--quickly-create-and-style-icons)
+- [📏 `padding` — Add Padding to Any Widget](#-padding--add-padding-to-any-widget)
+- [➖ `margin` — Add Outer Spacing Around Widgets](#-margin--add-outer-spacing-around-widgets)
+- [🎯 `center` — Center Your Widget with Optional Factors](#-center--center-your-widget-with-optional-factors)
+- [📐 `align` — Position a Widget Precisely](#-align--position-a-widget-precisely)
+- [📍 `positioned` — Position Widgets Inside a Stack](#-positioned--position-widgets-inside-a-stack)
+- [↔️ `expanded` — Make Widgets Fill Available Space](#️-expanded--make-widgets-fill-available-space)
+- [🧬 `flex` — Flexible Layouts with Fine-Tuned Control](#-flex--flexible-layouts-with-fine-tuned-control)
+- [🔳 `intrinsic` — Size Widgets to Their Natural Dimensions](#-intrinsic--size-widgets-to-their-natural-dimensions)
+- [🧱 `row` / `column` — Instantly Wrap Widgets in Flex Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)
+- [🧊 `stack` — Overlay Widgets with Full Stack Control](#-stack--overlay-widgets-with-full-stack-control)
+
+> More sections coming soon: layout, gestures, containers, spacing, animation, and more.
+
+#### Additional Sections
+
+- [Libraries](#-libraries)
+- [Vision](#exui-vision)
 
 ---
 
@@ -111,33 +123,6 @@ Icons.pages.icon().bottomNavigationItem('Page 2'),
 This isn’t just a utility library. It’s a **declarative layer on top of Flutter**—one that feels native, scales cleanly, and fits seamlessly into any project.
 
 Welcome to **`exui`**.
-
-[⤴️ Back](#table-of-contents) → Table of Contents
-
----
-
-### ✨ All `exui` Extensions:
-
-`exui` includes a focused set of pure Flutter extensions — no Material or Cupertino dependencies — so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group.
-
-- [📝 `text()` — Convert Strings to `Text` Widgets](#-text--turn-any-string-into-a-text-widget)
-- [🎛️ `text.styled()` — Style and Enhance `Text` Widgets](#️-textstyled--modify-and-style-text-widgets-easily)
-- [👁️ `visible` — Conditional Visibility for Widgets](#️-visible--conditional-visibility-for-widgets)
-- [🌫️ `opacity` — Control Widget Transparency](#️-opacity--control-widget-transparency)
-- [🔣 `icon` — Quickly Create and Style Icons](#-icon--quickly-create-and-style-icons)
-- [📏 `padding` — Add Padding to Any Widget](#-padding--add-padding-to-any-widget)
-- [➖ `margin` — Add Outer Spacing Around Widgets](#-margin--add-outer-spacing-around-widgets)
-- [🎯 `center` — Center Your Widget with Optional Factors](#-center--center-your-widget-with-optional-factors)
-- [📐 `align` — Position a Widget Precisely](#-align--position-a-widget-precisely)
-- [📍 `positioned` — Position Widgets Inside a Stack](#-positioned--position-widgets-inside-a-stack)
-- [↔️ `expanded` — Make Widgets Fill Available Space](#️-expanded--make-widgets-fill-available-space)
-- [🧬 `flex` — Flexible Layouts with Fine-Tuned Control](#-flex--flexible-layouts-with-fine-tuned-control)
-- [🔳 `intrinsic` — Size Widgets to Their Natural Dimensions](#-intrinsic--size-widgets-to-their-natural-dimensions)
-- [🧱 `row` / `column` — Instantly Wrap Widgets in Flex Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)
-- [🧊 `stack` — Overlay Widgets with Full Stack Control](#-stack--overlay-widgets-with-full-stack-control)
-  > More sections coming soon: layout, gestures, containers, spacing, animation, and more.
-
-[⤴️ Back](#table-of-contents) → Table of Contents
 
 ---
 
