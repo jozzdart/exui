@@ -37,22 +37,22 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 
 `exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group.
 
-[📝 `text()` - Convert Strings to `Text` Widgets](#-text--turn-any-string-into-a-text-widget)  
-[🎛️ `text.styled()` - Style and Enhance `Text` Widgets](#️-textstyled--modify-and-style-text-widgets-easily)  
-[👁️ `visible` - Conditional Visibility for Widgets](#️-visible--conditional-visibility-for-widgets)  
-[🌫️ `opacity` - Control Widget Transparency](#️-opacity--control-widget-transparency)  
-[🔣 `icon` - Quickly Create and Style Icons](#-icon--quickly-create-and-style-icons)  
-[📏 `padding` - Add Padding to Any Widget](#-padding--add-padding-to-any-widget)  
-[➖ `margin` - Add Outer Spacing Around Widgets](#-margin--add-outer-spacing-around-widgets)  
-[🎯 `center` - Center Your Widget with Optional Factors](#-center--center-your-widget-with-optional-factors)  
-[📐 `align` - Position a Widget Precisely](#-align--position-a-widget-precisely)  
-[📍 `positioned` - Position Widgets Inside a Stack](#-positioned--position-widgets-inside-a-stack)  
-[↔️ `expanded` - Make Widgets Fill Available Space](#️-expanded--make-widgets-fill-available-space)  
-[🧬 `flex` - Flexible Layouts with Fine-Tuned Control](#-flex--flexible-layouts-with-fine-tuned-control)  
-[🔳 `intrinsic` - Size Widgets to Their Natural Dimensions](#-intrinsic--size-widgets-to-their-natural-dimensions)  
-[🧱 `row` / `column` - Instantly Wrap Widgets in Flex Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
-[🧭 `row*` / `column*` - Rapid Alignment for Flex Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
-[🧊 `stack` - Overlay Widgets with Full Stack Control](#-stack--overlay-widgets-with-full-stack-control)
+[📝 `text` - String to Widget](#-text--turn-any-string-into-a-text-widget)  
+[🎛️ `styled text` - style fast](#️-textstyled--modify-and-style-text-widgets-easily)  
+[👁️ `visible` - Conditional Visibility](#️-visible--conditional-visibility-for-widgets)  
+[🌫️ `opacity` - Widget Transparency](#️-opacity--control-widget-transparency)  
+[🔣 `icon` - Create and Style Icons](#-icon--quickly-create-and-style-icons)  
+[📏 `padding` - Add Padding fast](#-padding--add-padding-to-any-widget)  
+[➖ `margin` - Add Outer Spacing fast](#-margin--add-outer-spacing-around-widgets)  
+[🎯 `center` - Center Widgets fast](#-center--center-your-widget-with-optional-factors)  
+[📐 `align` - Position Widgets fast](#-align--position-a-widget-precisely)  
+[📍 `positioned` - Position Inside a Stack](#-positioned--position-widgets-inside-a-stack)  
+[↔️ `expanded` - Fill Available Space](#️-expanded--make-widgets-fill-available-space)  
+[🧬 `flex` - fast Flexibles](#-flex--flexible-layouts-with-fine-tuned-control)  
+[🔳 `intrinsic` - Size Widgets](#-intrinsic--size-widgets-to-their-natural-dimensions)  
+[🧱 `row` / `column` - Rapid Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
+[🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
+[🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)
 
 > More sections coming soon: layout, gestures, containers, spacing, animation, and more.
 
