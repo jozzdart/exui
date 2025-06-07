@@ -53,7 +53,8 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🧱 `row` / `column` - Rapid Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
-[👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)
+[👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
+[🦸 `hero` - Shared Element Transitions](#-hero--smooth-page-to-page-transitions)
 
 > More sections coming soon: layout, gestures, containers, spacing, animation, and more.
 
@@ -1390,6 +1391,66 @@ All methods return a wrapped `GestureDetector` and support optional customizatio
 >
 > ```dart
 > MyWidget().onTap(() => doSomething())
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🦸 `hero` — Add Seamless Shared Element Transitions
+
+Effortlessly wrap any widget in a `Hero` for smooth page-to-page transitions. Customize behavior with optional parameters for animations, flight behavior, and placeholders.
+
+- `hero(String tag)` — Wraps the widget in a `Hero` with the given tag.
+- Optional parameters:
+  - `createRectTween(...)` — Customize the transition animation path.
+  - `flightShuttleBuilder(...)` — Override the animation widget during flight.
+  - `placeholderBuilder(...)` — Placeholder shown during transition loading.
+  - `transitionOnUserGestures` — Allow gesture-driven transitions.
+
+All options mirror the native `Hero` widget and can be configured inline.
+
+#### 🧪 Examples
+
+```dart
+// Basic shared element transition
+Image.asset("avatar.png").hero("profile-avatar");
+```
+
+```dart
+// Custom placeholder
+"Title"
+  .text()
+  .hero(
+    "title-hero",
+    placeholderBuilder: (context, size, child) =>
+        SizedBox.fromSize(size: size),
+  );
+```
+
+```dart
+// With custom flight behavior
+Icon(Icons.star).hero(
+  "star-icon",
+  flightShuttleBuilder: (context, animation, direction, from, to) {
+    return ScaleTransition(scale: animation, child: to.widget);
+  },
+);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> Hero(
+>   tag: "avatar",
+>   child: Image.asset("avatar.png"),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> Image.asset("avatar.png").hero("avatar")
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
