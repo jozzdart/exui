@@ -24,4 +24,8 @@ extension SizedBoxDoubleExtension on double {
   SizedBox get gapHorizontal => sizedWidth;
 
   SizedBox get gapVertical => sizedHeight;
+
+  SizedBox get gapHeight => sizedHeight;
+
+  SizedBox get gapWidth => sizedWidth;
 }
