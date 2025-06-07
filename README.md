@@ -38,7 +38,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 `exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group.
 
 [📝 `text` - String to Widget](#-text--turn-any-string-into-a-text-widget)  
-[🎛️ `styled text` - style fast](#️-textstyled--modify-and-style-text-widgets-easily)  
+[🎛️ `styled text` - style text fast](#️-textstyled--modify-and-style-text-widgets-easily)  
 [👁️ `visible` - Conditional Visibility](#️-visible--conditional-visibility-for-widgets)  
 [🌫️ `opacity` - Widget Transparency](#️-opacity--control-widget-transparency)  
 [🔣 `icon` - Create and Style Icons](#-icon--quickly-create-and-style-icons)  
@@ -53,6 +53,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🧱 `row` / `column` - Rapid Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
+[📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--smooth-page-to-page-transitions)
 
@@ -1321,6 +1322,49 @@ Build layered UI structures with intuitive, chainable extensions. These methods 
 >
 > ```dart
 > [...].stackExpand(alignment: Alignment.center)
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 📦 `sizedBox` — Wrap Widgets in Fixed-Size Boxes
+
+Quickly wrap any widget in a `SizedBox` with a specified width, height, or both. These extensions improve readability and reduce boilerplate when sizing widgets inline.
+
+- `sizedBox({width, height})` — Wrap with custom width and/or height.
+- `sizedWidth(double)` — Set only the width.
+- `sizedHeight(double)` — Set only the height.
+
+All methods return a `SizedBox` with your widget as the child, and are safe to chain.
+
+#### 🧪 Examples
+
+```dart
+// Fixed width and height
+"Button".text().sizedBox(width: 120, height: 40);
+```
+
+```dart
+// Only width
+"Label".text().sizedWidth(200);
+```
+
+```dart
+// Only height
+"Spacer".text().sizedHeight(60);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> SizedBox(width: 120, height: 40, child: MyWidget())
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().sizedBox(width: 120, height: 40)
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
