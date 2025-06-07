@@ -1,3 +1,7 @@
+## NEXT
+
+- Improved documentation
+
 ## 0.0.21
 
 - Added extensive new documentation for all widget extensions
