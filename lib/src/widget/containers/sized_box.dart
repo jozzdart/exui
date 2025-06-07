@@ -15,3 +15,13 @@ extension SizedBoxExtension on Widget {
 
   Widget sizedHeight(double height) => sized(height: height);
 }
+
+extension SizedBoxDoubleExtension on double {
+  SizedBox get sizedWidth => SizedBox(width: this);
+
+  SizedBox get sizedHeight => SizedBox(height: this);
+
+  SizedBox get gapHorizontal => sizedWidth;
+
+  SizedBox get gapVertical => sizedHeight;
+}
