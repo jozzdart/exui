@@ -5,7 +5,7 @@
 - Added additional parameters to `HeroWidgetExtension` for improved hero animation control
 - Changed all `Widget` extensions to return the same type as the extension method
 - Added `sizedWidth`, `sizedHeight`, `gapHorizontal`, `gapVertical`, `gapHeight`, and `gapWidth` extensions to `double` for fast gaps
-- Added `opacity`, `sizedBox`, `decoratedBox`, `gesture`, `hero` to the README
+- Added `opacity`, `sizedBox`, `decoratedBox`, `gesture`, `hero`, `constrained` to the README
 
 ## 0.0.22
 
