@@ -824,6 +824,13 @@ extension ColumnWidgetExtension on Widget {
     TextBaseline? textBaseline,
   }) {
     return Column(
+      mainAxisAlignment: mainAxisAlignment,
+      crossAxisAlignment: crossAxisAlignment,
+      mainAxisSize: mainAxisSize,
+      textDirection: textDirection,
+      verticalDirection: verticalDirection,
+      textBaseline: textBaseline,
+      spacing: spacing,
       children: [this],
     );
   }
