@@ -54,8 +54,9 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
 [📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
+[🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
-[🦸 `hero` - Shared Element Transitions](#-hero--smooth-page-to-page-transitions)
+[🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
 
 > More sections coming soon: layout, gestures, containers, spacing, animation, and more.
 
@@ -1365,6 +1366,89 @@ All methods return a `SizedBox` with your widget as the child, and are safe to c
 >
 > ```dart
 > MyWidget().sizedBox(width: 120, height: 40)
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🎨 `decoratedBox` — Add Backgrounds, Borders, Gradients & Effects
+
+Decorate any widget with rich visuals using a clean, expressive API. These extensions wrap your widget in a `DecoratedBox` with common presets like gradients, shadows, images, borders, and shapes — no boilerplate required.
+
+- `decoratedBox(...)` — Core method using any `Decoration`.
+- `decoratedBoxDecoration(...)` — Configure `BoxDecoration` inline with full control.
+- `imageBox(...)` — Add a background image with all `DecorationImage` options.
+- `gradientBox(Gradient)` — Add a linear, radial, or sweep gradient.
+- `shadowedBox(...)` — Apply shadow effects with offset, blur, spread.
+- `borderedBox(...)` — Add a border (and optional border radius).
+- `shapedBox(BoxShape)` — Change the shape (e.g., circle, rectangle).
+- `circularBorderBox(...)` — Draw a colored, circular border with width and radius.
+
+All methods return a `DecoratedBox` and can be safely combined with padding, opacity, or gesture extensions.
+
+#### 🧪 Examples
+
+```dart
+// Apply a gradient background
+"Gradient".text().gradientBox(
+  LinearGradient(colors: [Colors.purple, Colors.blue]),
+);
+```
+
+```dart
+// Add a background image
+"With image".text().imageBox(
+  image: NetworkImage("https://example.com/image.png"),
+  fit: BoxFit.cover,
+);
+```
+
+```dart
+// Add a shadow
+"Shadowed".text().shadowedBox(
+  offset: Offset(2, 2),
+  blurRadius: 6,
+);
+```
+
+```dart
+// Circular border
+"Border".text().circularBorderBox(
+  radius: 12,
+  color: Colors.red,
+  width: 2,
+);
+```
+
+```dart
+// Full decorated box manually
+"Custom".text().decoratedBoxDecoration(
+  color: Colors.grey.shade100,
+  border: Border.all(color: Colors.black26),
+  borderRadius: BorderRadius.circular(8),
+);
+```
+
+> 💡 Instead of wrapping your widget manually like this:
+>
+> ```dart
+> DecoratedBox(
+>   decoration: BoxDecoration(
+>     color: Colors.red,
+>     borderRadius: BorderRadius.circular(12),
+>   ),
+>   child: MyWidget(),
+> )
+> ```
+>
+> You can write:
+>
+> ```dart
+> MyWidget().decoratedBoxDecoration(
+>   color: Colors.red,
+>   borderRadius: BorderRadius.circular(12),
+> )
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
