@@ -1,6 +1,10 @@
 ## NEXT
 
 - Improved documentation
+- Added new column extensions for enhanced layout capabilities
+- Added new row extensions for enhanced layout capabilities
+- Added `row*` and `column*` axis extensions README sections
+- Fixed column single widget extension not passing parameters to the underlying `Column` widget
 
 ## 0.0.21
 
