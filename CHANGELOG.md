@@ -1,3 +1,8 @@
+## NEXT
+
+- Added `opacityZero`, `opacityTransparent`, and `opacityInvisible` methods to `OpacityWidgetExtension` for improved opacity control
+- Added new opacity methods to the README
+
 ## 0.0.22
 
 - Improved documentation
