@@ -1,36 +1,105 @@
 import 'package:flutter/widgets.dart';
 
 extension AlignedWidgetExtension on Widget {
-  Widget align({
-    Key? key,
+  Align align({
     AlignmentGeometry alignment = Alignment.center,
     double? widthFactor,
     double? heightFactor,
-    Widget? child,
   }) =>
       Align(
-        key: key,
         alignment: alignment,
         widthFactor: widthFactor,
         heightFactor: heightFactor,
         child: this,
       );
 
-  Widget alignCenter() => align(alignment: Alignment.center);
+  Align alignCenter({
+    double? widthFactor,
+    double? heightFactor,
+  }) =>
+      align(
+        alignment: Alignment.center,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignCenterLeft() => align(alignment: Alignment.centerLeft);
+  Align alignCenterLeft(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.centerLeft,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignCenterRight() => align(alignment: Alignment.centerRight);
+  Align alignCenterRight(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.centerRight,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignTopCenter() => align(alignment: Alignment.topCenter);
+  Align alignTopCenter(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.topCenter,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignTopLeft() => align(alignment: Alignment.topLeft);
+  Align alignTopLeft(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.topLeft,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignTopRight() => align(alignment: Alignment.topRight);
+  Align alignTopRight(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.topRight,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignBottomLeft() => align(alignment: Alignment.bottomLeft);
+  Align alignBottomLeft(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.bottomLeft,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignBottomCenter() => align(alignment: Alignment.bottomCenter);
+  Align alignBottomCenter(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.bottomCenter,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 
-  Widget alignBottomRight() => align(alignment: Alignment.bottomRight);
+  Align alignBottomRight(
+    double? widthFactor,
+    double? heightFactor,
+  ) =>
+      align(
+        alignment: Alignment.bottomRight,
+        widthFactor: widthFactor,
+        heightFactor: heightFactor,
+      );
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 extension CupertinoButtonWidgetExtensions on Widget {
-  Widget cupertinoButton({
+  CupertinoButton cupertinoButton({
     CupertinoButtonSize sizeStyle = CupertinoButtonSize.large,
     EdgeInsetsGeometry? padding,
     Color? color,
@@ -35,7 +35,7 @@ extension CupertinoButtonWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget cupertinoFilledButton({
+  CupertinoButton cupertinoFilledButton({
     CupertinoButtonSize sizeStyle = CupertinoButtonSize.large,
     EdgeInsetsGeometry? padding,
     Color disabledColor = CupertinoColors.tertiarySystemFill,
@@ -67,7 +67,7 @@ extension CupertinoButtonWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget cupertinoTintedButton({
+  CupertinoButton cupertinoTintedButton({
     CupertinoButtonSize sizeStyle = CupertinoButtonSize.large,
     EdgeInsetsGeometry? padding,
     Color? color,

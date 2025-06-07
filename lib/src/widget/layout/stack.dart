@@ -53,7 +53,7 @@ extension StackWidgetListExtension on List<Widget> {
 }
 
 extension StackWidgetExtension on Widget {
-  Widget stack({
+  Stack stack({
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
     TextDirection? textDirection,
     StackFit fit = StackFit.loose,
@@ -66,7 +66,7 @@ extension StackWidgetExtension on Widget {
         clipBehavior: clipBehavior,
       );
 
-  Widget stackPassthrough({
+  Stack stackPassthrough({
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
     TextDirection? textDirection,
     Clip clipBehavior = Clip.hardEdge,
@@ -77,7 +77,7 @@ extension StackWidgetExtension on Widget {
         clipBehavior: clipBehavior,
       );
 
-  Widget stackExpand({
+  Stack stackExpand({
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
     TextDirection? textDirection,
     Clip clipBehavior = Clip.hardEdge,
@@ -88,7 +88,7 @@ extension StackWidgetExtension on Widget {
         clipBehavior: clipBehavior,
       );
 
-  Widget stackLoose({
+  Stack stackLoose({
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
     TextDirection? textDirection,
     Clip clipBehavior = Clip.hardEdge,

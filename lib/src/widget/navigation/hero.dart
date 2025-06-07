@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension HeroWidgetExtension on Widget {
-  Widget hero(
+  Hero hero(
     String tag, {
     Tween<Rect?> Function(Rect?, Rect?)? createRectTween,
     Widget Function(BuildContext, Animation<double>, HeroFlightDirection,

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension ConstrainedBoxExtension on Widget {
-  Widget constrainedBox({
+  ConstrainedBox constrainedBox({
     required BoxConstraints constraints,
   }) =>
       ConstrainedBox(
@@ -9,7 +9,7 @@ extension ConstrainedBoxExtension on Widget {
         child: this,
       );
 
-  Widget constrained({
+  ConstrainedBox constrained({
     double minWidth = 0.0,
     double maxWidth = double.infinity,
     double minHeight = 0.0,
@@ -24,7 +24,8 @@ extension ConstrainedBoxExtension on Widget {
         ),
       );
 
-  Widget constrainedWidth({double min = 0, double max = double.infinity}) =>
+  ConstrainedBox constrainedWidth(
+          {double min = 0, double max = double.infinity}) =>
       constrainedBox(
         constraints: BoxConstraints(
           minWidth: min,
@@ -32,32 +33,33 @@ extension ConstrainedBoxExtension on Widget {
         ),
       );
 
-  Widget constrainedHeight({double min = 0, double max = double.infinity}) =>
+  ConstrainedBox constrainedHeight(
+          {double min = 0, double max = double.infinity}) =>
       constrainedBox(
         constraints: BoxConstraints(
           minHeight: min,
           maxHeight: max,
         ),
       );
-  Widget minWidth(double minWidth) => constrainedBox(
+  ConstrainedBox minWidth(double minWidth) => constrainedBox(
         constraints: BoxConstraints(
           minWidth: minWidth,
         ),
       );
 
-  Widget maxWidth(double maxWidth) => constrainedBox(
+  ConstrainedBox maxWidth(double maxWidth) => constrainedBox(
         constraints: BoxConstraints(
           maxWidth: maxWidth,
         ),
       );
 
-  Widget minHeight(double minHeight) => constrainedBox(
+  ConstrainedBox minHeight(double minHeight) => constrainedBox(
         constraints: BoxConstraints(
           minHeight: minHeight,
         ),
       );
 
-  Widget maxHeight(double maxHeight) => constrainedBox(
+  ConstrainedBox maxHeight(double maxHeight) => constrainedBox(
         constraints: BoxConstraints(
           maxHeight: maxHeight,
         ),

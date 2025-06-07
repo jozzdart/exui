@@ -1,22 +1,22 @@
 import 'package:flutter/widgets.dart';
 
 extension OpacityWidgetExtension on Widget {
-  Widget opacity(double opacity, {bool alwaysIncludeSemantics = false}) =>
+  Opacity opacity(double opacity, {bool alwaysIncludeSemantics = false}) =>
       Opacity(
         opacity: opacity,
         alwaysIncludeSemantics: alwaysIncludeSemantics,
         child: this,
       );
 
-  Widget opacityPercent(double percent) => opacity(percent / 100);
+  Opacity opacityPercent(double percent) => opacity(percent / 100);
 
-  Widget opacityHalf() => opacity(0.5);
+  Opacity opacityHalf() => opacity(0.5);
 
-  Widget opacityQuarter() => opacity(0.25);
+  Opacity opacityQuarter() => opacity(0.25);
 
-  Widget opacityZero() => opacity(0);
+  Opacity opacityZero() => opacity(0);
 
-  Widget opacityTransparent() => opacityZero();
+  Opacity opacityTransparent() => opacityZero();
 
-  Widget opacityInvisible() => opacityZero();
+  Opacity opacityInvisible() => opacityZero();
 }

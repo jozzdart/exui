@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension CenterWidgetExtension on Widget {
-  Widget center({
+  Center center({
     double? widthFactor,
     double? heightFactor,
   }) =>
@@ -11,8 +11,8 @@ extension CenterWidgetExtension on Widget {
         child: this,
       );
 
-  Widget centerWidth(double? widthFactor) => center(widthFactor: widthFactor);
+  Center centerWidth(double? widthFactor) => center(widthFactor: widthFactor);
 
-  Widget centerHeight(double? heightFactor) =>
+  Center centerHeight(double? heightFactor) =>
       center(heightFactor: heightFactor);
 }

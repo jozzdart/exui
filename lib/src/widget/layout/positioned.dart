@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension PositionedWidgetExtensions on Widget {
-  Widget positioned({
+  Positioned positioned({
     double? left,
     double? top,
     double? right,
@@ -19,15 +19,15 @@ extension PositionedWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget positionedTop(double top) => positioned(top: top);
+  Positioned positionedTop(double top) => positioned(top: top);
 
-  Widget positionedLeft(double left) => positioned(left: left);
+  Positioned positionedLeft(double left) => positioned(left: left);
 
-  Widget positionedRight(double right) => positioned(right: right);
+  Positioned positionedRight(double right) => positioned(right: right);
 
-  Widget positionedBottom(double bottom) => positioned(bottom: bottom);
+  Positioned positionedBottom(double bottom) => positioned(bottom: bottom);
 
-  Widget positionedWidth(double width) => positioned(width: width);
+  Positioned positionedWidth(double width) => positioned(width: width);
 
-  Widget positionedHeight(double height) => positioned(height: height);
+  Positioned positionedHeight(double height) => positioned(height: height);
 }

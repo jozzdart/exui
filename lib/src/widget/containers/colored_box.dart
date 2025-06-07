@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension ColoredBoxExtension on Widget {
-  Widget coloredBox(
+  ColoredBox coloredBox(
     Color color,
   ) =>
       ColoredBox(

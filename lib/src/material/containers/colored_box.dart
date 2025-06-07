@@ -3,63 +3,63 @@ import 'package:flutter/material.dart';
 import 'package:exui/src/widget/containers/colored_box.dart';
 
 extension BoxColorsExtension on Widget {
-  Widget redBox() => coloredBox(Colors.red);
+  ColoredBox redBox() => coloredBox(Colors.red);
 
-  Widget redAccentBox() => coloredBox(Colors.redAccent);
+  ColoredBox redAccentBox() => coloredBox(Colors.redAccent);
 
-  Widget greenBox() => coloredBox(Colors.green);
+  ColoredBox greenBox() => coloredBox(Colors.green);
 
-  Widget greenAccentBox() => coloredBox(Colors.greenAccent);
+  ColoredBox greenAccentBox() => coloredBox(Colors.greenAccent);
 
-  Widget blueBox() => coloredBox(Colors.blue);
+  ColoredBox blueBox() => coloredBox(Colors.blue);
 
-  Widget blueAccentBox() => coloredBox(Colors.blueAccent);
+  ColoredBox blueAccentBox() => coloredBox(Colors.blueAccent);
 
-  Widget yellowBox() => coloredBox(Colors.yellow);
+  ColoredBox yellowBox() => coloredBox(Colors.yellow);
 
-  Widget yellowAccentBox() => coloredBox(Colors.yellowAccent);
+  ColoredBox yellowAccentBox() => coloredBox(Colors.yellowAccent);
 
-  Widget orangeBox() => coloredBox(Colors.orange);
+  ColoredBox orangeBox() => coloredBox(Colors.orange);
 
-  Widget orangeAccentBox() => coloredBox(Colors.orangeAccent);
+  ColoredBox orangeAccentBox() => coloredBox(Colors.orangeAccent);
 
-  Widget purpleBox() => coloredBox(Colors.purple);
+  ColoredBox purpleBox() => coloredBox(Colors.purple);
 
-  Widget purpleAccentBox() => coloredBox(Colors.purpleAccent);
+  ColoredBox purpleAccentBox() => coloredBox(Colors.purpleAccent);
 
-  Widget deepPurpleBox() => coloredBox(Colors.deepPurple);
+  ColoredBox deepPurpleBox() => coloredBox(Colors.deepPurple);
 
-  Widget deepPurpleAccentBox() => coloredBox(Colors.deepPurpleAccent);
+  ColoredBox deepPurpleAccentBox() => coloredBox(Colors.deepPurpleAccent);
 
-  Widget pinkBox() => coloredBox(Colors.pink);
+  ColoredBox pinkBox() => coloredBox(Colors.pink);
 
-  Widget pinkAccentBox() => coloredBox(Colors.pinkAccent);
+  ColoredBox pinkAccentBox() => coloredBox(Colors.pinkAccent);
 
-  Widget brownBox() => coloredBox(Colors.brown);
+  ColoredBox brownBox() => coloredBox(Colors.brown);
 
-  Widget tealBox() => coloredBox(Colors.teal);
+  ColoredBox tealBox() => coloredBox(Colors.teal);
 
-  Widget tealAccentBox() => coloredBox(Colors.tealAccent);
+  ColoredBox tealAccentBox() => coloredBox(Colors.tealAccent);
 
-  Widget cyanBox() => coloredBox(Colors.cyan);
+  ColoredBox cyanBox() => coloredBox(Colors.cyan);
 
-  Widget cyanAccentBox() => coloredBox(Colors.cyanAccent);
+  ColoredBox cyanAccentBox() => coloredBox(Colors.cyanAccent);
 
-  Widget lightBlueBox() => coloredBox(Colors.lightBlue);
+  ColoredBox lightBlueBox() => coloredBox(Colors.lightBlue);
 
-  Widget lightBlueAccentBox() => coloredBox(Colors.lightBlueAccent);
+  ColoredBox lightBlueAccentBox() => coloredBox(Colors.lightBlueAccent);
 
-  Widget lightGreenBox() => coloredBox(Colors.lightGreen);
+  ColoredBox lightGreenBox() => coloredBox(Colors.lightGreen);
 
-  Widget lightGreenAccentBox() => coloredBox(Colors.lightGreenAccent);
+  ColoredBox lightGreenAccentBox() => coloredBox(Colors.lightGreenAccent);
 
-  Widget limeBox() => coloredBox(Colors.lime);
+  ColoredBox limeBox() => coloredBox(Colors.lime);
 
-  Widget limeAccentBox() => coloredBox(Colors.limeAccent);
+  ColoredBox limeAccentBox() => coloredBox(Colors.limeAccent);
 
-  Widget greyBox() => coloredBox(Colors.grey);
+  ColoredBox greyBox() => coloredBox(Colors.grey);
 
-  Widget blackBox() => coloredBox(Colors.black);
+  ColoredBox blackBox() => coloredBox(Colors.black);
 
-  Widget whiteBox() => coloredBox(Colors.white);
+  ColoredBox whiteBox() => coloredBox(Colors.white);
 }
