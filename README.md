@@ -54,6 +54,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
 [📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
+[🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
@@ -1064,8 +1065,6 @@ All methods accept **all standard layout parameters**, including:
 
 These shortcuts reduce boilerplate and keep your layout code highly consistent and declarative—perfect for design systems, builder UIs, and everyday Flutter apps.
 
----
-
 #### 📚 Available `column` Methods
 
 ##### `columnMain`\<choose alignment>`()`
@@ -1123,8 +1122,6 @@ These shortcuts reduce boilerplate and keep your layout code highly consistent a
 * `columnSpaceEvenlyBaseline()`
 * `columnSpaceEvenlyStretch()`
 
----
-
 #### 🧪 Examples
 
 ```dart
@@ -1150,10 +1147,6 @@ These shortcuts reduce boilerplate and keep your layout code highly consistent a
   "Item 2".text(), // same as Text("Item 2")
 ].columnCrossStretch(mainAxisAlignment: MainAxisAlignment.end);
 ```
-
-> ✅ You still retain full control of `spacing`, `mainAxisSize`, `textDirection`, and more — these are just smarter shortcuts.
-
----
 
 #### 📚 Available `row` Methods
 
@@ -1211,8 +1204,6 @@ These shortcuts reduce boilerplate and keep your layout code highly consistent a
 * `rowSpaceEvenlyEnd()`
 * `rowSpaceEvenlyBaseline()`
 * `rowSpaceEvenlyStretch()`
-
----
 
 #### 🧪 Examples
 
@@ -1449,6 +1440,140 @@ All methods return a `DecoratedBox` and can be safely combined with padding, opa
 >   color: Colors.red,
 >   borderRadius: BorderRadius.circular(12),
 > )
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🚧 `constrained` — Add Size Limits to Widgets
+
+Apply size constraints directly to any widget without manually wrapping in `ConstrainedBox`. These extensions make layout constraints clean, readable, and fully chainable.
+
+- `constrained({minWidth, maxWidth, minHeight, maxHeight})` — General constraint utility.
+- `constrainedBox(BoxConstraints)` — Use custom `BoxConstraints` directly.
+- `constrainedWidth({min, max})` — Horizontal size limits.
+- `constrainedHeight({min, max})` — Vertical size limits.
+- `minWidth(double)` / `maxWidth(double)` — Individual width constraints.
+- `minHeight(double)` / `maxHeight(double)` — Individual height constraints.
+
+All methods return a `ConstrainedBox` and are safe to chain in layout compositions.
+
+#### 🧪 Examples
+
+```dart
+// Limit to a width between 100–200
+"Wide".text().constrainedWidth(min: 100, max: 200);
+```
+
+```dart
+// Limit to a height between 50–100
+"Short".text().constrainedHeight(min: 50, max: 100);
+```
+
+```dart
+// Only limit max height
+"Header".text().maxHeight(120);
+```
+
+```dart
+// Fully custom constraints
+"Box".text().constrained(
+  minWidth: 80,
+  maxWidth: 150,
+  minHeight: 40,
+  maxHeight: 90,
+);
+```
+
+```dart
+// Using BoxConstraints directly
+"Box".text().constrainedBox(
+  constraints: BoxConstraints.tightFor(width: 100, height: 40),
+);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> ConstrainedBox(
+>   constraints: BoxConstraints(
+>     minWidth: 100,
+>     maxWidth: 200,
+>   ),
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().constrainedWidth(min: 100, max: 200)
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 📦 `container` — Wrap Any Widget in a Container
+
+Easily apply layout, styling, and decoration to any widget by wrapping it in a `Container`—without cluttering your code. This extension saves you from manual nesting while exposing all the powerful layout features of `Container`.
+
+- `container({...})` — Adds padding, margin, size, decoration, alignment, and more in a single call.
+
+Supports all `Container` options:
+
+- `width`, `height` — Size constraints
+- `color`, `decoration` — Background and border styling
+- `padding`, `margin` — Inner and outer spacing
+- `alignment` — Align child within the container
+- `clipBehavior`, `constraints` — Additional layout control
+
+#### 🧪 Examples
+
+```dart
+// Wrap with background color and padding
+"Boxed".text().container(
+  color: const Color(0xFFE0E0E0),
+  padding: const EdgeInsets.all(12),
+);
+```
+
+```dart
+// Add margin and align center
+"Center Me".text().container(
+  margin: const EdgeInsets.symmetric(vertical: 16),
+  alignment: Alignment.center,
+);
+```
+
+```dart
+// Fully customized container
+"Styled".text().container(
+  width: 150,
+  height: 80,
+  decoration: BoxDecoration(
+    color: const Color(0xFF2196F3),
+    borderRadius: BorderRadius.circular(12),
+  ),
+  alignment: Alignment.center,
+);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> Container(
+>   padding: EdgeInsets.all(12),
+>   color: Colors.grey,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().container(padding: EdgeInsets.all(12), color: Colors.grey)
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
