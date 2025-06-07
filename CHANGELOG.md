@@ -1,4 +1,4 @@
-## NEXT
+## 0.0.22
 
 - Improved documentation
 - Added new column extensions for enhanced layout capabilities
