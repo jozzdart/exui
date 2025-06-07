@@ -52,7 +52,8 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🔳 `intrinsic` - Size Widgets](#-intrinsic--size-widgets-to-their-natural-dimensions)  
 [🧱 `row` / `column` - Rapid Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
-[🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)
+[🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
+[👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)
 
 > More sections coming soon: layout, gestures, containers, spacing, animation, and more.
 
@@ -1319,6 +1320,76 @@ Build layered UI structures with intuitive, chainable extensions. These methods 
 >
 > ```dart
 > [...].stackExpand(alignment: Alignment.center)
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 👆 `gesture` — Add Tap, Drag & Press Events Easily
+
+Eliminate manual `GestureDetector` nesting with intuitive, chainable gesture methods. These extensions make it effortless to attach any gesture to any widget.
+
+- `onTap(VoidCallback)` — Handle basic tap gestures.
+- `onDoubleTap(VoidCallback)` — Respond to double-tap gestures.
+- `onLongPress(VoidCallback)` — Handle long presses.
+- `onTapDown(...)`, `onTapUp(...)`, `onTapCancel(...)` — Full tap phase handling.
+- `onSecondaryTap(...)`, `onTertiaryTapDown(...)`, etc. — Full multi-touch support.
+- `onVerticalDrag...`, `onHorizontalDrag...`, `onPan...` — Add drag gestures with full phase support.
+- `onScale...` — Handle pinch-to-zoom gestures.
+- `onForcePress...` — Support for pressure-sensitive gestures.
+- `gestureDetector(...)` — Attach multiple gestures at once in one call.
+
+All methods return a wrapped `GestureDetector` and support optional customization of behavior, semantics, and supported devices.
+
+#### 🧪 Examples
+
+```dart
+// Basic tap interaction
+"Tap me".text().onTap(() => print("Tapped!"));
+```
+
+```dart
+// Double tap
+"Double tap".text().onDoubleTap(() => print("Double tapped"));
+```
+
+```dart
+// Handle tap down position
+"Pressed".text().onTapDown((details) {
+  print("Tap down at ${details.globalPosition}");
+});
+```
+
+```dart
+// Add vertical drag support
+"Drag me".text().onVerticalDragUpdate((details) {
+  print("Dragging: ${details.delta.dy}");
+});
+```
+
+```dart
+// Combine multiple gestures
+"Interact".text().gestureDetector(
+  onTap: () => print("Tap"),
+  onLongPress: () => print("Long press"),
+  onPanUpdate: (details) => print("Panning"),
+);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> GestureDetector(
+>   onTap: () => doSomething(),
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().onTap(() => doSomething())
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
