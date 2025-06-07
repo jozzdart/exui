@@ -13,4 +13,10 @@ extension OpacityWidgetExtension on Widget {
   Widget opacityHalf() => opacity(0.5);
 
   Widget opacityQuarter() => opacity(0.25);
+
+  Widget opacityZero() => opacity(0);
+
+  Widget opacityTransparent() => opacityZero();
+
+  Widget opacityInvisible() => opacityZero();
 }
