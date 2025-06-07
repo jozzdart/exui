@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension SizedBoxExtension on Widget {
-  SizedBox sized({
+  SizedBox sizedBox({
     double? width,
     double? height,
   }) =>
@@ -11,7 +11,7 @@ extension SizedBoxExtension on Widget {
         child: this,
       );
 
-  SizedBox sizedWidth(double width) => sized(width: width);
+  SizedBox sizedWidth(double width) => sizedBox(width: width);
 
-  SizedBox sizedHeight(double height) => sized(height: height);
+  SizedBox sizedHeight(double height) => sizedBox(height: height);
 }
