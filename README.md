@@ -51,6 +51,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🧬 `flex` - Flexible Layouts with Fine-Tuned Control](#-flex--flexible-layouts-with-fine-tuned-control)  
 [🔳 `intrinsic` - Size Widgets to Their Natural Dimensions](#-intrinsic--size-widgets-to-their-natural-dimensions)  
 [🧱 `row` / `column` - Instantly Wrap Widgets in Flex Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
+[🧭 `row*` / `column*` - Rapid Alignment for Flex Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets with Full Stack Control](#-stack--overlay-widgets-with-full-stack-control)
 
 > More sections coming soon: layout, gestures, containers, spacing, animation, and more.
@@ -933,18 +934,13 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 Effortlessly create `Row` and `Column` layouts with readable, inline extensions. Whether you're working with a single widget or a whole list, these helpers make layout structure fast, chainable, and more expressive.
 
+- `[].row()` / `[].column()` — Wrap a **list** of widgets in a `Row` or `Column`.
 - `.row()` / `.column()` — Wrap a **single** widget in a `Row` or `Column`.
-- `[].row()` / `[].column()` — Wrap a **list** of widgets.
 
-* ✅ Fully supports **all `Row` and `Column` parameters**, including:  
-   `spacing`, `mainAxisAlignment`, `crossAxisAlignment`, and more.
+> ✅ Fully supports **all `Row` and `Column` parameters**, including:  
+>  `spacing`, `mainAxisAlignment`, `crossAxisAlignment`, and more.
 
 #### 🧪 Examples
-
-```dart
-// Single widget inside a Row
-"Item".text().row();
-```
 
 ```dart
 // Two widgets in a Row with spacing
@@ -966,7 +962,12 @@ Effortlessly create `Row` and `Column` layouts with readable, inline extensions.
 ```
 
 ```dart
-// Center a single widget vertically
+// Single widget inside a Row
+"Item".text().row();
+```
+
+```dart
+// Puts a single widget in a column with center alignment
 "Alone".text().column(
   mainAxisAlignment: MainAxisAlignment.center,
 );
@@ -992,6 +993,257 @@ Effortlessly create `Row` and `Column` layouts with readable, inline extensions.
 >    Icons.star.icon(),
 > ].column(spacing: 8)
 > ```
+
+---
+
+### 🧭 `row*` / `column*` — Rapid Alignment Extensions for Flex Layouts
+
+Stop repeating alignment boilerplate in your `Row` and `Column` widgets. These expressive extensions let you instantly apply common combinations of `mainAxisAlignment` and `crossAxisAlignment`, all while preserving full layout control. They make **UI creation dramatically faster and more readable**, especially in complex layouts or dynamic widget lists.
+
+#### 🧩 Functional Groups
+
+All extensions are available for both `Row` and `Column`, following the same structure:
+
+- ✅ `columnMain*` — Sets `mainAxisAlignment`, customize others
+- ✅ `columnCross*` — Sets `crossAxisAlignment`, customize others
+- ✅ `column<Main><Cross>()` — Aligns both axes (e.g., `columnCenterStart`)
+
+* ✅ `rowMain*` — Sets `mainAxisAlignment`, customize others
+* ✅ `rowCross*` — Sets `crossAxisAlignment`, customize others
+* ✅ `row<Main><Cross>()` — Aligns both axes (e.g., `rowCenterStart`)
+
+All methods accept **all standard layout parameters**, including:
+
+- `mainAxisSize`
+- `textDirection`
+- `verticalDirection`
+- `textBaseline`
+- `spacing`
+
+#### ✅ Why Use These?
+
+> 💡 Instead of writing:
+>
+> ```dart
+> Column(
+>   mainAxisAlignment: MainAxisAlignment.center,
+>   crossAxisAlignment: CrossAxisAlignment.start,
+>   children: [...],
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> [...].columnCenterStart()
+> ```
+
+> Or instead of:
+>
+> ```dart
+> Row(
+>   spacing: 12,
+>   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+>   crossAxisAlignment: CrossAxisAlignment.end,
+>   children: [...],
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> [...].rowSpaceBetweenEnd(spacing: 12)
+> ```
+
+These shortcuts reduce boilerplate and keep your layout code highly consistent and declarative—perfect for design systems, builder UIs, and everyday Flutter apps.
+
+---
+
+#### 📚 Available `column` Methods
+
+##### `columnMain`\<choose alignment>`()`
+
+- `columnMainStart()` — `MainAxisAlignment.start`
+- `columnMainCenter()` — `MainAxisAlignment.center`
+- `columnMainEnd()` — `MainAxisAlignment.end`
+- `columnMainSpaceAround()` — `MainAxisAlignment.spaceAround`
+- `columnMainSpaceBetween()` — `MainAxisAlignment.spaceBetween`
+- `columnMainSpaceEvenly()` — `MainAxisAlignment.spaceEvenly`
+
+##### `columnCross`\<choose alignment>`()`
+
+- `columnCrossStart()` — `CrossAxisAlignment.start`
+- `columnCrossCenter()` — `CrossAxisAlignment.center`
+- `columnCrossEnd()` — `CrossAxisAlignment.end`
+- `columnCrossBaseline()` — `CrossAxisAlignment.baseline`
+- `columnCrossStretch()` — `CrossAxisAlignment.stretch`
+
+##### `column`\<choose main alignment>\<choose cross alignment>`()`
+
+- `columnStartStart()`
+- `columnStartCenter()`
+- `columnStartEnd()`
+- `columnStartBaseline()`
+- `columnStartStretch()`
+
+* `columnCenterStart()`
+* `columnCenterCenter()`
+* `columnCenterEnd()`
+* `columnCenterBaseline()`
+* `columnCenterStretch()`
+
+- `columnEndStart()`
+- `columnEndCenter()`
+- `columnEndEnd()`
+- `columnEndBaseline()`
+- `columnEndStretch()`
+
+* `columnSpaceAroundStart()`
+* `columnSpaceAroundCenter()`
+* `columnSpaceAroundEnd()`
+* `columnSpaceAroundBaseline()`
+* `columnSpaceAroundStretch()`
+
+- `columnSpaceBetweenStart()`
+- `columnSpaceBetweenCenter()`
+- `columnSpaceBetweenEnd()`
+- `columnSpaceBetweenBaseline()`
+- `columnSpaceBetweenStretch()`
+
+* `columnSpaceEvenlyStart()`
+* `columnSpaceEvenlyCenter()`
+* `columnSpaceEvenlyEnd()`
+* `columnSpaceEvenlyBaseline()`
+* `columnSpaceEvenlyStretch()`
+
+---
+
+#### 🧪 Examples
+
+```dart
+// A vertically-centered column, aligned to start
+[
+  Icons.image.icon(), // same as Icon(Icons.image)
+  Text("Profile"),
+].columnCenterStart();
+```
+
+```dart
+// Use main alignment only, keep full control of cross
+[
+  Text("Hello"),
+  Text("World"),
+].columnMainSpaceAround(crossAxisAlignment: CrossAxisAlignment.end);
+```
+
+```dart
+// Use cross alignment only, keep full control of main
+[
+  Text("Item 1"),
+  "Item 2".text(), // same as Text("Item 2")
+].columnCrossStretch(mainAxisAlignment: MainAxisAlignment.end);
+```
+
+> ✅ You still retain full control of `spacing`, `mainAxisSize`, `textDirection`, and more — these are just smarter shortcuts.
+
+---
+
+#### 📚 Available `row` Methods
+
+##### `rowMain`\<choose alignment>`()`
+
+- `rowMainStart()`
+- `rowMainCenter()`
+- `rowMainEnd()`
+- `rowMainSpaceAround()`
+- `rowMainSpaceBetween()`
+- `rowMainSpaceEvenly()`
+
+##### `rowCross`\<choose alignment>`()`
+
+- `rowCrossStart()`
+- `rowCrossCenter()`
+- `rowCrossEnd()`
+- `rowCrossBaseline()`
+- `rowCrossStretch()`
+
+##### `row`\<choose main alignment>\<choose cross alignment>`()`
+
+- `rowStartStart()`
+- `rowStartCenter()`
+- `rowStartEnd()`
+- `rowStartBaseline()`
+- `rowStartStretch()`
+
+* `rowCenterStart()`
+* `rowCenterCenter()`
+* `rowCenterEnd()`
+* `rowCenterBaseline()`
+* `rowCenterStretch()`
+
+- `rowEndStart()`
+- `rowEndCenter()`
+- `rowEndEnd()`
+- `rowEndBaseline()`
+- `rowEndStretch()`
+
+* `rowSpaceAroundStart()`
+* `rowSpaceAroundCenter()`
+* `rowSpaceAroundEnd()`
+* `rowSpaceAroundBaseline()`
+* `rowSpaceAroundStretch()`
+
+- `rowSpaceBetweenStart()`
+- `rowSpaceBetweenCenter()`
+- `rowSpaceBetweenEnd()`
+- `rowSpaceBetweenBaseline()`
+- `rowSpaceBetweenStretch()`
+
+* `rowSpaceEvenlyStart()`
+* `rowSpaceEvenlyCenter()`
+* `rowSpaceEvenlyEnd()`
+* `rowSpaceEvenlyBaseline()`
+* `rowSpaceEvenlyStretch()`
+
+---
+
+#### 🧪 Examples
+
+```dart
+// Centered row, aligned to top
+[
+  Icons.star.icon(), // same as Icon(Icons.star)
+  "Favorite".text(), // same as Text("Favorite")
+].rowCenterStart();
+```
+
+```dart
+// Horizontal space between, vertically stretched
+[
+  Text("Left"),
+  Text("Right"),
+].rowSpaceBetweenStretch();
+```
+
+```dart
+// Apply only main alignment, customize cross
+[
+  Text("Tab 1"),
+  Text("Tab 2"),
+].rowMainEnd(crossAxisAlignment: CrossAxisAlignment.start);
+```
+
+```dart
+// Apply only cross alignment, keep full control of main
+[
+  "Bottom Aligned".text(), // same as Text("Bottom Aligned")
+  Text("Also Bottom"),
+].rowCrossEnd(mainAxisAlignment: MainAxisAlignment.center);
+```
+
+> 💡 These extensions make horizontal layout code extremely fast and clean — especially when building repetitive layouts across your app.
+
+> ✅ Full support for layout parameters like `spacing`, `mainAxisSize`, `textDirection`, and more — no flexibility lost.
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
