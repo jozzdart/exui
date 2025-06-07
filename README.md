@@ -345,6 +345,9 @@ Quickly apply opacity to any widget using clean, expressive methods. These exten
 - `opacityPercent(double)` — Use percentage (`0–100`) for readability.
 - `opacityHalf()` — Set opacity to 50%.
 - `opacityQuarter()` — Set opacity to 25%.
+- `opacityZero()` — Set opacity to 0.
+- `opacityTransparent()` — Alias of `opacityZero()`.
+- `opacityInvisible()` — Alias of `opacityZero()`.
 
 All methods return a wrapped `Opacity` widget and are safe to chain with other extensions.
 
