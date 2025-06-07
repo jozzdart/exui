@@ -4,6 +4,7 @@
 - Added new opacity methods to the README
 - Renamed `detectGestures` to `gestureDetector` in `GestureDetectorWidgetExtension` for improved clarity
 - Added gesture methods to the README
+- Added additional parameters to `HeroWidgetExtension` for improved hero animation control
 
 ## 0.0.22
 
