@@ -2,6 +2,8 @@
 
 - Added `opacityZero`, `opacityTransparent`, and `opacityInvisible` methods to `OpacityWidgetExtension` for improved opacity control
 - Added new opacity methods to the README
+- Renamed `detectGestures` to `gestureDetector` in `GestureDetectorWidgetExtension` for improved clarity
+- Added gesture methods to the README
 
 ## 0.0.22
 
