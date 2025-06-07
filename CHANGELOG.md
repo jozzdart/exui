@@ -7,6 +7,7 @@
 - Added hero methods to the README
 - Added additional parameters to `HeroWidgetExtension` for improved hero animation control
 - Added `sizedWidth`, `sizedHeight`, `gapHorizontal`, and `gapVertical` extensions to `double` for fast gaps
+- Changed all `Widget` extensions to return the same type as the extension method
 
 ## 0.0.22
 
