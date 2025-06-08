@@ -57,6 +57,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
 [🟥 `coloredBox` - Wrap in a Colored Box](#-coloredbox--add-background-color-to-any-widget)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
+[🪞 `fittedBox` - Fit Widgets](#-fit--control-how-widgets-scale-to-fit)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
 
@@ -1548,6 +1549,60 @@ Use this to apply color styling in layout compositions without using `Container`
 > ```
 
 > ✅ A minimal, performant way to color backgrounds without unnecessary overhead.
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🪞 `fit` — Control How Widgets Scale to Fit
+
+Wrap your widget with a `FittedBox` to control how it resizes within its parent. These extensions provide clean, expressive access to `BoxFit` options — without the boilerplate.
+
+- `fittedBox({fit, alignment, clipBehavior})` — Base method with full control.
+- `fitContain()` — Preserves aspect ratio, fits within bounds.
+- `fitCover()` — Fills bounds, possibly cropping.
+- `fitFill()` — Stretches to fill bounds, ignoring aspect ratio.
+- `fitScaleDown()` — Only scales down, never up.
+- `fitHeight()` — Scales to match parent height.
+
+All methods return a `FittedBox` and preserve your widget tree cleanly.
+
+#### 🧪 Examples
+
+```dart
+// Scale to fit within constraints
+"Resizable".text().fitContain();
+```
+
+```dart
+// Fill the available space
+"Background".image().fitCover();
+```
+
+```dart
+// Scale down only if too large
+"Preview".image().fitScaleDown();
+```
+
+```dart
+// Stretch to fill all dimensions
+"Banner".text().fitFill();
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> FittedBox(
+>   fit: BoxFit.cover,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().fitCover()
+> ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
