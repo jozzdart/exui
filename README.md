@@ -57,6 +57,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
 [🟥 `coloredBox` - Wrap in a Colored Box](#-coloredbox--add-background-color-to-any-widget)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
+[✂️ `clip` — Clip Widgets into Shapes](#️-clip--clip-widgets-into-shapes)  
 [🪞 `fittedBox` - Fit Widgets](#-fit--control-how-widgets-scale-to-fit)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
@@ -1667,6 +1668,66 @@ Supports all `Container` options:
 >
 > ```dart
 > MyWidget().container(padding: EdgeInsets.all(12), color: Colors.grey)
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### ✂️ `clip` — Clip Widgets into Shapes
+
+Easily apply clipping to any widget using expressive, chainable methods. These extensions eliminate boilerplate when working with `ClipPath`, `ClipRRect`, `ClipOval`, and even advanced shapes like squircles.
+
+- `clipRRect({borderRadius})` — Clip with rounded corners using `ClipRRect`.
+- `clipCircular([radius])` — Clip into a circle.
+- `clipOval()` — Clip into an oval or circle.
+- `clipCircle()` — Alias for `clipOval()` (semantic clarity).
+- `clipPath({clipper})` — General-purpose custom path clipping.
+- `clipSquircle([radiusFactor])` — Clip into a modern "squircle" shape.
+- `clipContinuousRectangle([radiusFactor])` — Alias for `clipSquircle()`.
+
+All methods return wrapped `Clip*` widgets and are safe to chain.
+
+#### 🧪 Examples
+
+```dart
+// Rounded corners (16 radius)
+Container().clipRRect(borderRadius: BorderRadius.circular(16));
+```
+
+```dart
+// Circular/oval clip
+Image.asset("avatar.png").clipCircle();
+```
+
+```dart
+// Custom path clip (e.g. star shape)
+MyWidget().clipPath(clipper: StarClipper());
+```
+
+```dart
+// Squircle shape (iOS-style corners)
+MyWidget().clipSquircle(2.5);
+```
+
+```dart
+// Same as above but with alternative naming
+MyWidget().clipContinuousRectangle(2.5);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> ClipRRect(
+>   borderRadius: BorderRadius.circular(12),
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().clipRRect(borderRadius: BorderRadius.circular(12))
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
