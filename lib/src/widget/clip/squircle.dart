@@ -1,7 +1,5 @@
 import 'package:flutter/widgets.dart';
 
-import 'jozz_clips.dart';
-
 /// Extension to clip any widget into a squircle (rounded square) shape.
 ///
 /// A squircle is a shape between a square and a circle, commonly used
@@ -29,9 +27,21 @@ extension SquircleWidgetExtensions on Widget {
     Clip clipBehavior = Clip.antiAlias,
   ]) {
     return ClipPath(
-      clipper: JozzSquircleClipper(radiusFactor),
+      clipper: ShapeBorderClipper(
+        shape: ContinuousRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(radiusFactor),
+          ),
+        ),
+      ),
       clipBehavior: clipBehavior,
       child: this,
     );
   }
+
+  ClipPath clipContinuousRectangle([
+    double radiusFactor = 2.5,
+    Clip clipBehavior = Clip.antiAlias,
+  ]) =>
+      clipSquircle(radiusFactor, clipBehavior);
 }
