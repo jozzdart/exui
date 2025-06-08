@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension ClipPathWidgetExtensions on Widget {
-  Widget clipPath({
+  ClipPath clipPath({
     CustomClipper<Path>? clipper,
     Clip clipBehavior = Clip.antiAlias,
   }) {

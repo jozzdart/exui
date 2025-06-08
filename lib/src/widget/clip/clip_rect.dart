@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension ClipRectWidgetExtensions on Widget {
-  Widget clipRRect({
+  ClipRRect clipRRect({
     BorderRadiusGeometry borderRadius = BorderRadius.zero,
     CustomClipper<RRect>? clipper,
     Clip clipBehavior = Clip.antiAlias,
@@ -14,7 +14,7 @@ extension ClipRectWidgetExtensions on Widget {
     );
   }
 
-  Widget clipOval({
+  ClipOval clipOval({
     CustomClipper<Rect>? clipper,
     Clip clipBehavior = Clip.antiAlias,
   }) {
@@ -25,7 +25,7 @@ extension ClipRectWidgetExtensions on Widget {
     );
   }
 
-  Widget clipCircle({
+  ClipOval clipCircle({
     CustomClipper<Rect>? clipper,
     Clip clipBehavior = Clip.antiAlias,
   }) =>
