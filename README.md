@@ -55,6 +55,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
 [📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
 [🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
+[🟥 `coloredBox` - Wrap in a Colored Box](#-coloredbox--add-background-color-to-any-widget)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
@@ -1510,6 +1511,43 @@ All methods return a `ConstrainedBox` and are safe to chain in layout compositio
 > ```dart
 > MyWidget().constrainedWidth(min: 100, max: 200)
 > ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🟥 `coloredBox` — Add Background Color to Any Widget
+
+Wrap any widget with a solid background using `ColoredBox`, without nesting manually. This extension is a clean and efficient way to apply color without additional containers.
+
+- `coloredBox(Color)` — Wraps the widget in a `ColoredBox` with the given background color.
+
+Use this to apply color styling in layout compositions without using `Container`, keeping your UI lightweight.
+
+#### 🧪 Example
+
+```dart
+// Red background
+"Label".text().coloredBox(Colors.red);
+```
+
+> 💡 **Why use this?**
+> Instead of writing:
+>
+> ```dart
+> ColoredBox(
+>   color: Colors.blue,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().coloredBox(Colors.blue)
+> ```
+
+> ✅ A minimal, performant way to color backgrounds without unnecessary overhead.
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
