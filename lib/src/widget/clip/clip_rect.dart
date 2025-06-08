@@ -14,6 +14,17 @@ extension ClipRectWidgetExtensions on Widget {
     );
   }
 
+  ClipRRect clipCircular([
+    double radius = 12,
+    Clip clipBehavior = Clip.antiAlias,
+  ]) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(radius),
+      clipBehavior: clipBehavior,
+      child: this,
+    );
+  }
+
   ClipOval clipOval({
     CustomClipper<Rect>? clipper,
     Clip clipBehavior = Clip.antiAlias,
