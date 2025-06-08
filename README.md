@@ -20,7 +20,7 @@
 
 Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. It provides expressive, chainable extensions for **every single Flutter widget**—with no reliance on Material, Cupertino, or external libraries. Just pure Dart and Flutter, designed to work seamlessly in any project.
 
-## ✅ Features
+### ✅ Features
 
 - **Extensions — for all Flutter widgets.**
 - **Lightweight and efficient** — wraps existing widgets without creating new classes.
@@ -54,10 +54,11 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
 [📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
+[↕️ `gap` - fast gaps native flutter](#️-gap--add-spacing-using-double-extensions)  
 [🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
 [🟥 `coloredBox` - Wrap in a Colored Box](#-coloredbox--add-background-color-to-any-widget)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
-[✂️ `clip` — Clip Widgets into Shapes](#️-clip--clip-widgets-into-shapes)  
+[✂️ `clip` - Clip Widgets into Shapes](#️-clip--clip-widgets-into-shapes)  
 [🪞 `fittedBox` - Fit Widgets](#-fit--control-how-widgets-scale-to-fit)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
@@ -1367,6 +1368,67 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
+### ↕️ `gap` — Add Spacing Using Double Extensions
+
+Use doubles to create `SizedBox` widgets with clear, expressive syntax. These extensions turn raw numbers into layout spacing—perfect for columns, rows, and consistent vertical/horizontal gaps.
+
+- `sizedWidth` — `SizedBox(width: this)`
+- `sizedHeight` — `SizedBox(height: this)`
+- `gapHorizontal` / `gapRow` / `gapWidth` — Aliases for horizontal spacing
+- `gapVertical` / `gapColumn` / `gapHeight` — Aliases for vertical spacing
+
+All extensions return a `SizedBox` and are ideal for use in layouts to avoid magic numbers and improve readability.
+
+#### 🧪 Examples
+
+```dart
+// Horizontal space of 16
+16.0.gapHorizontal,
+```
+
+```dart
+// Vertical space of 8
+8.0.gapVertical,
+```
+
+```dart
+// SizedBox with explicit width
+24.0.sizedWidth,
+```
+
+```dart
+// SizedBox with explicit height
+32.0.sizedHeight,
+```
+
+```dart
+// Clean Row layout
+Row(
+  children: [
+    Icon(Icons.star),
+    12.0.gapRow,
+    Text("Starred"),
+  ],
+)
+```
+
+```dart
+// Clean Column layout
+Column(
+  children: [
+    Text("Title"),
+    16.0.gapColumn,
+    Text("Subtitle"),
+  ],
+)
+```
+
+> 💡 Use `.gapRow` and `.gapColumn` when working inside `Row` or `Column` widgets for clarity and intent-based naming.
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
 ### 🎨 `decoratedBox` — Add Backgrounds, Borders, Gradients & Effects
 
 Decorate any widget with rich visuals using a clean, expressive API. These extensions wrap your widget in a `DecoratedBox` with common presets like gradients, shadows, images, borders, and shapes — no boilerplate required.
@@ -2107,3 +2169,11 @@ Each method supports full customization via Flutter's native parameters:
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
+
+## 🔗 License MIT © Jozz
+
+<p align="center">
+  <a href="https://buymeacoffee.com/yosefd99v" target="https://buymeacoffee.com/yosefd99v">
+    ☕ Enjoying this package? You can support it here.
+  </a>
+</p>
