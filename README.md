@@ -62,24 +62,25 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
 
-> More sections coming soon: layout, gestures, containers, spacing, animation, and more.
+> `exui` is built on **pure Flutter** (`flutter/widgets.dart`) and avoids bundling unnecessary Material or Cupertino designs by default. For convenience, optional libraries are provided for those who want seamless integration with Flutter’s built-in design systems.
 
-#### Additional Sections
+#### `exui` Libraries
 
-- [Libraries](#-libraries)
-- [Vision](#exui-vision)
+| Library                                     | Description                                                     |
+| ------------------------------------------- | --------------------------------------------------------------- |
+| [`exui/exui.dart`](lib/exui.dart)           | Core extensions for pure Flutter. Lightweight and universal.    |
+| [`exui/material.dart`](lib/material.dart)   | Adds extensions tailored to Material widgets and components.    |
+| [`exui/cupertino.dart`](lib/cupertino.dart) | Adds extensions for Cupertino widgets and iOS-style components. |
 
----
+#### Cupertino Extensions (Apple)
 
-### 📦 `exui` Libraries
+- 🍎 [`cupertinoButton` - buttons](#-cupertinobutton--turn-any-widget-into-an-ios-button)
+- 🎨 [`coloredBox` - background color](#-cupertino-coloredbox--apply-ios-themed-background-colors)
 
-`exui` is built on **pure Flutter** (`flutter/widgets.dart`) and avoids bundling unnecessary Material or Cupertino designs by default. For convenience, optional libraries are provided for those who want seamless integration with Flutter’s built-in design systems.
+#### Material Extensions (Google)
 
-| Library                                     | Description                                                     | Link                                   |
-| ------------------------------------------- | --------------------------------------------------------------- | -------------------------------------- |
-| [`exui/exui.dart`](lib/exui.dart)           | Core extensions for pure Flutter. Lightweight and universal.    | [See details →](#-all-exui-extensions) |
-| [`exui/material.dart`](lib/material.dart)   | Adds extensions tailored to Material widgets and components.    | [See details →](#material-extensions)  |
-| [`exui/cupertino.dart`](lib/cupertino.dart) | Adds extensions for Cupertino widgets and iOS-style components. | [See details →](#cupertino-extensions) |
+- 🖲️ [`button` - buttons](#️-button--instantly-turn-any-widget-into-a-button)
+- 🎨 [`coloredBox` - background color](#-material-coloredbox--background-color-with-one-line)
 
 ---
 
@@ -1555,6 +1556,126 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
+### 🎨 `Material coloredBox` — Background Color with One Line
+
+Apply colorful backgrounds to any widget using expressive `.colorBox()` helpers. These extensions wrap your widget in a `ColoredBox` with a specific `Color` from the Material palette.
+
+No need to write `Container` or manage `BoxDecoration`—just add color directly to any widget in one line.
+
+All extensions return a `ColoredBox`.
+
+#### 🌈 Available Colors
+
+- `redBox()` / `redAccentBox()`
+- `greenBox()` / `greenAccentBox()`
+- `blueBox()` / `blueAccentBox()`
+- `yellowBox()` / `yellowAccentBox()`
+- `orangeBox()` / `orangeAccentBox()`
+- `purpleBox()` / `purpleAccentBox()`
+- `deepPurpleBox()` / `deepPurpleAccentBox()`
+- `pinkBox()` / `pinkAccentBox()`
+- `brownBox()`
+- `tealBox()` / `tealAccentBox()`
+- `cyanBox()` / `cyanAccentBox()`
+- `lightBlueBox()` / `lightBlueAccentBox()`
+- `lightGreenBox()` / `lightGreenAccentBox()`
+- `limeBox()` / `limeAccentBox()`
+- `greyBox()`
+- `blackBox()`
+- `whiteBox()`
+
+#### 🧪 Examples
+
+```dart
+// Add a red background
+"Error".text().redBox();
+```
+
+```dart
+// Success message with green accent
+"Success!".text().greenAccentBox();
+```
+
+```dart
+// Stylized button background
+"Click me".text().blueBox().paddingAll(12);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> ColoredBox(
+>   color: Colors.red,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().redBox()
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🎨 `Cupertino coloredBox` — Apply iOS-Themed Background Colors
+
+Quickly apply Cupertino-style background colors to any widget using expressive, pre-named methods. These extensions wrap your widget in a `ColoredBox` using native `CupertinoColors`.
+
+- `redBox()` / `destructiveRedBox()`
+- `greenBox()` / `activeGreenBox()`
+- `blueBox()` / `activeBlueBox()`
+- `orangeBox()` / `orangeAccentBox()`
+- `yellowBox()` / `purpleBox()` / `pinkBox()`
+- `tealBox()` / `cyanBox()` / `brownBox()`
+- `greyBox()` / `blackBox()` / `whiteBox()`
+- `darkGrayBox()` / `lightGrayBox()`
+
+All methods return a `ColoredBox` using system-consistent Cupertino color values, ideal for quick prototyping and iOS-native look and feel.
+
+#### 🧪 Examples
+
+```dart
+// Apply iOS system red background
+"Delete".text().redBox();
+```
+
+```dart
+// Use active Cupertino blue
+"Continue".text().activeBlueBox();
+```
+
+```dart
+// Style with light gray background
+"Background".text().lightGrayBox();
+```
+
+```dart
+// Warning or alert color
+"Alert".text().orangeAccentBox();
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> ColoredBox(
+>   color: CupertinoColors.systemTeal,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().tealBox()
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
 ### 🪞 `fit` — Control How Widgets Scale to Fit
 
 Wrap your widget with a `FittedBox` to control how it resizes within its parent. These extensions provide clean, expressive access to `BoxFit` options — without the boilerplate.
@@ -1861,3 +1982,128 @@ Icon(Icons.star).hero(
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🍎 `cupertinoButton` — Turn Any Widget into an iOS Button
+
+Transform any widget into a fully styled `CupertinoButton`, with fluent syntax and optional variants for filled or tinted styles. These extensions reduce boilerplate while preserving full configurability.
+
+- `cupertinoButton(...)` — Standard iOS-style button.
+- `cupertinoFilledButton(...)` — Filled style, best for emphasis.
+- `cupertinoTintedButton(...)` — Tinted (outlined) style with subtle color emphasis.
+
+Each method returns a `CupertinoButton` and supports all common options, including `pressedOpacity`, `autofocus`, `borderRadius`, and `onLongPress`.
+
+#### 🧪 Examples
+
+```dart
+// Basic Cupertino button
+"Continue".text().cupertinoButton(onPressed: () {});
+```
+
+```dart
+// Filled iOS-style button
+"Submit".text().cupertinoFilledButton(onPressed: () {});
+```
+
+```dart
+// Tinted iOS-style button with border and color
+"Retry".text().cupertinoTintedButton(
+  color: CupertinoColors.systemRed,
+  onPressed: () {},
+);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> CupertinoButton(
+>   child: Text("Continue"),
+>   onPressed: () {},
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> "Continue".text().cupertinoButton(onPressed: () {})
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🖲️ `button` — Instantly Turn Any Widget into a Button
+
+Wrap any widget in a Material Design button with a single method. These extensions let you create `ElevatedButton`, `FilledButton`, `OutlinedButton`, and `TextButton` variants with or without icons—without boilerplate.
+
+#### ✅ Supported Types
+
+- `elevatedButton({onPressed})`
+- `elevatedIconButton({onPressed, icon})`
+- `filledButton({onPressed})`
+- `filledTonalButton({onPressed})`
+- `filledIconButton({onPressed, icon})`
+- `filledTonalIconButton({onPressed, icon})`
+- `outlinedButton({onPressed})`
+- `outlinedIconButton({onPressed, icon})`
+- `textButton({onPressed})`
+- `textIconButton({onPressed, icon})`
+
+Each method supports full customization via Flutter's native parameters:
+`style`, `focusNode`, `clipBehavior`, `onHover`, `autofocus`, `statesController`, and more.
+
+---
+
+#### 🧪 Examples
+
+```dart
+// Basic elevated button
+"Submit".text().elevatedButton(onPressed: () => print("Tapped"))
+```
+
+```dart
+// Filled button with icon
+"Send".text().filledIconButton(
+  onPressed: () => print("Sent"),
+  icon: const Icon(Icons.send),
+)
+```
+
+```dart
+// Text button, semantic only
+"Cancel".text().textButton(onPressed: () => print("Canceled"))
+```
+
+```dart
+// Outlined button with icon and custom style
+"Info".text().outlinedIconButton(
+  onPressed: () {},
+  icon: const Icon(Icons.info_outline),
+  style: OutlinedButton.styleFrom(
+    foregroundColor: Colors.blue,
+  ),
+)
+```
+
+---
+
+> 💡 Instead of writing:
+>
+> ```dart
+> ElevatedButton(
+>   onPressed: () {},
+>   child: Text("Confirm"),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> "Confirm".text().elevatedButton(onPressed: () {})
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
