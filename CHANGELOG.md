@@ -1,6 +1,7 @@
-## NEXT
+## 1.0.2
 
 - Improved README navigation
+- Added proper documentation to all extensions
 
 ## 1.0.1
 
