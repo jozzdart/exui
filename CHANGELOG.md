@@ -1,3 +1,7 @@
+## NEXT
+
+- Improved README navigation
+
 ## 1.0.1
 
 - Fixed README links
