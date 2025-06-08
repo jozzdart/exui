@@ -38,27 +38,27 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 `exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group.
 
 [📝 `text` - String to Widget](#-text--turn-any-string-into-a-text-widget)  
-[🎛️ `styled text` - style text fast](#️-textstyled--modify-and-style-text-widgets-easily)  
-[👁️ `visible` - Conditional Visibility](#️-visible--conditional-visibility-for-widgets)  
-[🌫️ `opacity` - Widget Transparency](#️-opacity--control-widget-transparency)  
+[🎛️ `styled text` - style text fast](#️-styled-text---modify-and-style-text-widgets-easily)  
+[👁️ `visible` - Conditional Visibility](#️-visible---conditional-visibility-for-widgets)  
+[🌫️ `opacity` - Widget Transparency](#️-opacity---control-widget-transparency)  
 [🔣 `icon` - Create and Style Icons](#-icon--quickly-create-and-style-icons)  
 [📏 `padding` - Add Padding fast](#-padding--add-padding-to-any-widget)  
 [➖ `margin` - Add Outer Spacing fast](#-margin--add-outer-spacing-around-widgets)  
 [🎯 `center` - Center Widgets fast](#-center--center-your-widget-with-optional-factors)  
 [📐 `align` - Position Widgets fast](#-align--position-a-widget-precisely)  
 [📍 `positioned` - Position Inside a Stack](#-positioned--position-widgets-inside-a-stack)  
-[↔️ `expanded` - Fill Available Space](#️-expanded--make-widgets-fill-available-space)  
+[↔️ `expanded` - Fill Available Space](#️-expanded---make-widgets-fill-available-space)  
 [🧬 `flex` - fast Flexibles](#-flex--flexible-layouts-with-fine-tuned-control)  
 [🔳 `intrinsic` - Size Widgets](#-intrinsic--size-widgets-to-their-natural-dimensions)  
 [🧱 `row` / `column` - Rapid Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
 [📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
-[↕️ `gap` - fast gaps native flutter](#️-gap--add-spacing-using-double-extensions)  
+[↕️ `gap` - fast gaps native flutter](#️-gap---add-spacing-using-double-extensions)  
 [🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
 [🟥 `coloredBox` - Wrap in a Colored Box](#-coloredbox--add-background-color-to-any-widget)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
-[✂️ `clip` - Clip Widgets into Shapes](#️-clip--clip-widgets-into-shapes)  
+[✂️ `clip` - Clip Widgets into Shapes](#️-clip---clip-widgets-into-shapes)  
 [🪞 `fittedBox` - Fit Widgets](#-fit--control-how-widgets-scale-to-fit)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
@@ -80,7 +80,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 
 #### Material Extensions (Google)
 
-- 🖲️ [`button` - buttons](#️-button--instantly-turn-any-widget-into-a-button)
+- 🖲️ [`button` - buttons](#️-button---instantly-turn-any-widget-into-a-button)
 - 🎨 [`coloredBox` - background color](#-material-coloredbox--background-color-with-one-line)
 
 ---
@@ -201,7 +201,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### 🎛️ `text.styled()` — Modify and Style `Text` Widgets Easily
+### 🎛️ `styled text` - Modify and Style `Text` Widgets Easily
 
 Powerfully enhance your `Text` widgets with dozens of chainable extensions. Control alignment, overflow, semantics, and apply fine-grained styling—without verbose `TextStyle` blocks.
 
@@ -284,7 +284,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### 👁️ `visible` — Conditional Visibility for Widgets
+### 👁️ `visible` - Conditional Visibility for Widgets
 
 Simplify visibility logic in your widget tree with expressive, chainable methods. These extensions replace repetitive ternary conditions and help keep your UI code declarative and clean.
 
@@ -347,7 +347,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### 🌫️ `opacity` — Control Widget Transparency
+### 🌫️ `opacity` - Control Widget Transparency
 
 Quickly apply opacity to any widget using clean, expressive methods. These extensions eliminate the need to wrap widgets manually in `Opacity` and support percentage-based and common preset values.
 
@@ -777,7 +777,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### ↔️ `expanded` — Make Widgets Fill Available Space
+### ↔️ `expanded` - Make Widgets Fill Available Space
 
 Add layout flexibility with zero boilerplate. These extensions wrap your widget in an `Expanded`, allowing you to quickly define how much space it should take relative to its siblings.
 
@@ -1006,6 +1006,8 @@ Effortlessly create `Row` and `Column` layouts with readable, inline extensions.
 >    Icons.star.icon(),
 > ].column(spacing: 8)
 > ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
@@ -1368,7 +1370,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### ↕️ `gap` — Add Spacing Using Double Extensions
+### ↕️ `gap` - Add Spacing Using Double Extensions
 
 Use doubles to create `SizedBox` widgets with clear, expressive syntax. These extensions turn raw numbers into layout spacing—perfect for columns, rows, and consistent vertical/horizontal gaps.
 
@@ -1857,7 +1859,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### ✂️ `clip` — Clip Widgets into Shapes
+### ✂️ `clip` - Clip Widgets into Shapes
 
 Easily apply clipping to any widget using expressive, chainable methods. These extensions eliminate boilerplate when working with `ClipPath`, `ClipRRect`, `ClipOval`, and even advanced shapes like squircles.
 
@@ -2096,7 +2098,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### 🖲️ `button` — Instantly Turn Any Widget into a Button
+### 🖲️ `button` - Instantly Turn Any Widget into a Button
 
 Wrap any widget in a Material Design button with a single method. These extensions let you create `ElevatedButton`, `FilledButton`, `OutlinedButton`, and `TextButton` variants with or without icons—without boilerplate.
 
