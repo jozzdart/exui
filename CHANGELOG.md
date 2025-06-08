@@ -1,3 +1,8 @@
+## 1.0.1
+
+- Fixed README links
+- Added `gap` extensions to the README
+
 ## 1.0.0
 
 - Added `opacityZero`, `opacityTransparent`, and `opacityInvisible` methods to `OpacityWidgetExtension` for improved opacity control
