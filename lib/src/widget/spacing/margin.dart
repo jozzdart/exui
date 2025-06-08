@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 
 extension MarginWidgetExtension on Widget {
-  Widget margin(EdgeInsets margin) => Container(
+  Container margin(EdgeInsets margin) => Container(
         margin: margin,
         child: this,
       );
 
-  Widget marginAll(double margin) => this.margin(EdgeInsets.all(margin));
+  Container marginAll(double margin) => this.margin(EdgeInsets.all(margin));
 
-  Widget marginOnly({
+  Container marginOnly({
     double? top,
     double? left,
     double? right,
@@ -21,7 +21,7 @@ extension MarginWidgetExtension on Widget {
         bottom: bottom ?? 0,
       ));
 
-  Widget marginSymmetric({
+  Container marginSymmetric({
     double horizontal = 0,
     double vertical = 0,
   }) =>
@@ -32,16 +32,17 @@ extension MarginWidgetExtension on Widget {
         ),
       );
 
-  Widget marginHorizontal(double horizontal) =>
+  Container marginHorizontal(double horizontal) =>
       marginSymmetric(horizontal: horizontal);
 
-  Widget marginVertical(double vertical) => marginSymmetric(vertical: vertical);
+  Container marginVertical(double vertical) =>
+      marginSymmetric(vertical: vertical);
 
-  Widget marginTop(double top) => marginOnly(top: top);
+  Container marginTop(double top) => marginOnly(top: top);
 
-  Widget marginLeft(double left) => marginOnly(left: left);
+  Container marginLeft(double left) => marginOnly(left: left);
 
-  Widget marginRight(double right) => marginOnly(right: right);
+  Container marginRight(double right) => marginOnly(right: right);
 
-  Widget marginBottom(double bottom) => marginOnly(bottom: bottom);
+  Container marginBottom(double bottom) => marginOnly(bottom: bottom);
 }

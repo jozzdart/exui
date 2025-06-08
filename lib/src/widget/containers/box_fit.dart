@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension BoxFitWidgetExtensions on Widget {
-  Widget fittedBox({
+  FittedBox fittedBox({
     BoxFit fit = BoxFit.contain,
     AlignmentGeometry alignment = Alignment.center,
     Clip clipBehavior = Clip.none,
@@ -13,17 +13,53 @@ extension BoxFitWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget fitContain() => fittedBox(fit: BoxFit.contain);
+  FittedBox fitContain({
+    AlignmentGeometry alignment = Alignment.center,
+    Clip clipBehavior = Clip.none,
+  }) =>
+      fittedBox(
+        fit: BoxFit.contain,
+        alignment: alignment,
+        clipBehavior: clipBehavior,
+      );
 
-  Widget fitCover() => fittedBox(fit: BoxFit.cover);
+  FittedBox fitCover({
+    AlignmentGeometry alignment = Alignment.center,
+    Clip clipBehavior = Clip.none,
+  }) =>
+      fittedBox(
+        fit: BoxFit.cover,
+        alignment: alignment,
+        clipBehavior: clipBehavior,
+      );
 
-  Widget fitFill() => fittedBox(fit: BoxFit.fill);
+  FittedBox fitFill({
+    AlignmentGeometry alignment = Alignment.center,
+    Clip clipBehavior = Clip.none,
+  }) =>
+      fittedBox(
+        fit: BoxFit.fill,
+        alignment: alignment,
+        clipBehavior: clipBehavior,
+      );
 
-  Widget fitNone() => fittedBox(fit: BoxFit.none);
+  FittedBox fitScaleDown({
+    AlignmentGeometry alignment = Alignment.center,
+    Clip clipBehavior = Clip.none,
+  }) =>
+      fittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: alignment,
+        clipBehavior: clipBehavior,
+      );
 
-  Widget fitScaleDown() => fittedBox(fit: BoxFit.scaleDown);
-
-  Widget fitWidth() => fittedBox(fit: BoxFit.fitWidth);
-
-  Widget fitHeight() => fittedBox(fit: BoxFit.fitHeight);
+  FittedBox fitHeight({
+    AlignmentGeometry alignment = Alignment.center,
+    Clip clipBehavior = Clip.none,
+  }) =>
+      fittedBox(
+        fit: BoxFit.fitHeight,
+        alignment: alignment,
+        clipBehavior: clipBehavior,
+      );
 }

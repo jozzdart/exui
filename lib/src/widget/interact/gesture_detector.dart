@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/gestures.dart';
 
 extension WidgetOnGestureExtension on Widget {
-  Widget detectGestures({
+  GestureDetector gestureDetector({
     // Tap gestures
     GestureTapDownCallback? onTapDown,
     GestureTapUpCallback? onTapUp,
@@ -160,7 +160,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTap(
+  GestureDetector onTap(
     VoidCallback onTap, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -181,7 +181,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTapDown(
+  GestureDetector onTapDown(
     GestureTapDownCallback onTapDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -202,7 +202,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTapUp(
+  GestureDetector onTapUp(
     GestureTapUpCallback onTapUp, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -223,7 +223,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTapCancel(
+  GestureDetector onTapCancel(
     VoidCallback onTapCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -244,7 +244,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryTap(
+  GestureDetector onSecondaryTap(
     VoidCallback onSecondaryTap, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -265,7 +265,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryTapDown(
+  GestureDetector onSecondaryTapDown(
     GestureTapDownCallback onSecondaryTapDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -286,7 +286,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryTapUp(
+  GestureDetector onSecondaryTapUp(
     GestureTapUpCallback onSecondaryTapUp, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -307,7 +307,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryTapCancel(
+  GestureDetector onSecondaryTapCancel(
     VoidCallback onSecondaryTapCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -328,7 +328,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryTapDown(
+  GestureDetector onTertiaryTapDown(
     GestureTapDownCallback onTertiaryTapDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -349,7 +349,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryTapUp(
+  GestureDetector onTertiaryTapUp(
     GestureTapUpCallback onTertiaryTapUp, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -370,7 +370,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryTapCancel(
+  GestureDetector onTertiaryTapCancel(
     VoidCallback onTertiaryTapCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -391,7 +391,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onDoubleTap(
+  GestureDetector onDoubleTap(
     VoidCallback onDoubleTap, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -412,7 +412,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onDoubleTapDown(
+  GestureDetector onDoubleTapDown(
     GestureTapDownCallback onDoubleTapDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -433,7 +433,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onDoubleTapCancel(
+  GestureDetector onDoubleTapCancel(
     VoidCallback onDoubleTapCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -454,7 +454,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onLongPress(
+  GestureDetector onLongPress(
     VoidCallback onLongPress, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -475,7 +475,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onLongPressDown(
+  GestureDetector onLongPressDown(
     GestureLongPressDownCallback onLongPressDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -496,7 +496,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onLongPressCancel(
+  GestureDetector onLongPressCancel(
     VoidCallback onLongPressCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -517,7 +517,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onLongPressStart(
+  GestureDetector onLongPressStart(
     GestureLongPressStartCallback onLongPressStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -538,7 +538,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onLongPressMoveUpdate(
+  GestureDetector onLongPressMoveUpdate(
     GestureLongPressMoveUpdateCallback onLongPressMoveUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -559,7 +559,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onLongPressUp(
+  GestureDetector onLongPressUp(
     VoidCallback onLongPressUp, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -580,7 +580,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onLongPressEnd(
+  GestureDetector onLongPressEnd(
     GestureLongPressEndCallback onLongPressEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -601,7 +601,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryLongPress(
+  GestureDetector onSecondaryLongPress(
     VoidCallback onSecondaryLongPress, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -622,7 +622,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryLongPressDown(
+  GestureDetector onSecondaryLongPressDown(
     GestureLongPressDownCallback onSecondaryLongPressDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -643,7 +643,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryLongPressCancel(
+  GestureDetector onSecondaryLongPressCancel(
     VoidCallback onSecondaryLongPressCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -664,7 +664,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryLongPressStart(
+  GestureDetector onSecondaryLongPressStart(
     GestureLongPressStartCallback onSecondaryLongPressStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -685,7 +685,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryLongPressMoveUpdate(
+  GestureDetector onSecondaryLongPressMoveUpdate(
     GestureLongPressMoveUpdateCallback onSecondaryLongPressMoveUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -706,7 +706,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryLongPressUp(
+  GestureDetector onSecondaryLongPressUp(
     VoidCallback onSecondaryLongPressUp, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -727,7 +727,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onSecondaryLongPressEnd(
+  GestureDetector onSecondaryLongPressEnd(
     GestureLongPressEndCallback onSecondaryLongPressEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -748,7 +748,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryLongPress(
+  GestureDetector onTertiaryLongPress(
     VoidCallback onTertiaryLongPress, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -769,7 +769,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryLongPressDown(
+  GestureDetector onTertiaryLongPressDown(
     GestureLongPressDownCallback onTertiaryLongPressDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -790,7 +790,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryLongPressCancel(
+  GestureDetector onTertiaryLongPressCancel(
     VoidCallback onTertiaryLongPressCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -811,7 +811,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryLongPressStart(
+  GestureDetector onTertiaryLongPressStart(
     GestureLongPressStartCallback onTertiaryLongPressStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -832,7 +832,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryLongPressMoveUpdate(
+  GestureDetector onTertiaryLongPressMoveUpdate(
     GestureLongPressMoveUpdateCallback onTertiaryLongPressMoveUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -853,7 +853,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryLongPressUp(
+  GestureDetector onTertiaryLongPressUp(
     VoidCallback onTertiaryLongPressUp, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -874,7 +874,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onTertiaryLongPressEnd(
+  GestureDetector onTertiaryLongPressEnd(
     GestureLongPressEndCallback onTertiaryLongPressEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -895,7 +895,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onVerticalDragDown(
+  GestureDetector onVerticalDragDown(
     GestureDragDownCallback onVerticalDragDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -916,7 +916,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onVerticalDragStart(
+  GestureDetector onVerticalDragStart(
     GestureDragStartCallback onVerticalDragStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -937,7 +937,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onVerticalDragUpdate(
+  GestureDetector onVerticalDragUpdate(
     GestureDragUpdateCallback onVerticalDragUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -958,7 +958,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onVerticalDragEnd(
+  GestureDetector onVerticalDragEnd(
     GestureDragEndCallback onVerticalDragEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -979,7 +979,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onVerticalDragCancel(
+  GestureDetector onVerticalDragCancel(
     VoidCallback onVerticalDragCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1000,7 +1000,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onHorizontalDragDown(
+  GestureDetector onHorizontalDragDown(
     GestureDragDownCallback onHorizontalDragDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1021,7 +1021,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onHorizontalDragStart(
+  GestureDetector onHorizontalDragStart(
     GestureDragStartCallback onHorizontalDragStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1042,7 +1042,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onHorizontalDragUpdate(
+  GestureDetector onHorizontalDragUpdate(
     GestureDragUpdateCallback onHorizontalDragUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1063,7 +1063,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onHorizontalDragEnd(
+  GestureDetector onHorizontalDragEnd(
     GestureDragEndCallback onHorizontalDragEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1084,7 +1084,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onHorizontalDragCancel(
+  GestureDetector onHorizontalDragCancel(
     VoidCallback onHorizontalDragCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1105,7 +1105,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onPanDown(
+  GestureDetector onPanDown(
     GestureDragDownCallback onPanDown, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1126,7 +1126,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onPanStart(
+  GestureDetector onPanStart(
     GestureDragStartCallback onPanStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1147,7 +1147,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onPanUpdate(
+  GestureDetector onPanUpdate(
     GestureDragUpdateCallback onPanUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1168,7 +1168,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onPanEnd(
+  GestureDetector onPanEnd(
     GestureDragEndCallback onPanEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1189,7 +1189,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onPanCancel(
+  GestureDetector onPanCancel(
     VoidCallback onPanCancel, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1210,7 +1210,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onScaleStart(
+  GestureDetector onScaleStart(
     GestureScaleStartCallback onScaleStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1231,7 +1231,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onScaleUpdate(
+  GestureDetector onScaleUpdate(
     GestureScaleUpdateCallback onScaleUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1252,7 +1252,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onScaleEnd(
+  GestureDetector onScaleEnd(
     GestureScaleEndCallback onScaleEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1273,7 +1273,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onForcePressStart(
+  GestureDetector onForcePressStart(
     GestureForcePressStartCallback onForcePressStart, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1294,7 +1294,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onForcePressPeak(
+  GestureDetector onForcePressPeak(
     GestureForcePressPeakCallback onForcePressPeak, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1315,7 +1315,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onForcePressUpdate(
+  GestureDetector onForcePressUpdate(
     GestureForcePressUpdateCallback onForcePressUpdate, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,
@@ -1336,7 +1336,7 @@ extension WidgetOnGestureExtension on Widget {
     );
   }
 
-  Widget onForcePressEnd(
+  GestureDetector onForcePressEnd(
     GestureForcePressEndCallback onForcePressEnd, {
     HitTestBehavior? behavior,
     bool excludeFromSemantics = false,

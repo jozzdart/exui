@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 extension ContainerWidgetExtension on Widget {
-  Widget container({
-    Key? key,
+  Container container({
     double? width,
     double? height,
     Color? color,
@@ -14,7 +13,6 @@ extension ContainerWidgetExtension on Widget {
     Clip clipBehavior = Clip.none,
   }) =>
       Container(
-        key: key,
         width: width,
         height: height,
         color: color,

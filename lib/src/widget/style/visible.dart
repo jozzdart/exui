@@ -10,9 +10,9 @@ extension VisibleWidgetExtension on Widget {
 
   Widget visibleIfNotNull(Object? value) => visibleIf(value != null);
 
-  Widget boxShrink() => const SizedBox.shrink();
+  SizedBox boxShrink() => const SizedBox.shrink();
 
-  Widget hide() => const SizedBox.shrink();
+  SizedBox hide() => const SizedBox.shrink();
 
-  Widget invisible() => const SizedBox.shrink();
+  SizedBox invisible() => const SizedBox.shrink();
 }

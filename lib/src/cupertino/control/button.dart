@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
 extension CupertinoButtonWidgetExtensions on Widget {
-  Widget cupertinoButton({
+  CupertinoButton cupertinoButton({
     CupertinoButtonSize sizeStyle = CupertinoButtonSize.large,
     EdgeInsetsGeometry? padding,
     Color? color,
     Color disabledColor = CupertinoColors.quaternarySystemFill,
-    double? minSize,
+    @Deprecated('Use minimumSize instead') double? minSize,
+    Size? minimumSize,
     double? pressedOpacity = 0.4,
     BorderRadius? borderRadius,
     AlignmentGeometry alignment = Alignment.center,
@@ -22,7 +23,8 @@ extension CupertinoButtonWidgetExtensions on Widget {
         padding: padding,
         color: color,
         disabledColor: disabledColor,
-        minSize: minSize,
+        minimumSize:
+            minimumSize ?? (minSize != null ? Size(minSize, minSize) : null),
         pressedOpacity: pressedOpacity,
         borderRadius: borderRadius,
         alignment: alignment,
@@ -35,11 +37,12 @@ extension CupertinoButtonWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget cupertinoFilledButton({
+  CupertinoButton cupertinoFilledButton({
     CupertinoButtonSize sizeStyle = CupertinoButtonSize.large,
     EdgeInsetsGeometry? padding,
     Color disabledColor = CupertinoColors.tertiarySystemFill,
-    double? minSize,
+    @Deprecated('Use minimumSize instead') double? minSize,
+    Size? minimumSize,
     double? pressedOpacity = 0.4,
     BorderRadius? borderRadius,
     AlignmentGeometry alignment = Alignment.center,
@@ -54,7 +57,8 @@ extension CupertinoButtonWidgetExtensions on Widget {
         sizeStyle: sizeStyle,
         padding: padding,
         disabledColor: disabledColor,
-        minSize: minSize,
+        minimumSize:
+            minimumSize ?? (minSize != null ? Size(minSize, minSize) : null),
         pressedOpacity: pressedOpacity,
         borderRadius: borderRadius,
         alignment: alignment,
@@ -67,12 +71,13 @@ extension CupertinoButtonWidgetExtensions on Widget {
         child: this,
       );
 
-  Widget cupertinoTintedButton({
+  CupertinoButton cupertinoTintedButton({
     CupertinoButtonSize sizeStyle = CupertinoButtonSize.large,
     EdgeInsetsGeometry? padding,
     Color? color,
     Color disabledColor = CupertinoColors.tertiarySystemFill,
-    double? minSize,
+    @Deprecated('Use minimumSize instead') double? minSize,
+    Size? minimumSize,
     double? pressedOpacity = 0.4,
     BorderRadius? borderRadius,
     AlignmentGeometry alignment = Alignment.center,
@@ -88,7 +93,8 @@ extension CupertinoButtonWidgetExtensions on Widget {
         padding: padding,
         color: color,
         disabledColor: disabledColor,
-        minSize: minSize,
+        minimumSize:
+            minimumSize ?? (minSize != null ? Size(minSize, minSize) : null),
         pressedOpacity: pressedOpacity,
         borderRadius: borderRadius,
         alignment: alignment,

@@ -1,3 +1,12 @@
+## 1.0.0
+
+- Added `opacityZero`, `opacityTransparent`, and `opacityInvisible` methods to `OpacityWidgetExtension` for improved opacity control
+- Renamed `detectGestures` to `gestureDetector` in `GestureDetectorWidgetExtension` for improved clarity
+- Added additional parameters to `HeroWidgetExtension` for improved hero animation control
+- Changed all `Widget` extensions to return the same type as the extension method
+- Added `sizedWidth`, `sizedHeight`, `gapHorizontal`, `gapVertical`, `gapHeight`, and `gapWidth` extensions to `double` for fast gaps
+- Added `opacity`, `sizedBox`, `decoratedBox`, `gesture`, `hero`, `constrained` and all remaining extensions to the README
+
 ## 0.0.22
 
 - Improved documentation
