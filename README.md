@@ -301,31 +301,31 @@ All methods return valid widgets and are safe to chain inside build methods.
 #### 🧪 Examples
 
 ```dart
-"Welcome".text().visibleIf(isLoggedIn); // Show only if condition is true
+MyWidget().visibleIf(isLoggedIn); // Show only if condition is true
 ```
 
 ```dart
-"Not logged in".text().visibleIfNot(isLoggedIn); // Show only if condition is false
+MyWidget().visibleIfNot(isLoggedIn); // Show only if condition is false
 ```
 
 ```dart
-"Missing info".text().visibleIfNull(user); // Show only if value is null
+MyWidget().visibleIfNull(user); // Show only if value is null
 ```
 
 ```dart
-"Edit profile".text().visibleIfNotNull(user); // Show only if value is not null
+MyWidget().visibleIfNotNull(user); // Show only if value is not null
 ```
 
 ```dart
-"Hidden message".text().hide(); // Always hidden
+MyWidget().hide(); // Always hidden
 ```
 
 ```dart
-"Not visible".text().invisible(); // Same as hide(), for clarity
+MyWidget().invisible(); // Same as hide(), for clarity
 ```
 
 ```dart
-final emptyBox = "Unused".text().boxShrink(); // Returns an empty widget directly
+final emptyBox = MyWidget().boxShrink(); // Returns an empty widget directly
 ```
 
 > 💡 **Why use this?**
@@ -366,21 +366,21 @@ All methods return a wrapped `Opacity` widget and are safe to chain with other e
 Set to `70%` visible
 
 ```dart
-"Hello".text().opacity(0.7);
+MyWidget().opacity(0.7);
 ```
 
 Set to `40%` using percent
 
 ```dart
-"Faded".text().opacityPercent(40);
+MyWidget().opacityPercent(40);
 ```
 
 ```dart
-"50/50".text().opacityHalf(); // Half visible (0.5)
+MyWidget().opacityHalf(); // Half visible (0.5)
 ```
 
 ```dart
-"Subtle".text().opacityQuarter(); // Quarter visible (0.25)
+MyWidget().opacityQuarter(); // Quarter visible (0.25)
 ```
 
 > 💡 Instead of writing:
@@ -495,22 +495,22 @@ All methods return a wrapped `Padding` widget and can be freely chained with oth
 
 ```dart
 // 12px padding on all sides
-"Hello".text().paddingAll(12);
+MyWidget().paddingAll(12);
 ```
 
 ```dart
 // 16px left and right, 8px top and bottom
-"Box".text().paddingSymmetric(horizontal: 16, vertical: 8);
+MyWidget().paddingSymmetric(horizontal: 16, vertical: 8);
 ```
 
 ```dart
 // 10px padding only on the left
-"Back".text().paddingLeft(10);
+MyWidget().paddingLeft(10);
 ```
 
 ```dart
 // Custom per-side padding
-"Margin".text().paddingOnly(left: 8, top: 4, bottom: 12);
+MyWidget().paddingOnly(left: 8, top: 4, bottom: 12);
 ```
 
 > 💡 **Why use this?**
@@ -613,22 +613,22 @@ All methods return a `Center` widget and can be seamlessly chained with other ex
 
 ```dart
 // Center without size constraints
-"Centered".text().center();
+MyWidget().center();
 ```
 
 ```dart
 // Center and shrink-wrap width only
-"Shrink X".text().centerWidth(1);
+MyWidget().centerWidth(1);
 ```
 
 ```dart
 // Center and shrink-wrap height only
-"Shrink Y".text().centerHeight(1);
+MyWidget().centerHeight(1);
 ```
 
 ```dart
 // Fully customized centering
-"Shrink both".text().center(widthFactor: 0.8, heightFactor: 0.5);
+MyWidget().center(widthFactor: 0.8, heightFactor: 0.5);
 ```
 
 > 💡 Instead of writing:
@@ -674,17 +674,17 @@ All methods return an `Align` widget and are safe to use inside any layout conte
 
 ```dart
 // Center the widget (default)
-"Centered".text().alignCenter();
+MyWidget().alignCenter();
 ```
 
 ```dart
 // Align to bottom-right
-"Download".text().alignBottomRight();
+MyWidget().alignBottomRight();
 ```
 
 ```dart
 // Top-left aligned with width factor
-"Logo".text().alignTopLeft().align(widthFactor: 2);
+MyWidget().alignTopLeft().align(widthFactor: 2);
 ```
 
 > 💡 Instead of writing:
@@ -730,24 +730,22 @@ All methods return a `Positioned` widget and are designed to be composed fluentl
 
 ```dart
 // Position 10px from top and left
-"Hello".text().positioned(top: 10, left: 10);
+MyWidget().positioned(top: 10, left: 10);
 ```
 
 ```dart
 // Set only the width, auto-positioned
-"Wide".text().positionedWidth(200);
+MyWidget().positionedWidth(200);
 ```
 
 ```dart
 // Position from bottom with fixed height
-"Footer".text().positionedBottom(0).positionedHeight(60);
+MyWidget().positionedBottom(0).positionedHeight(60);
 ```
 
 ```dart
 // Custom full placement
-"Box"
-  .text()
-  .positioned(top: 12, right: 16, width: 150);
+MyWidget().positioned(top: 12, right: 16, width: 150);
 ```
 
 > 💡 Instead of writing:
@@ -793,17 +791,17 @@ Use them in `Row`, `Column`, or `Flex` to control space distribution without nes
 
 ```dart
 // Flex: 1 (default)
-"Item".text().expanded;
+MyWidget().expanded;
 ```
 
 ```dart
 // Flex: 2
-"Item".text().expanded2;
+MyWidget().expanded2;
 ```
 
 ```dart
 // Flex: 5
-"Item".text().expandedFlex(5);
+MyWidget().expandedFlex(5);
 ```
 
 > 💡 Instead of writing:
@@ -842,27 +840,27 @@ All methods return a `Flexible` widget and are safe to chain with other layout o
 
 ```dart
 // Default: flex 1, loose fit
-"Flexible".text().flex();
+MyWidget().flex();
 ```
 
 ```dart
 // Predefined: flex 3, loose fit
-"Main".text().flex3();
+MyWidget().flex3();
 ```
 
 ```dart
 // Custom: flex 4, tight fit
-"Filled".text().flex(flex: 4, fit: FlexFit.tight);
+MyWidget().flex(flex: 4, fit: FlexFit.tight);
 ```
 
 ```dart
 // Loose-fit with custom flex
-"Side".text().flexLoose(2);
+MyWidget().flexLoose(2);
 ```
 
 ```dart
 // Tight-fit with custom flex
-"Primary".text().flexTight(6);
+MyWidget().flexTight(6);
 ```
 
 > 💡 Instead of writing:
@@ -958,16 +956,16 @@ Effortlessly create `Row` and `Column` layouts with readable, inline extensions.
 ```dart
 // Two widgets in a Row with spacing
 [
-  "A".text(),
-  "B".text(),
+  WidgetOne(),
+  WidgetTwo(),
 ].row(spacing: 12);
 ```
 
 ```dart
 // Vertical layout with alignment and spacing
 [
-  Icons.star.icon(),
-  "Favorite".text(),
+  WidgetOne(),
+  WidgetTwo(),
 ].column(
   mainAxisAlignment: MainAxisAlignment.center,
   spacing: 8,
@@ -976,12 +974,12 @@ Effortlessly create `Row` and `Column` layouts with readable, inline extensions.
 
 ```dart
 // Single widget inside a Row
-"Item".text().row();
+MyWidget().row();
 ```
 
 ```dart
 // Puts a single widget in a column with center alignment
-"Alone".text().column(
+MyWidget().column(
   mainAxisAlignment: MainAxisAlignment.center,
 );
 ```
@@ -992,8 +990,8 @@ Effortlessly create `Row` and `Column` layouts with readable, inline extensions.
 > Column(
 >   spacing: 8,
 >   children: [
->     Text("Hello"),
->     Icon(Icons.star),
+>     WidgetOne(),
+>     WidgetTwo(),
 >   ],
 > )
 > ```
@@ -1002,8 +1000,8 @@ Effortlessly create `Row` and `Column` layouts with readable, inline extensions.
 >
 > ```dart
 > [
->   "Hello".text(),
->    Icons.star.icon(),
+>    WidgetOne(),
+>    WidgetTwo(),
 > ].column(spacing: 8)
 > ```
 
@@ -1217,32 +1215,32 @@ These shortcuts reduce boilerplate and keep your layout code highly consistent a
 ```dart
 // Centered row, aligned to top
 [
-  Icons.star.icon(), // same as Icon(Icons.star)
-  "Favorite".text(), // same as Text("Favorite")
+  WidgetOne(),
+  WidgetTwo(),
 ].rowCenterStart();
 ```
 
 ```dart
 // Horizontal space between, vertically stretched
 [
-  Text("Left"),
-  Text("Right"),
+  WidgetOne(),
+  WidgetTwo(),
 ].rowSpaceBetweenStretch();
 ```
 
 ```dart
 // Apply only main alignment, customize cross
 [
-  Text("Tab 1"),
-  Text("Tab 2"),
+  WidgetOne(),
+  WidgetTwo(),
 ].rowMainEnd(crossAxisAlignment: CrossAxisAlignment.start);
 ```
 
 ```dart
 // Apply only cross alignment, keep full control of main
 [
-  "Bottom Aligned".text(), // same as Text("Bottom Aligned")
-  Text("Also Bottom"),
+  WidgetOne(),
+  WidgetTwo(),
 ].rowCrossEnd(mainAxisAlignment: MainAxisAlignment.center);
 ```
 
@@ -1271,24 +1269,24 @@ Build layered UI structures with intuitive, chainable extensions. These methods 
 ```dart
 // Default stack with loose fit
 [
-  "Base".text(),
-  "Overlay".text().positionedTop(0),
+  WidgetOne(),
+  WidgetTwo().positionedTop(0),
 ].stack();
 ```
 
 ```dart
 // Stack with expanded fit
 [
-  Image.asset("bg.png"),
-  "Play".text().positionedBottom(0),
+  WidgetOne(),
+  WidgetTwo().positionedBottom(0),
 ].stackExpand();
 ```
 
 ```dart
 // Stack with passthrough sizing
 [
-  Icons.circle.icon(), // same as Icon(Icons.circle)
-  Icon(Icons.star),
+  WidgetOne(),
+  WidgetTwo(),
 ].stackPassthrough();
 ```
 
@@ -1304,7 +1302,7 @@ Build layered UI structures with intuitive, chainable extensions. These methods 
 
 ```dart
 // A single widget wrapped in a Stack
-"Overlay".text().stack();
+MyWidget().stack();
 ```
 
 > 💡 Instead of writing:
@@ -1341,17 +1339,17 @@ All methods return a `SizedBox` with your widget as the child, and are safe to c
 
 ```dart
 // Fixed width and height
-"Button".text().sizedBox(width: 120, height: 40);
+MyWidget().sizedBox(width: 120, height: 40);
 ```
 
 ```dart
 // Only width
-"Label".text().sizedWidth(200);
+MyWidget().sizedWidth(200);
 ```
 
 ```dart
 // Only height
-"Spacer".text().sizedHeight(60);
+MyWidget().sizedHeight(60);
 ```
 
 > 💡 Instead of writing:
@@ -1407,9 +1405,9 @@ All extensions return a `SizedBox` and are ideal for use in layouts to avoid mag
 // Clean Row layout
 Row(
   children: [
-    Icon(Icons.star),
+    WidgetOne(),
     12.0.gapRow,
-    Text("Starred"),
+    WidgetTwo(),
   ],
 )
 ```
@@ -1418,9 +1416,9 @@ Row(
 // Clean Column layout
 Column(
   children: [
-    Text("Title"),
+    WidgetOne(),
     16.0.gapColumn,
-    Text("Subtitle"),
+    WidgetTwo(),
   ],
 )
 ```
@@ -1450,14 +1448,14 @@ All methods return a `DecoratedBox` and can be safely combined with padding, opa
 
 ```dart
 // Apply a gradient background
-"Gradient".text().gradientBox(
+MyWidget().gradientBox(
   LinearGradient(colors: [Colors.purple, Colors.blue]),
 );
 ```
 
 ```dart
 // Add a background image
-"With image".text().imageBox(
+MyWidget().imageBox(
   image: NetworkImage("https://example.com/image.png"),
   fit: BoxFit.cover,
 );
@@ -1465,7 +1463,7 @@ All methods return a `DecoratedBox` and can be safely combined with padding, opa
 
 ```dart
 // Add a shadow
-"Shadowed".text().shadowedBox(
+MyWidget().shadowedBox(
   offset: Offset(2, 2),
   blurRadius: 6,
 );
@@ -1473,7 +1471,7 @@ All methods return a `DecoratedBox` and can be safely combined with padding, opa
 
 ```dart
 // Circular border
-"Border".text().circularBorderBox(
+MyWidget().circularBorderBox(
   radius: 12,
   color: Colors.red,
   width: 2,
@@ -1482,7 +1480,7 @@ All methods return a `DecoratedBox` and can be safely combined with padding, opa
 
 ```dart
 // Full decorated box manually
-"Custom".text().decoratedBoxDecoration(
+MyWidget().decoratedBoxDecoration(
   color: Colors.grey.shade100,
   border: Border.all(color: Colors.black26),
   borderRadius: BorderRadius.circular(8),
@@ -1531,22 +1529,22 @@ All methods return a `ConstrainedBox` and are safe to chain in layout compositio
 
 ```dart
 // Limit to a width between 100–200
-"Wide".text().constrainedWidth(min: 100, max: 200);
+MyWidget().constrainedWidth(min: 100, max: 200);
 ```
 
 ```dart
 // Limit to a height between 50–100
-"Short".text().constrainedHeight(min: 50, max: 100);
+MyWidget().constrainedHeight(min: 50, max: 100);
 ```
 
 ```dart
 // Only limit max height
-"Header".text().maxHeight(120);
+MyWidget().maxHeight(120);
 ```
 
 ```dart
 // Fully custom constraints
-"Box".text().constrained(
+MyWidget().constrained(
   minWidth: 80,
   maxWidth: 150,
   minHeight: 40,
@@ -1556,7 +1554,7 @@ All methods return a `ConstrainedBox` and are safe to chain in layout compositio
 
 ```dart
 // Using BoxConstraints directly
-"Box".text().constrainedBox(
+MyWidget().constrainedBox(
   constraints: BoxConstraints.tightFor(width: 100, height: 40),
 );
 ```
@@ -1595,7 +1593,7 @@ Use this to apply color styling in layout compositions without using `Container`
 
 ```dart
 // Red background
-"Label".text().coloredBox(Colors.red);
+MyWidget().coloredBox(Colors.red);
 ```
 
 > 💡 **Why use this?**
@@ -1652,17 +1650,17 @@ All extensions return a `ColoredBox`.
 
 ```dart
 // Add a red background
-"Error".text().redBox();
+MyWidget().redBox();
 ```
 
 ```dart
 // Success message with green accent
-"Success!".text().greenAccentBox();
+MyWidget().greenAccentBox();
 ```
 
 ```dart
 // Stylized button background
-"Click me".text().blueBox().paddingAll(12);
+MyWidget().blueBox().paddingAll(12);
 ```
 
 > 💡 Instead of writing:
@@ -1703,22 +1701,22 @@ All methods return a `ColoredBox` using system-consistent Cupertino color values
 
 ```dart
 // Apply iOS system red background
-"Delete".text().redBox();
+MyWidget().redBox();
 ```
 
 ```dart
 // Use active Cupertino blue
-"Continue".text().activeBlueBox();
+MyWidget().activeBlueBox();
 ```
 
 ```dart
 // Style with light gray background
-"Background".text().lightGrayBox();
+MyWidget().lightGrayBox();
 ```
 
 ```dart
 // Warning or alert color
-"Alert".text().orangeAccentBox();
+MyWidget().orangeAccentBox();
 ```
 
 > 💡 Instead of writing:
@@ -1757,22 +1755,22 @@ All methods return a `FittedBox` and preserve your widget tree cleanly.
 
 ```dart
 // Scale to fit within constraints
-"Resizable".text().fitContain();
+MyWidget().fitContain();
 ```
 
 ```dart
 // Fill the available space
-"Background".image().fitCover();
+MyWidget().fitCover();
 ```
 
 ```dart
 // Scale down only if too large
-"Preview".image().fitScaleDown();
+MyWidget().fitScaleDown();
 ```
 
 ```dart
 // Stretch to fill all dimensions
-"Banner".text().fitFill();
+MyWidget().fitFill();
 ```
 
 > 💡 Instead of writing:
@@ -1812,7 +1810,7 @@ Supports all `Container` options:
 
 ```dart
 // Wrap with background color and padding
-"Boxed".text().container(
+MyWidget().container(
   color: const Color(0xFFE0E0E0),
   padding: const EdgeInsets.all(12),
 );
@@ -1820,7 +1818,7 @@ Supports all `Container` options:
 
 ```dart
 // Add margin and align center
-"Center Me".text().container(
+MyWidget().container(
   margin: const EdgeInsets.symmetric(vertical: 16),
   alignment: Alignment.center,
 );
@@ -1828,7 +1826,7 @@ Supports all `Container` options:
 
 ```dart
 // Fully customized container
-"Styled".text().container(
+MyWidget().container(
   width: 150,
   height: 80,
   decoration: BoxDecoration(
@@ -1939,31 +1937,31 @@ All methods return a wrapped `GestureDetector` and support optional customizatio
 
 ```dart
 // Basic tap interaction
-"Tap me".text().onTap(() => print("Tapped!"));
+MyWidget().onTap(() => print("Tapped!"));
 ```
 
 ```dart
 // Double tap
-"Double tap".text().onDoubleTap(() => print("Double tapped"));
+MyWidget().onDoubleTap(() => print("Double tapped"));
 ```
 
 ```dart
 // Handle tap down position
-"Pressed".text().onTapDown((details) {
+MyWidget().onTapDown((details) {
   print("Tap down at ${details.globalPosition}");
 });
 ```
 
 ```dart
 // Add vertical drag support
-"Drag me".text().onVerticalDragUpdate((details) {
+MyWidget().onVerticalDragUpdate((details) {
   print("Dragging: ${details.delta.dy}");
 });
 ```
 
 ```dart
 // Combine multiple gestures
-"Interact".text().gestureDetector(
+MyWidget().gestureDetector(
   onTap: () => print("Tap"),
   onLongPress: () => print("Long press"),
   onPanUpdate: (details) => print("Panning"),
@@ -2006,13 +2004,12 @@ All options mirror the native `Hero` widget and can be configured inline.
 
 ```dart
 // Basic shared element transition
-Image.asset("avatar.png").hero("profile-avatar");
+MyWidget().hero("profile-avatar");
 ```
 
 ```dart
 // Custom placeholder
-"Title"
-  .text()
+MyWidget()
   .hero(
     "title-hero",
     placeholderBuilder: (context, size, child) =>
@@ -2022,7 +2019,7 @@ Image.asset("avatar.png").hero("profile-avatar");
 
 ```dart
 // With custom flight behavior
-Icon(Icons.star).hero(
+MyWidget().hero(
   "star-icon",
   flightShuttleBuilder: (context, animation, direction, from, to) {
     return ScaleTransition(scale: animation, child: to.widget);
@@ -2063,17 +2060,17 @@ Each method returns a `CupertinoButton` and supports all common options, includi
 
 ```dart
 // Basic Cupertino button
-"Continue".text().cupertinoButton(onPressed: () {});
+Text("Continue").cupertinoButton(onPressed: () {});
 ```
 
 ```dart
 // Filled iOS-style button
-"Submit".text().cupertinoFilledButton(onPressed: () {});
+Text("Submit").cupertinoFilledButton(onPressed: () {});
 ```
 
 ```dart
 // Tinted iOS-style button with border and color
-"Retry".text().cupertinoTintedButton(
+Text("Retry").cupertinoTintedButton(
   color: CupertinoColors.systemRed,
   onPressed: () {},
 );
@@ -2124,12 +2121,12 @@ Each method supports full customization via Flutter's native parameters:
 
 ```dart
 // Basic elevated button
-"Submit".text().elevatedButton(onPressed: () => print("Tapped"))
+Text("Submit").elevatedButton(onPressed: () => print("Tapped"))
 ```
 
 ```dart
 // Filled button with icon
-"Send".text().filledIconButton(
+Text("Send").filledIconButton(
   onPressed: () => print("Sent"),
   icon: const Icon(Icons.send),
 )
@@ -2137,12 +2134,12 @@ Each method supports full customization via Flutter's native parameters:
 
 ```dart
 // Text button, semantic only
-"Cancel".text().textButton(onPressed: () => print("Canceled"))
+Text("Cancel").textButton(onPressed: () => print("Canceled"))
 ```
 
 ```dart
 // Outlined button with icon and custom style
-"Info".text().outlinedIconButton(
+Text("Info").outlinedIconButton(
   onPressed: () {},
   icon: const Icon(Icons.info_outline),
   style: OutlinedButton.styleFrom(
