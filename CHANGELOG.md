@@ -7,6 +7,7 @@ Added detailed tests for all extensions and fixed all issues found
 - Fixed all alignment methods to accept optional parameters
 - Fixed `TextExtensions` to use `with` prefix for all modification methods, was conflicting with getters with same name
 - Fixed `Opacity` extensions asserts
+- Fixed `Icon` modify extensions not working as expected
 
 ### Changed
 
