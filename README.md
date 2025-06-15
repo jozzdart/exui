@@ -18,50 +18,63 @@
 > **Want to 10× your Flutter UI development speed?**  
 > Use `exui`. It’s the fastest way to build clean, maintainable UIs, no wrappers, no boilerplate.
 
-Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. It provides expressive, chainable extensions for **every single Flutter widget**—with no reliance on Material, Cupertino, or external libraries. Just pure Dart and Flutter, designed to work seamlessly in any project.
+Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. It provides expressive, chainable extensions for **most used Flutter widgets**—with no reliance on Material, Cupertino, or external libraries. Just pure Dart and Flutter, designed to work seamlessly in any project.
 
 ### ✅ Features
 
-- **Extensions — for all Flutter widgets.**
+- **Extensions — for most used Flutter widgets. Same names, same behavior.**
 - **Lightweight and efficient** — wraps existing widgets without creating new classes.
 - **Actively maintained** — Production-ready and continuously evolving.
 - **Zero dependencies** - Pure Dart. No bloat. Add it to any project safely.
 - **Exceptional documentation** — every extension is well documented with clear examples and fast navigation.
-- **Gesture extensions** — `.onTap`, `.onLongPress`, `.detectGestures`, and more!
-- **Layout shorthands** — `.paddingAll`, `.centered`, `.expanded`, `.sizedBox`, and more!
-- **Styling utilities** — `.backgroundColor`, `.rounded`, `.border`, `.blur`, and more!
+- **Amazing shorthands** — `.paddingAll`, `.center`, `.expanded`, `.sizedBox`, and more!
 
 ---
 
 ### ✨ All `exui` Extensions:
 
-`exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group.
+`exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group. (Emojis only added to distinguish easily between extensions)
 
-[📝 `text` - String to Widget](#-text--turn-any-string-into-a-text-widget)  
-[🎛️ `styled text` - style text fast](#️-styled-text---modify-and-style-text-widgets-easily)  
-[👁️ `visible` - Conditional Visibility](#️-visible---conditional-visibility-for-widgets)  
-[🌫️ `opacity` - Widget Transparency](#️-opacity---control-widget-transparency)  
-[🔣 `icon` - Create and Style Icons](#-icon--quickly-create-and-style-icons)  
+#### Layout Manipulation
+
 [📏 `padding` - Add Padding fast](#-padding--add-padding-to-any-widget)  
-[➖ `margin` - Add Outer Spacing fast](#-margin--add-outer-spacing-around-widgets)  
 [🎯 `center` - Center Widgets fast](#-center--center-your-widget-with-optional-factors)  
-[📐 `align` - Position Widgets fast](#-align--position-a-widget-precisely)  
-[📍 `positioned` - Position Inside a Stack](#-positioned--position-widgets-inside-a-stack)  
 [↔️ `expanded` - Fill Available Space](#️-expanded---make-widgets-fill-available-space)  
 [🧬 `flex` - fast Flexibles](#-flex--flexible-layouts-with-fine-tuned-control)  
+[📐 `align` - Position Widgets fast](#-align--position-a-widget-precisely)  
+[📍 `positioned` - Position Inside a Stack](#-positioned--position-widgets-inside-a-stack)  
 [🔳 `intrinsic` - Size Widgets](#-intrinsic--size-widgets-to-their-natural-dimensions)  
+[➖ `margin` - Add Outer Spacing fast](#-margin--add-outer-spacing-around-widgets)
+
+#### Layout Creation
+
+[↕️ `gap` - fast gaps native flutter](#️-gap---add-spacing-using-double-extensions)  
 [🧱 `row` / `column` - Rapid Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
-[🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)  
+[🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)
+
+#### Visibility, Transitions & Interactions
+
+[👁️ `visible` - Conditional Visibility](#️-visible---conditional-visibility-for-widgets)  
+[🌫️ `opacity` - Widget Transparency](#️-opacity---control-widget-transparency)  
+[📱 `safeArea` - SafeArea Padding](#-safearea--add-safeareapadding-declaratively)  
+[👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
+[🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
+
+#### Containers & Effects
+
 [📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
-[↕️ `gap` - fast gaps native flutter](#️-gap---add-spacing-using-double-extensions)  
 [🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
 [🟥 `coloredBox` - Wrap in a Colored Box](#-coloredbox--add-background-color-to-any-widget)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
 [✂️ `clip` - Clip Widgets into Shapes](#️-clip---clip-widgets-into-shapes)  
-[🪞 `fittedBox` - Fit Widgets](#-fit--control-how-widgets-scale-to-fit)  
-[👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
-[🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
+[🪞 `fittedBox` - Fit Widgets](#-fit--control-how-widgets-scale-to-fit)
+
+#### Widget Creation
+
+[📝 `text` - String to Widget](#-text--turn-any-string-into-a-text-widget)  
+[🎛️ `styled text` - style text fast](#️-styled-text---modify-and-style-text-widgets-easily)  
+[🔣 `icon` - Create and Style Icons](#-icon--quickly-create-and-style-icons)
 
 > `exui` is built on **pure Flutter** (`flutter/widgets.dart`) and avoids bundling unnecessary Material or Cupertino designs by default. For convenience, optional libraries are provided for those who want seamless integration with Flutter’s built-in design systems.
 
@@ -137,342 +150,6 @@ Welcome to **`exui`**.
 
 ---
 
-### 📝 `text` — Turn Any String into a Text Widget
-
-Effortlessly convert a `String` into a fully configurable `Text` widget. The `.text()` and `.styledText()` extensions make your UI code clean, readable, and expressive — no more boilerplate, no more clutter.
-
-- `.text({...})` — Create a `Text` widget with any native `Text` constructor parameters.
-- `.styledText({...})` — Configure full `TextStyle` in one place: font, color, spacing, shadows, decoration, and more.
-
-Both methods return a standard Flutter `Text` widget — no wrappers, no magic.
-
-#### 🔹 Basic Text
-
-```dart
-"Hello world".text(); // same as Text("Hello world");
-```
-
-```dart
-Text("Hello world"); // same as "Hello world".text();
-```
-
-#### 🔹 Styled Text with Alignment
-
-```dart
-"Hello exui".text(
-  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-  textAlign: TextAlign.center,
-);
-```
-
-```dart
-Text(
-  "Hello exui",
-  style: TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.bold,
-  ),
-  textAlign: TextAlign.center,
-);
-```
-
-#### 🔹 Rich Styling in One Call
-
-```dart
-"Stylish!".styledText(
-  fontSize: 24,
-  fontWeight: FontWeight.w600,
-  color: Colors.purple,
-);
-```
-
-```dart
-Text(
-  "Stylish!",
-  style: TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.w600,
-    color: Colors.purple,
-  ),
-);
-```
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
-### 🎛️ `styled text` - Modify and Style `Text` Widgets Easily
-
-Powerfully enhance your `Text` widgets with dozens of chainable extensions. Control alignment, overflow, semantics, and apply fine-grained styling—without verbose `TextStyle` blocks.
-
-These extensions are non-intrusive, composable, and maintain the immutability of the original widget.
-
-#### 📐 Layout & Metadata Modifiers
-
-- `textAlign(...)`
-- `textDirection(...)`
-- `locale(...)`
-- `softWrap(...)`
-- `overflow(...)`
-- `maxLines(...)`
-- `semanticsLabel(...)`
-- `widthBasis(...)`
-- `heightBehavior(...)`
-- `selectionColor(...)`
-- `strutStyle(...)`
-- `textScaler(...)`
-
-#### 🎨 Style Extensions
-
-Apply full or partial `TextStyle` changes with expressive one-liners:
-
-- `fontSize(...)`
-- `fontWeight(...)`
-- `fontStyle(...)`
-- `letterSpacing(...)`
-- `wordSpacing(...)`
-- `height(...)`
-- `foreground(...)` / `background(...)`
-- `shadows(...)`
-- `fontFeatures(...)` / `fontVariations(...)`
-- `decoration(...)`
-- `decorationColor(...)`
-- `decorationStyle(...)`
-- `decorationThickness(...)`
-- `fontFamily(...)` / `fontFamilyFallback(...)`
-- `leadingDistribution(...)`
-- `debugLabel(...)`
-
-#### ⚡ Expressive Shortcuts
-
-Use simple methods for common typography tasks:
-
-- `bold()`
-- `italic()`
-- `underline()`
-- `strikethrough()`
-- `boldItalic()`
-- `boldUnderline()`
-- `boldStrikethrough()`
-
-#### 🧪 Example
-
-```dart
-"Hello World"
-  .text()
-  .fontSize(20)
-  .boldItalic()
-  .textAlign(TextAlign.center)
-  .maxLines(2)
-  .overflow(TextOverflow.ellipsis);
-```
-
-Or, apply full styling in one go:
-
-```dart
-"Sale!"
-  .text()
-  .styled(
-    fontSize: 24,
-    fontWeight: FontWeight.w900,
-    decoration: TextDecoration.lineThrough,
-    color: Colors.red,
-  );
-```
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
-### 👁️ `visible` - Conditional Visibility for Widgets
-
-Simplify visibility logic in your widget tree with expressive, chainable methods. These extensions replace repetitive ternary conditions and help keep your UI code declarative and clean.
-
-- `visibleIf(bool)` — Show this widget only if the condition is `true`; otherwise returns an empty box.
-- `visibleIfNot(bool)` — Inverse of `visibleIf`.
-- `visibleIfNull(Object?)` — Show this widget only if the given value is `null`.
-- `visibleIfNotNull(Object?)` — Show this widget only if the given value is **not** `null`.
-- `hide()` — Always returns an empty widget (`SizedBox.shrink()`).
-- `invisible()` — Alias of `hide()` for readability.
-- `boxShrink()` — Returns `SizedBox.shrink()` directly.
-
-All methods return valid widgets and are safe to chain inside build methods.
-
-#### 🧪 Examples
-
-```dart
-MyWidget().visibleIf(isLoggedIn); // Show only if condition is true
-```
-
-```dart
-MyWidget().visibleIfNot(isLoggedIn); // Show only if condition is false
-```
-
-```dart
-MyWidget().visibleIfNull(user); // Show only if value is null
-```
-
-```dart
-MyWidget().visibleIfNotNull(user); // Show only if value is not null
-```
-
-```dart
-MyWidget().hide(); // Always hidden
-```
-
-```dart
-MyWidget().invisible(); // Same as hide(), for clarity
-```
-
-```dart
-final emptyBox = MyWidget().boxShrink(); // Returns an empty widget directly
-```
-
-> 💡 **Why use this?**
-> Instead of writing:
->
-> ```dart
-> condition ? MyWidget() : const SizedBox.shrink()
-> ```
->
-> Just write:
->
-> ```dart
-> MyWidget().visibleIf(condition)
-> ```
-
-> 🔒 These methods **never break layout structure** — they return a valid widget in all cases and help you write safer conditional UI.
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
-### 🌫️ `opacity` - Control Widget Transparency
-
-Quickly apply opacity to any widget using clean, expressive methods. These extensions eliminate the need to wrap widgets manually in `Opacity` and support percentage-based and common preset values.
-
-- `opacity(double)` — Set widget transparency using a `0.0–1.0` value.
-- `opacityPercent(double)` — Use percentage (`0–100`) for readability.
-- `opacityHalf()` — Set opacity to 50%.
-- `opacityQuarter()` — Set opacity to 25%.
-- `opacityZero()` — Set opacity to 0.
-- `opacityTransparent()` — Alias of `opacityZero()`.
-- `opacityInvisible()` — Alias of `opacityZero()`.
-
-All methods return a wrapped `Opacity` widget and are safe to chain with other extensions.
-
-#### 🧪 Examples
-
-Set to `70%` visible
-
-```dart
-MyWidget().opacity(0.7);
-```
-
-Set to `40%` using percent
-
-```dart
-MyWidget().opacityPercent(40);
-```
-
-```dart
-MyWidget().opacityHalf(); // Half visible (0.5)
-```
-
-```dart
-MyWidget().opacityQuarter(); // Quarter visible (0.25)
-```
-
-> 💡 Instead of writing:
->
-> ```dart
-> Opacity(
->   opacity: value,
->   child: MyWidget(),
-> )
-> ```
->
-> Just write:
->
-> ```dart
-> MyWidget().opacity(value)
-> ```
->
-> Use `.opacityPercent()` when working with designer specs or to make your code more intuitive at a glance.
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
-### 🔣 `icon` — Quickly Create and Style Icons
-
-Easily create and customize `Icon` widgets from an `IconData`, or update existing `Icon` instances with expressive, chainable methods. These extensions support all styling parameters available on Flutter's `Icon`.
-
-#### 🧩 On `IconData`
-
-- `icon({...})` — Create an `Icon` from `IconData` with full styling options.
-- `iconSized(double)` — Shorthand for setting size.
-- `iconFilled(double)` — Set the fill level (for Material symbols).
-- `iconColored(Color)` — Apply color.
-
-#### 🧩 On `Icon`
-
-- `.sized(double)` — Change icon size.
-- `.filled(double)` — Set fill level.
-- `.weight(double)` / `.grade(double)` / `.opticalSize(double)` — Fine-tune variable font icons.
-- `.colored(Color)` — Change icon color.
-- `.shadowed(List<Shadow>)` — Add text-style shadows.
-- `.semanticLabeled(String)` — Set semantic label for accessibility.
-- `.textDirectioned(TextDirection)` — Set directionality.
-- `.applyTextScaling(bool)` — Respect or ignore text scaling.
-- `.blendMode(BlendMode)` — Control blend behavior.
-
-All methods return a new `Icon` and preserve other properties unless overwritten.
-
----
-
-#### 🧪 Examples
-
-```dart
-Icons.settings.icon(size: 32, color: Colors.amber,);
-```
-
-```dart
-// Create a red icon at 24px
-Icons.home.iconSized(24).colored(Colors.red);
-```
-
-```dart
-// Create and fill a Material symbol icon
-Icons.favorite.iconFilled(1.0);
-```
-
-```dart
-// Chain multiple style changes
-Icons.star.icon().sized(32).filled(0.8).colored(Colors.amber);
-```
-
-> 💡 Instead of:
->
-> ```dart
-> Icon(
->   Icons.star,
->   size: 32,
->   color: Colors.amber,
->   fill: 0.8,
-> )
-> ```
->
-> Just write:
->
-> ```dart
-> Icons.star.icon(size: 32, color: Colors.amber, fill: 0.8)
-> ```
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
 ### 📏 `padding` — Add Padding to Any Widget
 
 Apply padding effortlessly with readable, chainable methods. These extensions wrap your widget in a `Padding` widget using concise, expressive syntax.
@@ -533,72 +210,6 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### ➖ `margin` — Add Outer Spacing Around Widgets
-
-Add clean, configurable margins around any widget with chainable extensions. These methods wrap the widget in a `Container` with `margin`, avoiding cluttered layout nesting and improving code clarity.
-
-- `margin(EdgeInsets)` — Use any `EdgeInsets` object directly.
-- `marginAll(double)` — Equal margin on all sides.
-- `marginOnly({left, top, right, bottom})` — Custom margin per side.
-- `marginSymmetric({horizontal, vertical})` — Horizontal & vertical margin.
-- `marginHorizontal(double)` — Shorthand for horizontal-only margin.
-- `marginVertical(double)` — Shorthand for vertical-only margin.
-- One-sided margin helpers:
-  - `marginLeft(double)`
-  - `marginRight(double)`
-  - `marginTop(double)`
-  - `marginBottom(double)`
-
-All methods return a wrapped `Container` and can be freely chained with other extensions.
-
-#### 🧪 Examples
-
-```dart
-// 16px margin on all sides
-"Card".text().marginAll(16);
-```
-
-```dart
-// 24px horizontal, 12px vertical
-"Tile".text().marginSymmetric(horizontal: 24, vertical: 12);
-```
-
-```dart
-// 8px margin only on top
-"Header".text().marginTop(8);
-```
-
-```dart
-// Custom side-by-side margin
-"Box".text().marginOnly(left: 6, bottom: 10);
-```
-
-> 💡 **Why use this?**
-> Instead of writing:
->
-> ```dart
-> Container(
->   margin: EdgeInsets.only(left: 8, top: 4),
->   child: MyWidget(),
-> )
-> ```
->
-> Just write:
->
-> ```dart
-> MyWidget().marginOnly(left: 8, top: 4)
-> ```
-
-> ⚖️ **Margin vs Padding**  
-> Use **`padding`** to add spacing _inside_ a widget's boundary — like space around text in a button.  
-> Use **`margin`** to add spacing _outside_ a widget — like separating it from other widgets.
->
-> 🟢 For most layout needs, **`padding` is the preferred and safer default**. Use `margin` when you need to push the widget away from surrounding elements, but be cautious with nesting to avoid layout issues.
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
 ### 🎯 `center` — Center Your Widget with Optional Factors
 
 Effortlessly center any widget with precise control over layout behavior. These extensions wrap your widget in a `Center` and offer intuitive access to `widthFactor` and `heightFactor` when needed.
@@ -644,6 +255,114 @@ MyWidget().center(widthFactor: 0.8, heightFactor: 0.5);
 >
 > ```dart
 > MyWidget().centerWidth(1)
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### ↔️ `expanded` - Make Widgets Fill Available Space
+
+Add layout flexibility with zero boilerplate. These extensions wrap your widget in an `Expanded`, allowing you to quickly define how much space it should take relative to its siblings.
+
+- `expandedFlex([int flex = 1])` — Wraps the widget in `Expanded` with an optional `flex`.
+- `expanded1` — Shorthand for `Expanded(flex: 1)`.
+
+* Predefined shorthand getters for fixed flex values:  
+  `expanded2`, `expanded3`, `expanded4`, `expanded5`, `expanded6`, `expanded7`, `expanded8`
+
+Use them in `Row`, `Column`, or `Flex` to control space distribution without nesting or repetition.
+
+#### 🧪 Examples
+
+```dart
+// Flex: 1 (default)
+MyWidget().expanded1;
+```
+
+```dart
+// Flex: 2
+MyWidget().expanded2;
+```
+
+```dart
+// Flex: 5
+MyWidget().expandedFlex(5);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> Expanded(
+>   flex: 3,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().expanded3
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🧬 `flex` — Flexible Layouts with Fine-Tuned Control
+
+Wrap any widget in a `Flexible` with full control over `flex` and `fit`. These extensions reduce verbosity while giving you precise layout behavior in `Row`, `Column`, or `Flex` widgets.
+
+- `flex({int flex, FlexFit fit})` — Custom flex and fit values (default: `flex: 1`, `fit: FlexFit.loose`)
+- `flexLoose(int)` — Loose-fit shortcut
+- `flexTight(int)` — Tight-fit shortcut
+
+* Predefined `flex` shortcuts (default fit: `loose`):  
+  `flex2()`, `flex3()`, `flex4()`, `flex5()`, `flex6()`, `flex7()`, `flex8()`
+
+All methods return a `Flexible` widget and are safe to chain with other layout or styling extensions.
+
+#### 🧪 Examples
+
+```dart
+// Default: flex 1, loose fit
+MyWidget().flex();
+```
+
+```dart
+// Predefined: flex 3, loose fit
+MyWidget().flex3();
+```
+
+```dart
+// Custom: flex 4, tight fit
+MyWidget().flex(flex: 4, fit: FlexFit.tight);
+```
+
+```dart
+// Loose-fit with custom flex
+MyWidget().flexLoose(2);
+```
+
+```dart
+// Tight-fit with custom flex
+MyWidget().flexTight(6);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> Flexible(
+>   flex: 3,
+>   fit: FlexFit.tight,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().flexTight(3)
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
@@ -775,114 +494,6 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### ↔️ `expanded` - Make Widgets Fill Available Space
-
-Add layout flexibility with zero boilerplate. These extensions wrap your widget in an `Expanded`, allowing you to quickly define how much space it should take relative to its siblings.
-
-- `expandedFlex([int flex = 1])` — Wraps the widget in `Expanded` with an optional `flex`.
-- `expanded1` — Shorthand for `Expanded(flex: 1)`.
-
-* Predefined shorthand getters for fixed flex values:  
-  `expanded2`, `expanded3`, `expanded4`, `expanded5`, `expanded6`, `expanded7`, `expanded8`
-
-Use them in `Row`, `Column`, or `Flex` to control space distribution without nesting or repetition.
-
-#### 🧪 Examples
-
-```dart
-// Flex: 1 (default)
-MyWidget().expanded1;
-```
-
-```dart
-// Flex: 2
-MyWidget().expanded2;
-```
-
-```dart
-// Flex: 5
-MyWidget().expandedFlex(5);
-```
-
-> 💡 Instead of writing:
->
-> ```dart
-> Expanded(
->   flex: 3,
->   child: MyWidget(),
-> )
-> ```
->
-> Just write:
->
-> ```dart
-> MyWidget().expanded3
-> ```
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
-### 🧬 `flex` — Flexible Layouts with Fine-Tuned Control
-
-Wrap any widget in a `Flexible` with full control over `flex` and `fit`. These extensions reduce verbosity while giving you precise layout behavior in `Row`, `Column`, or `Flex` widgets.
-
-- `flex({int flex, FlexFit fit})` — Custom flex and fit values (default: `flex: 1`, `fit: FlexFit.loose`)
-- `flexLoose(int)` — Loose-fit shortcut
-- `flexTight(int)` — Tight-fit shortcut
-
-* Predefined `flex` shortcuts (default fit: `loose`):  
-  `flex2()`, `flex3()`, `flex4()`, `flex5()`, `flex6()`, `flex7()`, `flex8()`
-
-All methods return a `Flexible` widget and are safe to chain with other layout or styling extensions.
-
-#### 🧪 Examples
-
-```dart
-// Default: flex 1, loose fit
-MyWidget().flex();
-```
-
-```dart
-// Predefined: flex 3, loose fit
-MyWidget().flex3();
-```
-
-```dart
-// Custom: flex 4, tight fit
-MyWidget().flex(flex: 4, fit: FlexFit.tight);
-```
-
-```dart
-// Loose-fit with custom flex
-MyWidget().flexLoose(2);
-```
-
-```dart
-// Tight-fit with custom flex
-MyWidget().flexTight(6);
-```
-
-> 💡 Instead of writing:
->
-> ```dart
-> Flexible(
->   flex: 3,
->   fit: FlexFit.tight,
->   child: MyWidget(),
-> )
-> ```
->
-> Just write:
->
-> ```dart
-> MyWidget().flexTight(3)
-> ```
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
 ### 🔳 `intrinsic` — Size Widgets to Their Natural Dimensions
 
 Wrap widgets with `IntrinsicWidth` or `IntrinsicHeight` to size them based on their intrinsic (natural) dimensions. These extensions make it easy to apply intrinsic sizing with expressive, chainable syntax.
@@ -936,6 +547,133 @@ MyWidget().intrinsicWidthWith(
 > ```
 
 > ⚠️ Use intrinsic widgets with care — they can be expensive to layout and should only be used when needed for dynamic content sizing.
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### ➖ `margin` — Add Outer Spacing Around Widgets
+
+Add clean, configurable margins around any widget with chainable extensions. These methods wrap the widget in a `Container` with `margin`, avoiding cluttered layout nesting and improving code clarity.
+
+- `margin(EdgeInsets)` — Use any `EdgeInsets` object directly.
+- `marginAll(double)` — Equal margin on all sides.
+- `marginOnly({left, top, right, bottom})` — Custom margin per side.
+- `marginSymmetric({horizontal, vertical})` — Horizontal & vertical margin.
+- `marginHorizontal(double)` — Shorthand for horizontal-only margin.
+- `marginVertical(double)` — Shorthand for vertical-only margin.
+- One-sided margin helpers:
+  - `marginLeft(double)`
+  - `marginRight(double)`
+  - `marginTop(double)`
+  - `marginBottom(double)`
+
+All methods return a wrapped `Container` and can be freely chained with other extensions.
+
+#### 🧪 Examples
+
+```dart
+// 16px margin on all sides
+"Card".text().marginAll(16);
+```
+
+```dart
+// 24px horizontal, 12px vertical
+"Tile".text().marginSymmetric(horizontal: 24, vertical: 12);
+```
+
+```dart
+// 8px margin only on top
+"Header".text().marginTop(8);
+```
+
+```dart
+// Custom side-by-side margin
+"Box".text().marginOnly(left: 6, bottom: 10);
+```
+
+> 💡 **Why use this?**
+> Instead of writing:
+>
+> ```dart
+> Container(
+>   margin: EdgeInsets.only(left: 8, top: 4),
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().marginOnly(left: 8, top: 4)
+> ```
+
+> ⚖️ **Margin vs Padding**  
+> Use **`padding`** to add spacing _inside_ a widget's boundary — like space around text in a button.  
+> Use **`margin`** to add spacing _outside_ a widget — like separating it from other widgets.
+>
+> 🟢 For most layout needs, **`padding` is the preferred and safer default**. Use `margin` when you need to push the widget away from surrounding elements, but be cautious with nesting to avoid layout issues.
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### ↕️ `gap` - Add Spacing Using Double Extensions
+
+Use doubles to create `SizedBox` widgets with clear, expressive syntax. These extensions turn raw numbers into layout spacing—perfect for columns, rows, and consistent vertical/horizontal gaps.
+
+- `sizedWidth` — `SizedBox(width: this)`
+- `sizedHeight` — `SizedBox(height: this)`
+- `gapHorizontal` / `gapRow` / `gapWidth` — Aliases for horizontal spacing
+- `gapVertical` / `gapColumn` / `gapHeight` — Aliases for vertical spacing
+
+All extensions return a `SizedBox` and are ideal for use in layouts to avoid magic numbers and improve readability.
+
+#### 🧪 Examples
+
+```dart
+// Horizontal space of 16
+16.0.gapHorizontal,
+```
+
+```dart
+// Vertical space of 8
+8.0.gapVertical,
+```
+
+```dart
+// SizedBox with explicit width
+24.0.sizedWidth,
+```
+
+```dart
+// SizedBox with explicit height
+32.0.sizedHeight,
+```
+
+```dart
+// Clean Row layout
+Row(
+  children: [
+    WidgetOne(),
+    12.0.gapRow,
+    WidgetTwo(),
+  ],
+)
+```
+
+```dart
+// Clean Column layout
+Column(
+  children: [
+    WidgetOne(),
+    16.0.gapColumn,
+    WidgetTwo(),
+  ],
+)
+```
+
+> 💡 Use `.gapRow` and `.gapColumn` when working inside `Row` or `Column` widgets for clarity and intent-based naming.
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
@@ -1325,6 +1063,313 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
+### 👁️ `visible` - Conditional Visibility for Widgets
+
+Simplify visibility logic in your widget tree with expressive, chainable methods. These extensions replace repetitive ternary conditions and help keep your UI code declarative and clean.
+
+- `visibleIf(bool)` — Show this widget only if the condition is `true`; otherwise returns an empty box.
+- `visibleIfNot(bool)` — Inverse of `visibleIf`.
+- `visibleIfNull(Object?)` — Show this widget only if the given value is `null`.
+- `visibleIfNotNull(Object?)` — Show this widget only if the given value is **not** `null`.
+- `hide()` — Always returns an empty widget (`SizedBox.shrink()`).
+- `invisible()` — Alias of `hide()` for readability.
+- `boxShrink()` — Returns `SizedBox.shrink()` directly.
+
+All methods return valid widgets and are safe to chain inside build methods.
+
+#### 🧪 Examples
+
+```dart
+MyWidget().visibleIf(isLoggedIn); // Show only if condition is true
+```
+
+```dart
+MyWidget().visibleIfNot(isLoggedIn); // Show only if condition is false
+```
+
+```dart
+MyWidget().visibleIfNull(user); // Show only if value is null
+```
+
+```dart
+MyWidget().visibleIfNotNull(user); // Show only if value is not null
+```
+
+```dart
+MyWidget().hide(); // Always hidden
+```
+
+```dart
+MyWidget().invisible(); // Same as hide(), for clarity
+```
+
+```dart
+final emptyBox = MyWidget().boxShrink(); // Returns an empty widget directly
+```
+
+> 💡 **Why use this?**
+> Instead of writing:
+>
+> ```dart
+> condition ? MyWidget() : const SizedBox.shrink()
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().visibleIf(condition)
+> ```
+
+> 🔒 These methods **never break layout structure** — they return a valid widget in all cases and help you write safer conditional UI.
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🌫️ `opacity` - Control Widget Transparency
+
+Quickly apply opacity to any widget using clean, expressive methods. These extensions eliminate the need to wrap widgets manually in `Opacity` and support percentage-based and common preset values.
+
+- `opacity(double)` — Set widget transparency using a `0.0–1.0` value.
+- `opacityPercent(double)` — Use percentage (`0–100`) for readability.
+- `opacityHalf()` — Set opacity to 50%.
+- `opacityQuarter()` — Set opacity to 25%.
+- `opacityZero()` — Set opacity to 0.
+- `opacityTransparent()` — Alias of `opacityZero()`.
+- `opacityInvisible()` — Alias of `opacityZero()`.
+
+All methods return a wrapped `Opacity` widget and are safe to chain with other extensions.
+
+#### 🧪 Examples
+
+Set to `70%` visible
+
+```dart
+MyWidget().opacity(0.7);
+```
+
+Set to `40%` using percent
+
+```dart
+MyWidget().opacityPercent(40);
+```
+
+```dart
+MyWidget().opacityHalf(); // Half visible (0.5)
+```
+
+```dart
+MyWidget().opacityQuarter(); // Quarter visible (0.25)
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> Opacity(
+>   opacity: value,
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().opacity(value)
+> ```
+>
+> Use `.opacityPercent()` when working with designer specs or to make your code more intuitive at a glance.
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 📱 `safeArea` — Add SafeArea Padding Declaratively
+
+Easily wrap widgets in `SafeArea` using expressive, chainable extensions. These methods let you control which sides are padded—without nesting or verbose boilerplate.
+
+- `safeArea({left, top, right, bottom, minimum, maintainBottomViewPadding})` — Full control over all sides and padding behavior.
+- `safeAreaAll()` — Padding on all sides.
+- `safeAreaNone()` — No padding at all.
+- `safeAreaOnlyTop()` / `safeAreaOnlyBottom()` — Top or bottom only.
+- `safeAreaOnlyLeft()` / `safeAreaOnlyRight()` — Left or right only.
+- `safeAreaOnlyHorizontal()` — Left + right.
+- `safeAreaOnlyVertical()` — Top + bottom.
+
+All methods return a `SafeArea` widget wrapping the original widget.
+
+#### 🧪 Examples
+
+```dart
+MyWidget().safeArea(); // Same as wrap in SafeArea;
+```
+
+```dart
+// Only top padded (e.g., below status bar)
+MyWidget().safeAreaOnlyTop();
+```
+
+```dart
+// Bottom safe area only (e.g., above iPhone home indicator)
+MyWidget().safeAreaOnlyBottom();
+```
+
+```dart
+// Custom safe area: only horizontal
+MyWidget().safeAreaOnlyHorizontal();
+```
+
+```dart
+// No SafeArea applied
+MyWidget().safeAreaNone();
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> SafeArea(
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().safeArea()
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 👆 `gesture` — Add Tap, Drag & Press Events Easily
+
+Eliminate manual `GestureDetector` nesting with intuitive, chainable gesture methods. These extensions make it effortless to attach any gesture to any widget.
+
+- `onTap(VoidCallback)` — Handle basic tap gestures.
+- `onDoubleTap(VoidCallback)` — Respond to double-tap gestures.
+- `onLongPress(VoidCallback)` — Handle long presses.
+- `onTapDown(...)`, `onTapUp(...)`, `onTapCancel(...)` — Full tap phase handling.
+- `onSecondaryTap(...)`, `onTertiaryTapDown(...)`, etc. — Full multi-touch support.
+- `onVerticalDrag...`, `onHorizontalDrag...`, `onPan...` — Add drag gestures with full phase support.
+- `onScale...` — Handle pinch-to-zoom gestures.
+- `onForcePress...` — Support for pressure-sensitive gestures.
+- `gestureDetector(...)` — Attach multiple gestures at once in one call.
+
+All methods return a wrapped `GestureDetector` and support optional customization of behavior, semantics, and supported devices.
+
+#### 🧪 Examples
+
+```dart
+// Basic tap interaction
+MyWidget().onTap(() => print("Tapped!"));
+```
+
+```dart
+// Double tap
+MyWidget().onDoubleTap(() => print("Double tapped"));
+```
+
+```dart
+// Handle tap down position
+MyWidget().onTapDown((details) {
+  print("Tap down at ${details.globalPosition}");
+});
+```
+
+```dart
+// Add vertical drag support
+MyWidget().onVerticalDragUpdate((details) {
+  print("Dragging: ${details.delta.dy}");
+});
+```
+
+```dart
+// Combine multiple gestures
+MyWidget().gestureDetector(
+  onTap: () => print("Tap"),
+  onLongPress: () => print("Long press"),
+  onPanUpdate: (details) => print("Panning"),
+);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> GestureDetector(
+>   onTap: () => doSomething(),
+>   child: MyWidget(),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> MyWidget().onTap(() => doSomething())
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🦸 `hero` — Add Seamless Shared Element Transitions
+
+Effortlessly wrap any widget in a `Hero` for smooth page-to-page transitions. Customize behavior with optional parameters for animations, flight behavior, and placeholders.
+
+- `hero(String tag)` — Wraps the widget in a `Hero` with the given tag.
+- Optional parameters:
+  - `createRectTween(...)` — Customize the transition animation path.
+  - `flightShuttleBuilder(...)` — Override the animation widget during flight.
+  - `placeholderBuilder(...)` — Placeholder shown during transition loading.
+  - `transitionOnUserGestures` — Allow gesture-driven transitions.
+
+All options mirror the native `Hero` widget and can be configured inline.
+
+#### 🧪 Examples
+
+```dart
+// Basic shared element transition
+MyWidget().hero("profile-avatar");
+```
+
+```dart
+// Custom placeholder
+MyWidget()
+  .hero(
+    "title-hero",
+    placeholderBuilder: (context, size, child) =>
+        SizedBox.fromSize(size: size),
+  );
+```
+
+```dart
+// With custom flight behavior
+MyWidget().hero(
+  "star-icon",
+  flightShuttleBuilder: (context, animation, direction, from, to) {
+    return ScaleTransition(scale: animation, child: to.widget);
+  },
+);
+```
+
+> 💡 Instead of writing:
+>
+> ```dart
+> Hero(
+>   tag: "avatar",
+>   child: Image.asset("avatar.png"),
+> )
+> ```
+>
+> Just write:
+>
+> ```dart
+> Image.asset("avatar.png").hero("avatar")
+> ```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
 ### 📦 `sizedBox` — Wrap Widgets in Fixed-Size Boxes
 
 Quickly wrap any widget in a `SizedBox` with a specified width, height, or both. These extensions improve readability and reduce boilerplate when sizing widgets inline.
@@ -1363,67 +1408,6 @@ MyWidget().sizedHeight(60);
 > ```dart
 > MyWidget().sizedBox(width: 120, height: 40)
 > ```
-
-_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
-
----
-
-### ↕️ `gap` - Add Spacing Using Double Extensions
-
-Use doubles to create `SizedBox` widgets with clear, expressive syntax. These extensions turn raw numbers into layout spacing—perfect for columns, rows, and consistent vertical/horizontal gaps.
-
-- `sizedWidth` — `SizedBox(width: this)`
-- `sizedHeight` — `SizedBox(height: this)`
-- `gapHorizontal` / `gapRow` / `gapWidth` — Aliases for horizontal spacing
-- `gapVertical` / `gapColumn` / `gapHeight` — Aliases for vertical spacing
-
-All extensions return a `SizedBox` and are ideal for use in layouts to avoid magic numbers and improve readability.
-
-#### 🧪 Examples
-
-```dart
-// Horizontal space of 16
-16.0.gapHorizontal,
-```
-
-```dart
-// Vertical space of 8
-8.0.gapVertical,
-```
-
-```dart
-// SizedBox with explicit width
-24.0.sizedWidth,
-```
-
-```dart
-// SizedBox with explicit height
-32.0.sizedHeight,
-```
-
-```dart
-// Clean Row layout
-Row(
-  children: [
-    WidgetOne(),
-    12.0.gapRow,
-    WidgetTwo(),
-  ],
-)
-```
-
-```dart
-// Clean Column layout
-Column(
-  children: [
-    WidgetOne(),
-    16.0.gapColumn,
-    WidgetTwo(),
-  ],
-)
-```
-
-> 💡 Use `.gapRow` and `.gapColumn` when working inside `Row` or `Column` widgets for clarity and intent-based naming.
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
@@ -1917,129 +1901,216 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### 👆 `gesture` — Add Tap, Drag & Press Events Easily
+### 📝 `text` — Turn Any String into a Text Widget
 
-Eliminate manual `GestureDetector` nesting with intuitive, chainable gesture methods. These extensions make it effortless to attach any gesture to any widget.
+Effortlessly convert a `String` into a fully configurable `Text` widget. The `.text()` and `.styledText()` extensions make your UI code clean, readable, and expressive — no more boilerplate, no more clutter.
 
-- `onTap(VoidCallback)` — Handle basic tap gestures.
-- `onDoubleTap(VoidCallback)` — Respond to double-tap gestures.
-- `onLongPress(VoidCallback)` — Handle long presses.
-- `onTapDown(...)`, `onTapUp(...)`, `onTapCancel(...)` — Full tap phase handling.
-- `onSecondaryTap(...)`, `onTertiaryTapDown(...)`, etc. — Full multi-touch support.
-- `onVerticalDrag...`, `onHorizontalDrag...`, `onPan...` — Add drag gestures with full phase support.
-- `onScale...` — Handle pinch-to-zoom gestures.
-- `onForcePress...` — Support for pressure-sensitive gestures.
-- `gestureDetector(...)` — Attach multiple gestures at once in one call.
+- `.text({...})` — Create a `Text` widget with any native `Text` constructor parameters.
+- `.styledText({...})` — Configure full `TextStyle` in one place: font, color, spacing, shadows, decoration, and more.
 
-All methods return a wrapped `GestureDetector` and support optional customization of behavior, semantics, and supported devices.
+Both methods return a standard Flutter `Text` widget — no wrappers, no magic.
 
-#### 🧪 Examples
+#### 🔹 Basic Text
 
 ```dart
-// Basic tap interaction
-MyWidget().onTap(() => print("Tapped!"));
+"Hello world".text(); // same as Text("Hello world");
 ```
 
 ```dart
-// Double tap
-MyWidget().onDoubleTap(() => print("Double tapped"));
+Text("Hello world"); // same as "Hello world".text();
 ```
 
-```dart
-// Handle tap down position
-MyWidget().onTapDown((details) {
-  print("Tap down at ${details.globalPosition}");
-});
-```
+#### 🔹 Styled Text with Alignment
 
 ```dart
-// Add vertical drag support
-MyWidget().onVerticalDragUpdate((details) {
-  print("Dragging: ${details.delta.dy}");
-});
-```
-
-```dart
-// Combine multiple gestures
-MyWidget().gestureDetector(
-  onTap: () => print("Tap"),
-  onLongPress: () => print("Long press"),
-  onPanUpdate: (details) => print("Panning"),
+"Hello exui".text(
+  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+  textAlign: TextAlign.center,
 );
 ```
 
-> 💡 Instead of writing:
->
-> ```dart
-> GestureDetector(
->   onTap: () => doSomething(),
->   child: MyWidget(),
-> )
-> ```
->
-> Just write:
->
-> ```dart
-> MyWidget().onTap(() => doSomething())
-> ```
+```dart
+Text(
+  "Hello exui",
+  style: TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+  ),
+  textAlign: TextAlign.center,
+);
+```
+
+#### 🔹 Rich Styling in One Call
+
+```dart
+"Stylish!".styledText(
+  fontSize: 24,
+  fontWeight: FontWeight.w600,
+  color: Colors.purple,
+);
+```
+
+```dart
+Text(
+  "Stylish!",
+  style: TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    color: Colors.purple,
+  ),
+);
+```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### 🦸 `hero` — Add Seamless Shared Element Transitions
+### 🎛️ `styled text` - Modify and Style `Text` Widgets Easily
 
-Effortlessly wrap any widget in a `Hero` for smooth page-to-page transitions. Customize behavior with optional parameters for animations, flight behavior, and placeholders.
+Powerfully enhance your `Text` widgets with dozens of chainable extensions. Control alignment, overflow, semantics, and apply fine-grained styling—without verbose `TextStyle` blocks.
 
-- `hero(String tag)` — Wraps the widget in a `Hero` with the given tag.
-- Optional parameters:
-  - `createRectTween(...)` — Customize the transition animation path.
-  - `flightShuttleBuilder(...)` — Override the animation widget during flight.
-  - `placeholderBuilder(...)` — Placeholder shown during transition loading.
-  - `transitionOnUserGestures` — Allow gesture-driven transitions.
+These extensions are non-intrusive, composable, and maintain the immutability of the original widget.
 
-All options mirror the native `Hero` widget and can be configured inline.
+#### 📐 Layout & Metadata Modifiers
+
+- `textAlign(...)`
+- `textDirection(...)`
+- `locale(...)`
+- `softWrap(...)`
+- `overflow(...)`
+- `maxLines(...)`
+- `semanticsLabel(...)`
+- `widthBasis(...)`
+- `heightBehavior(...)`
+- `selectionColor(...)`
+- `strutStyle(...)`
+- `textScaler(...)`
+
+#### 🎨 Style Extensions
+
+Apply full or partial `TextStyle` changes with expressive one-liners:
+
+- `fontSize(...)`
+- `fontWeight(...)`
+- `fontStyle(...)`
+- `letterSpacing(...)`
+- `wordSpacing(...)`
+- `height(...)`
+- `foreground(...)` / `background(...)`
+- `shadows(...)`
+- `fontFeatures(...)` / `fontVariations(...)`
+- `decoration(...)`
+- `decorationColor(...)`
+- `decorationStyle(...)`
+- `decorationThickness(...)`
+- `fontFamily(...)` / `fontFamilyFallback(...)`
+- `leadingDistribution(...)`
+- `debugLabel(...)`
+
+#### ⚡ Expressive Shortcuts
+
+Use simple methods for common typography tasks:
+
+- `bold()`
+- `italic()`
+- `underline()`
+- `strikethrough()`
+- `boldItalic()`
+- `boldUnderline()`
+- `boldStrikethrough()`
+
+#### 🧪 Example
+
+```dart
+"Hello World"
+  .text()
+  .fontSize(20)
+  .boldItalic()
+  .textAlign(TextAlign.center)
+  .maxLines(2)
+  .overflow(TextOverflow.ellipsis);
+```
+
+Or, apply full styling in one go:
+
+```dart
+"Sale!"
+  .text()
+  .styled(
+    fontSize: 24,
+    fontWeight: FontWeight.w900,
+    decoration: TextDecoration.lineThrough,
+    color: Colors.red,
+  );
+```
+
+_[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
+
+---
+
+### 🔣 `icon` — Quickly Create and Style Icons
+
+Easily create and customize `Icon` widgets from an `IconData`, or update existing `Icon` instances with expressive, chainable methods. These extensions support all styling parameters available on Flutter's `Icon`.
+
+#### 🧩 On `IconData`
+
+- `icon({...})` — Create an `Icon` from `IconData` with full styling options.
+- `iconSized(double)` — Shorthand for setting size.
+- `iconFilled(double)` — Set the fill level (for Material symbols).
+- `iconColored(Color)` — Apply color.
+
+#### 🧩 On `Icon`
+
+- `.sized(double)` — Change icon size.
+- `.filled(double)` — Set fill level.
+- `.weight(double)` / `.grade(double)` / `.opticalSize(double)` — Fine-tune variable font icons.
+- `.colored(Color)` — Change icon color.
+- `.shadowed(List<Shadow>)` — Add text-style shadows.
+- `.semanticLabeled(String)` — Set semantic label for accessibility.
+- `.textDirectioned(TextDirection)` — Set directionality.
+- `.applyTextScaling(bool)` — Respect or ignore text scaling.
+- `.blendMode(BlendMode)` — Control blend behavior.
+
+All methods return a new `Icon` and preserve other properties unless overwritten.
+
+---
 
 #### 🧪 Examples
 
 ```dart
-// Basic shared element transition
-MyWidget().hero("profile-avatar");
+Icons.settings.icon(size: 32, color: Colors.amber,);
 ```
 
 ```dart
-// Custom placeholder
-MyWidget()
-  .hero(
-    "title-hero",
-    placeholderBuilder: (context, size, child) =>
-        SizedBox.fromSize(size: size),
-  );
+// Create a red icon at 24px
+Icons.home.iconSized(24).colored(Colors.red);
 ```
 
 ```dart
-// With custom flight behavior
-MyWidget().hero(
-  "star-icon",
-  flightShuttleBuilder: (context, animation, direction, from, to) {
-    return ScaleTransition(scale: animation, child: to.widget);
-  },
-);
+// Create and fill a Material symbol icon
+Icons.favorite.iconFilled(1.0);
 ```
 
-> 💡 Instead of writing:
+```dart
+// Chain multiple style changes
+Icons.star.icon().sized(32).filled(0.8).colored(Colors.amber);
+```
+
+> 💡 Instead of:
 >
 > ```dart
-> Hero(
->   tag: "avatar",
->   child: Image.asset("avatar.png"),
+> Icon(
+>   Icons.star,
+>   size: 32,
+>   color: Colors.amber,
+>   fill: 0.8,
 > )
 > ```
 >
 > Just write:
 >
 > ```dart
-> Image.asset("avatar.png").hero("avatar")
+> Icons.star.icon(size: 32, color: Colors.amber, fill: 0.8)
 > ```
 
 _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
