@@ -1,4 +1,4 @@
-## NEXT
+## 1.0.3
 
 Added detailed tests for all extensions and fixed all issues found
 
