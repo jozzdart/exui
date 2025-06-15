@@ -4,6 +4,7 @@
 - Removed redundant exports from material and cupertino modules
 - Improved documentation to be more comprehensive and easier to understand
 - Renamed `expanded` to `expanded1` for consistency
+- Added `safeArea` extensions for improved layout control
 
 ## 1.0.2
 
