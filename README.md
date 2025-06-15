@@ -684,7 +684,7 @@ MyWidget().alignBottomRight();
 
 ```dart
 // Top-left aligned with width factor
-MyWidget().alignTopLeft().align(widthFactor: 2);
+MyWidget().alignTopLeft(widthFactor: 2);
 ```
 
 > 💡 Instead of writing:
@@ -780,7 +780,7 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 Add layout flexibility with zero boilerplate. These extensions wrap your widget in an `Expanded`, allowing you to quickly define how much space it should take relative to its siblings.
 
 - `expandedFlex([int flex = 1])` — Wraps the widget in `Expanded` with an optional `flex`.
-- `expanded` — Shorthand for `Expanded(flex: 1)`.
+- `expanded1` — Shorthand for `Expanded(flex: 1)`.
 
 * Predefined shorthand getters for fixed flex values:  
   `expanded2`, `expanded3`, `expanded4`, `expanded5`, `expanded6`, `expanded7`, `expanded8`
@@ -791,7 +791,7 @@ Use them in `Row`, `Column`, or `Flex` to control space distribution without nes
 
 ```dart
 // Flex: 1 (default)
-MyWidget().expanded;
+MyWidget().expanded1;
 ```
 
 ```dart
