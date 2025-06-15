@@ -1,3 +1,7 @@
+## NEXT
+
+- Removed redundant exports from material and cupertino modules
+
 ## 1.0.2
 
 - Improved README navigation
