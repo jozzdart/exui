@@ -78,7 +78,7 @@ extension TextExtensions on Text {
   /// Text('Centered text').textAlign(TextAlign.center);
   /// Text('Right aligned').textAlign(TextAlign.right);
   /// ```
-  Text textAlign(TextAlign align) => _copyWith(textAlign: align);
+  Text withTextAlign(TextAlign align) => _copyWith(textAlign: align);
 
   /// Sets the text direction for the text widget.
   ///
@@ -96,7 +96,7 @@ extension TextExtensions on Text {
   /// Text('RTL text').textDirection(TextDirection.rtl);
   /// Text('LTR text').textDirection(TextDirection.ltr);
   /// ```
-  Text textDirection(TextDirection direction) =>
+  Text withTextDirection(TextDirection direction) =>
       _copyWith(textDirection: direction);
 
   /// Sets the locale for the text widget.
@@ -114,7 +114,7 @@ extension TextExtensions on Text {
   /// ```dart
   /// Text('Localized text').locale(Locale('es', 'ES'));
   /// ```
-  Text locale(Locale locale) => _copyWith(locale: locale);
+  Text withLocale(Locale locale) => _copyWith(locale: locale);
 
   /// Sets whether the text should wrap at soft line breaks.
   ///
@@ -132,7 +132,7 @@ extension TextExtensions on Text {
   /// Text('Long text that should wrap').softWrap(true);
   /// Text('No wrapping allowed').softWrap(false);
   /// ```
-  Text softWrap(bool softWrap) => _copyWith(softWrap: softWrap);
+  Text withSoftWrap(bool softWrap) => _copyWith(softWrap: softWrap);
 
   /// Sets how text overflow should be handled.
   ///
@@ -149,7 +149,7 @@ extension TextExtensions on Text {
   /// Text('Text that might overflow').overflow(TextOverflow.ellipsis);
   /// Text('Fading overflow').overflow(TextOverflow.fade);
   /// ```
-  Text overflow(TextOverflow overflow) => _copyWith(overflow: overflow);
+  Text withOverflow(TextOverflow overflow) => _copyWith(overflow: overflow);
 
   /// Sets the maximum number of lines for the text.
   ///
@@ -167,7 +167,7 @@ extension TextExtensions on Text {
   /// Text('Multi-line text content').maxLines(3);
   /// Text('Single line only').maxLines(1);
   /// ```
-  Text maxLines(int maxLines) => _copyWith(maxLines: maxLines);
+  Text withMaxLines(int maxLines) => _copyWith(maxLines: maxLines);
 
   /// Sets the semantic label for accessibility.
   ///
@@ -184,7 +184,7 @@ extension TextExtensions on Text {
   /// ```dart
   /// Text('👍').semanticsLabel('Thumbs up emoji');
   /// ```
-  Text semanticsLabel(String semanticsLabel) =>
+  Text withSemanticsLabel(String semanticsLabel) =>
       _copyWith(semanticsLabel: semanticsLabel);
 
   /// Sets the text width basis for measuring text width.
@@ -196,7 +196,7 @@ extension TextExtensions on Text {
   /// - [basis]: The text width basis to apply.
   ///
   /// Returns a new [Text] widget with the specified width basis.
-  Text widthBasis(TextWidthBasis basis) => _copyWith(textWidthBasis: basis);
+  Text withWidthBasis(TextWidthBasis basis) => _copyWith(textWidthBasis: basis);
 
   /// Sets the text height behavior for line height calculation.
   ///
@@ -207,7 +207,7 @@ extension TextExtensions on Text {
   /// - [behavior]: The text height behavior to apply.
   ///
   /// Returns a new [Text] widget with the specified height behavior.
-  Text heightBehavior(TextHeightBehavior behavior) =>
+  Text withHeightBehavior(TextHeightBehavior behavior) =>
       _copyWith(textHeightBehavior: behavior);
 
   /// Sets the selection color for selectable text.
@@ -219,7 +219,7 @@ extension TextExtensions on Text {
   /// - [color]: The selection color to apply.
   ///
   /// Returns a new [Text] widget with the specified selection color.
-  Text selectionColor(Color color) => _copyWith(selectionColor: color);
+  Text withSelectionColor(Color color) => _copyWith(selectionColor: color);
 
   /// Sets the strut style for the text.
   ///
@@ -230,7 +230,7 @@ extension TextExtensions on Text {
   /// - [style]: The strut style to apply.
   ///
   /// Returns a new [Text] widget with the specified strut style.
-  Text strutStyle(StrutStyle style) => _copyWith(strutStyle: style);
+  Text withStrutStyle(StrutStyle style) => _copyWith(strutStyle: style);
 
   /// Sets the text scaler for the text.
   ///
@@ -241,7 +241,7 @@ extension TextExtensions on Text {
   /// - [scaler]: The text scaler to apply.
   ///
   /// Returns a new [Text] widget with the specified text scaler.
-  Text textScaler(TextScaler scaler) => _copyWith(textScaler: scaler);
+  Text withTextScaler(TextScaler scaler) => _copyWith(textScaler: scaler);
 
   /// Applies comprehensive styling to the text widget.
   ///
@@ -309,7 +309,7 @@ extension TextExtensions on Text {
     bool? inherit,
   }) {
     return _copyWith(
-      style: style?.copyWith(
+      style: (style ?? const TextStyle()).copyWith(
         color: color,
         backgroundColor: backgroundColor,
         fontSize: fontSize,
