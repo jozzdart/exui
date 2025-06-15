@@ -40,12 +40,15 @@ extension OpacityWidgetExtension on Widget {
   ///   color: Colors.blue,
   /// ).opacity(0.7); // 70% opacity
   /// ```
-  Opacity opacity(double opacity, {bool alwaysIncludeSemantics = false}) =>
-      Opacity(
-        opacity: opacity,
-        alwaysIncludeSemantics: alwaysIncludeSemantics,
-        child: this,
-      );
+  Opacity opacity(double opacity, {bool alwaysIncludeSemantics = false}) {
+    assert(opacity >= 0.0 && opacity <= 1.0,
+        'Opacity must be between 0.0 and 1.0');
+    return Opacity(
+      opacity: opacity,
+      alwaysIncludeSemantics: alwaysIncludeSemantics,
+      child: this,
+    );
+  }
 
   /// Applies opacity using a percentage value.
   ///

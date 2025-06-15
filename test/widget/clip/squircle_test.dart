@@ -1,72 +1,106 @@
+import 'package:exui/exui.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter/widgets.dart';
-import 'dart:math';
-
-class _SquircleClipper extends CustomClipper<Path> {
-  final double radiusFactor;
-  _SquircleClipper(this.radiusFactor);
-
-  @override
-  Path getClip(Size size) {
-    final double minSize = min(size.width, size.height);
-    final double cornerRadius = minSize / radiusFactor;
-
-    final path = Path();
-    path.moveTo(0, cornerRadius);
-    path.quadraticBezierTo(0, 0, cornerRadius, 0);
-    path.lineTo(size.width - cornerRadius, 0);
-    path.quadraticBezierTo(size.width, 0, size.width, cornerRadius);
-    path.lineTo(size.width, size.height - cornerRadius);
-    path.quadraticBezierTo(
-        size.width, size.height, size.width - cornerRadius, size.height);
-    path.lineTo(cornerRadius, size.height);
-    path.quadraticBezierTo(0, size.height, 0, size.height - cornerRadius);
-    path.close();
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;
-}
 
 void main() {
-  group('SquircleClipper', () {
-    const size = Size(200, 200);
+  group('SquircleWidgetExtensions', () {
+    testWidgets(
+        'clipSquircle wraps widget with ClipPath using ContinuousRectangleBorder',
+        (WidgetTester tester) async {
+      final widget =
+          Container(width: 100, height: 100, color: Colors.blue).clipSquircle();
 
-    test('generates a non-empty path', () {
-      final clipper = _SquircleClipper(2.5);
-      final path = clipper.getClip(size);
+      await tester.pumpWidget(
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: widget,
+        ),
+      );
 
-      expect(path, isA<Path>());
-      expect(path.getBounds().isEmpty, isFalse);
+      final clipPathFinder = find.byType(ClipPath);
+      expect(clipPathFinder, findsOneWidget);
+
+      final clipPathWidget = tester.widget<ClipPath>(clipPathFinder);
+      expect(clipPathWidget.clipBehavior, Clip.antiAlias);
+      expect(clipPathWidget.clipper, isA<ShapeBorderClipper>());
+
+      final shape = (clipPathWidget.clipper! as ShapeBorderClipper).shape;
+      expect(shape, isA<ContinuousRectangleBorder>());
+      final borderRadius = (shape as ContinuousRectangleBorder).borderRadius;
+      expect(borderRadius, BorderRadius.all(Radius.circular(2.5)));
     });
 
-    test('different radiusFactor yields different path shapes', () {
-      final pathA = _SquircleClipper(2.0).getClip(size);
-      final pathB = _SquircleClipper(3.0).getClip(size);
+    testWidgets('clipSquircle applies custom radiusFactor and clipBehavior',
+        (WidgetTester tester) async {
+      final widget = Container().clipSquircle(4.0, Clip.hardEdge);
 
-      expect(pathA, isNot(same(pathB)),
-          reason: 'Paths should differ with radiusFactor');
-      expect(pathA.getBounds(), equals(pathB.getBounds()),
-          reason: 'Bounds should match if size is same');
+      await tester.pumpWidget(
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: widget,
+        ),
+      );
+
+      final clipPath = tester.widget<ClipPath>(find.byType(ClipPath));
+      expect(clipPath.clipBehavior, Clip.hardEdge);
+
+      final shape = (clipPath.clipper! as ShapeBorderClipper).shape;
+      final borderRadius = (shape as ContinuousRectangleBorder).borderRadius;
+      expect(borderRadius, BorderRadius.all(Radius.circular(4.0)));
     });
 
-    test('performance: generate path', () {
-      final stopwatch = Stopwatch()..start();
-      final path = _SquircleClipper(2.5).getClip(size);
-      stopwatch.stop();
+    testWidgets('clipContinuousRectangle behaves identically to clipSquircle',
+        (WidgetTester tester) async {
+      final widget1 = Container().clipSquircle(3.0, Clip.none);
+      final widget2 = Container().clipContinuousRectangle(3.0, Clip.none);
 
-      expect(path, isA<Path>());
-      debugPrint(
-          'SquircleClipper: generation took ${stopwatch.elapsedMicroseconds}µs');
+      await tester.pumpWidget(
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: Column(
+            children: [widget1, widget2],
+          ),
+        ),
+      );
+
+      final clipPaths =
+          tester.widgetList<ClipPath>(find.byType(ClipPath)).toList();
+      expect(clipPaths.length, 2);
+
+      for (final clipPath in clipPaths) {
+        expect(clipPath.clipBehavior, Clip.none);
+        final shape = (clipPath.clipper! as ShapeBorderClipper).shape;
+        final borderRadius = (shape as ContinuousRectangleBorder).borderRadius;
+        expect(borderRadius, BorderRadius.all(Radius.circular(3.0)));
+      }
     });
 
-    test('shouldReclip always returns false', () {
-      final clipper = _SquircleClipper(2.5);
-      final otherClipper = _SquircleClipper(3.0);
+    testWidgets('clipSquircle does not crash on small radius',
+        (WidgetTester tester) async {
+      final widget = Container().clipSquircle(0.1);
 
-      expect(clipper.shouldReclip(otherClipper), isFalse);
+      await tester.pumpWidget(
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: widget,
+        ),
+      );
+
+      expect(find.byType(ClipPath), findsOneWidget);
+    });
+
+    testWidgets('clipSquircle does not crash on high radius',
+        (WidgetTester tester) async {
+      final widget = Container().clipSquircle(100);
+
+      await tester.pumpWidget(
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: widget,
+        ),
+      );
+
+      expect(find.byType(ClipPath), findsOneWidget);
     });
   });
 }
