@@ -67,7 +67,7 @@ extension ExpandedWidgetExtension on Widget {
   ///   ],
   /// );
   /// ```
-  Expanded get expanded => expandedFlex();
+  Expanded get expanded1 => expandedFlex(1);
 
   /// Wraps the widget in an [Expanded] with flex value 2.
   ///
