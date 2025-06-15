@@ -1,9 +1,20 @@
 ## NEXT
 
+Added detailed tests for all extensions and fixed all issues found
+
+### Fixed
+
 - Fixed all alignment methods to accept optional parameters
-- Removed redundant exports from material and cupertino modules
-- Improved documentation to be more comprehensive and easier to understand
+- Fixed `TextExtensions` to use `with` prefix for all modification methods, was conflicting with getters with same name
+
+### Changed
+
 - Renamed `expanded` to `expanded1` for consistency
+- Removed redundant exports from material and cupertino modules
+
+### Added
+
+- Improved documentation to be more comprehensive and easier to understand
 - Added `safeArea` extensions for improved layout control
 
 ## 1.0.2
