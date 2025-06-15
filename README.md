@@ -26,6 +26,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 - **Lightweight and efficient** — wraps existing widgets without creating new classes.
 - **Actively maintained** — Production-ready and continuously evolving.
 - **Zero dependencies** - Pure Dart. No bloat. Add it to any project safely.
+- **Battle-tested** — backed by **hundreds of unit tests** to ensure safety and reliability.
 - **Exceptional documentation** — every extension is well documented with clear examples and fast navigation.
 - **Amazing shorthands** — `.paddingAll`, `.center`, `.expanded`, `.sizedBox`, and more!
 
