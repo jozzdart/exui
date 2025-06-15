@@ -58,7 +58,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 
 [👁️ `visible` - Conditional Visibility](#️-visible---conditional-visibility-for-widgets)  
 [🌫️ `opacity` - Widget Transparency](#️-opacity---control-widget-transparency)  
-[📱 `safeArea` - SafeArea Padding](#-safearea--add-safeareapadding-declaratively)  
+[📱 `safeArea` - SafeArea Padding](#-safearea--add-safearea-padding-declaratively)  
 [👆 `gesture` - Detect Gestures](#-gesture--add-tap-drag--press-events-easily)  
 [🦸 `hero` - Shared Element Transitions](#-hero--add-seamless-shared-element-transitions)
 
