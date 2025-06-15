@@ -54,18 +54,18 @@ extension IconExtension on Icon {
   }) =>
       Icon(
         icon,
-        key: key,
-        size: size,
-        fill: fill,
-        weight: weight,
-        grade: grade,
-        opticalSize: opticalSize,
-        color: color,
-        shadows: shadows,
-        semanticLabel: semanticLabel,
-        textDirection: textDirection,
-        applyTextScaling: applyTextScaling,
-        blendMode: blendMode,
+        key: key ?? this.key,
+        size: size ?? this.size,
+        fill: fill ?? this.fill,
+        weight: weight ?? this.weight,
+        grade: grade ?? this.grade,
+        opticalSize: opticalSize ?? this.opticalSize,
+        color: color ?? this.color,
+        shadows: shadows ?? this.shadows,
+        semanticLabel: semanticLabel ?? this.semanticLabel,
+        textDirection: textDirection ?? this.textDirection,
+        applyTextScaling: applyTextScaling ?? this.applyTextScaling,
+        blendMode: blendMode ?? this.blendMode,
       );
 
   /// Creates a copy of the icon with a specific size.
@@ -82,7 +82,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.home).sized(32); // 32x32 pixel icon
   /// ```
-  Icon sized(double size) => _copyWith(size: size);
+  Icon withSize(double size) => _copyWith(size: size);
 
   /// Creates a copy of the icon with a specific fill value.
   ///
@@ -98,7 +98,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.star).filled(0.5); // Half-filled star
   /// ```
-  Icon filled(double fill) => _copyWith(fill: fill);
+  Icon withFill(double fill) => _copyWith(fill: fill);
 
   /// Creates a copy of the icon with a specific weight.
   ///
@@ -114,7 +114,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.search).weight(700); // Bold search icon
   /// ```
-  Icon weight(double weight) => _copyWith(weight: weight);
+  Icon withWeight(double weight) => _copyWith(weight: weight);
 
   /// Creates a copy of the icon with a specific grade.
   ///
@@ -130,7 +130,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.favorite).grade(200); // Higher grade favorite icon
   /// ```
-  Icon grade(double grade) => _copyWith(grade: grade);
+  Icon withGrade(double grade) => _copyWith(grade: grade);
 
   /// Creates a copy of the icon with a specific optical size.
   ///
@@ -146,7 +146,8 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.text_fields).opticalSize(48); // Optimized for 48px display
   /// ```
-  Icon opticalSize(double opticalSize) => _copyWith(opticalSize: opticalSize);
+  Icon withOpticalSize(double opticalSize) =>
+      _copyWith(opticalSize: opticalSize);
 
   /// Creates a copy of the icon with a specific color.
   ///
@@ -161,7 +162,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.warning).colored(Colors.red); // Red warning icon
   /// ```
-  Icon colored(Color color) => _copyWith(color: color);
+  Icon withColor(Color color) => _copyWith(color: color);
 
   /// Creates a copy of the icon with specific shadows.
   ///
@@ -178,7 +179,7 @@ extension IconExtension on Icon {
   ///   Shadow(color: Colors.black26, blurRadius: 4, offset: Offset(2, 2))
   /// ]);
   /// ```
-  Icon shadowed(List<Shadow> shadows) => _copyWith(shadows: shadows);
+  Icon withShadows(List<Shadow> shadows) => _copyWith(shadows: shadows);
 
   /// Creates a copy of the icon with a specific semantic label.
   ///
@@ -194,7 +195,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.delete).semanticLabeled('Delete item');
   /// ```
-  Icon semanticLabeled(String semanticLabel) =>
+  Icon withSemanticLabel(String semanticLabel) =>
       _copyWith(semanticLabel: semanticLabel);
 
   /// Creates a copy of the icon with a specific text direction.
@@ -211,7 +212,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.arrow_forward).textDirectioned(TextDirection.rtl);
   /// ```
-  Icon textDirectioned(TextDirection textDirection) =>
+  Icon withTextDirection(TextDirection textDirection) =>
       _copyWith(textDirection: textDirection);
 
   /// Creates a copy of the icon with text scaling applied or disabled.
@@ -228,7 +229,7 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.settings).applyTextScaling(false); // Fixed size regardless of text scaling
   /// ```
-  Icon applyTextScaling(bool applyTextScaling) =>
+  Icon withApplyTextScaling(bool applyTextScaling) =>
       _copyWith(applyTextScaling: applyTextScaling);
 
   /// Creates a copy of the icon with a specific blend mode.
@@ -245,5 +246,5 @@ extension IconExtension on Icon {
   /// ```dart
   /// Icon(Icons.overlay).blendMode(BlendMode.multiply);
   /// ```
-  Icon blendMode(BlendMode blendMode) => _copyWith(blendMode: blendMode);
+  Icon withBlendMode(BlendMode blendMode) => _copyWith(blendMode: blendMode);
 }
