@@ -111,10 +111,10 @@ extension AlignedWidgetExtension on Widget {
   ///   .alignCenterLeft()
   ///   .sizedBox(width: 100, height: 50);
   /// ```
-  Align alignCenterLeft(
+  Align alignCenterLeft({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.centerLeft,
         widthFactor: widthFactor,
@@ -139,10 +139,10 @@ extension AlignedWidgetExtension on Widget {
   ///   .alignCenterRight()
   ///   .sizedBox(width: 100, height: 50);
   /// ```
-  Align alignCenterRight(
+  Align alignCenterRight({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.centerRight,
         widthFactor: widthFactor,
@@ -167,10 +167,10 @@ extension AlignedWidgetExtension on Widget {
   ///   .alignTopCenter()
   ///   .sizedBox(width: 200, height: 100);
   /// ```
-  Align alignTopCenter(
+  Align alignTopCenter({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.topCenter,
         widthFactor: widthFactor,
@@ -194,10 +194,10 @@ extension AlignedWidgetExtension on Widget {
   ///   .alignTopLeft()
   ///   .sizedBox(width: 100, height: 100);
   /// ```
-  Align alignTopLeft(
+  Align alignTopLeft({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.topLeft,
         widthFactor: widthFactor,
@@ -221,10 +221,10 @@ extension AlignedWidgetExtension on Widget {
   ///   .alignTopRight()
   ///   .sizedBox(width: 100, height: 100);
   /// ```
-  Align alignTopRight(
+  Align alignTopRight({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.topRight,
         widthFactor: widthFactor,
@@ -248,10 +248,10 @@ extension AlignedWidgetExtension on Widget {
   ///   .alignBottomLeft()
   ///   .sizedBox(width: 200, height: 100);
   /// ```
-  Align alignBottomLeft(
+  Align alignBottomLeft({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.bottomLeft,
         widthFactor: widthFactor,
@@ -278,10 +278,10 @@ extension AlignedWidgetExtension on Widget {
   /// ).alignBottomCenter()
   ///  .sizedBox(width: 300, height: 200);
   /// ```
-  Align alignBottomCenter(
+  Align alignBottomCenter({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.bottomCenter,
         widthFactor: widthFactor,
@@ -307,10 +307,10 @@ extension AlignedWidgetExtension on Widget {
   /// ).alignBottomRight()
   ///  .sizedBox(width: 300, height: 200);
   /// ```
-  Align alignBottomRight(
+  Align alignBottomRight({
     double? widthFactor,
     double? heightFactor,
-  ) =>
+  }) =>
       align(
         alignment: Alignment.bottomRight,
         widthFactor: widthFactor,
