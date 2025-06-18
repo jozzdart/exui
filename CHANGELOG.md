@@ -1,3 +1,7 @@
+## 1.0.7
+
+- Fixed missing export of `gap` extensions and additonal exports
+
 ## 1.0.6
 
 - Fixed outdated README documentation
