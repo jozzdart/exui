@@ -15,10 +15,12 @@
   </a>
 </p>
 
-> **Want to 10× your Flutter UI development speed?**  
-> Use `exui`. It’s the fastest way to build clean, maintainable UIs, no wrappers, no boilerplate.
+> **Accelerate your Flutter UI development, without compromising clarity.**  
+> `exui` helps you build clean, maintainable UIs faster, with no wrappers and zero boilerplate.
 
-Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zero-dependency Flutter extension library that makes your UI code faster, cleaner, and more expressive. It provides expressive, chainable extensions for **most used Flutter widgets**—with no reliance on Material, Cupertino, or external libraries. Just pure Dart and Flutter, designed to work seamlessly in any project.
+**`exui`** is a lightweight, zero-dependency extension library for Flutter that enhances your UI code with expressive, chainable utilities. It streamlines common layout and styling patterns using pure Dart and Flutter, no reliance on Material, Cupertino, or third-party frameworks.
+
+Designed to work seamlessly in any project, `exui` makes your widget code more concise, readable, and efficient, all while keeping full control over your widget tree.
 
 ### ✅ Features
 
@@ -28,28 +30,27 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 - **Zero dependencies** - Pure Dart. No bloat. Add it to any project safely.
 - **Battle-tested** - backed by **hundreds of unit tests** to ensure safety and reliability.
 - **Exceptional documentation** - every extension is well documented with clear examples and fast navigation.
-- **Amazing shorthands** - `.paddingAll`, `.center`, `.expanded`, `.sizedBox`, and more!
 
 ---
 
 ### ✨ All `exui` Extensions:
 
-`exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group. (Emojis only added to distinguish easily between extensions)
+Each section below links to detailed documentation for a specific extension group. (Emojis only added to distinguish easily between extensions)
 
 #### Layout Manipulation
 
-[📏 `padding` - Add Padding fast](#-padding--add-padding-to-any-widget)  
-[🎯 `center` - Center Widgets fast](#-center--center-your-widget-with-optional-factors)  
+[📏 `padding` - Quickly Add Padding](#-padding--add-padding-to-any-widget)  
+[🎯 `center` - Center Widgets](#-center--center-your-widget-with-optional-factors)  
 [↔️ `expanded` - Fill Available Space](#️-expanded---make-widgets-fill-available-space)  
 [🧬 `flex` - fast Flexibles](#-flex--flexible-layouts-with-fine-tuned-control)  
-[📐 `align` - Position Widgets fast](#-align--position-a-widget-precisely)  
+[📐 `align` - Position Widgets](#-align--position-a-widget-precisely)  
 [📍 `positioned` - Position Inside a Stack](#-positioned--position-widgets-inside-a-stack)  
 [🔳 `intrinsic` - Size Widgets](#-intrinsic--size-widgets-to-their-natural-dimensions)  
-[➖ `margin` - Add Outer Spacing fast](#-margin--add-outer-spacing-around-widgets)
+[➖ `margin` - Add Outer Spacing](#-margin--add-outer-spacing-around-widgets)
 
 #### Layout Creation
 
-[↕️ `gap` - fast gaps native flutter](#️-gap---add-spacing-using-double-extensions)  
+[↕️ `gap` - Performant gaps](#️-gap---add-spacing-using-number-extensions)  
 [🧱 `row` / `column` - Rapid Layouts](#-row--column--instantly-wrap-widgets-in-flex-layouts)  
 [🧭 `row*` / `column*` - Rapid Aligned Layouts](#-row--column--rapid-alignment-extensions-for-flex-layouts)  
 [🧊 `stack` - Overlay Widgets](#-stack--overlay-widgets-with-full-stack-control)
@@ -64,7 +65,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 
 #### Containers & Effects
 
-[📦 `sizedBox` - put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
+[📦 `sizedBox` - Put in a SizedBox](#-sizedbox--wrap-widgets-in-fixed-size-boxes)  
 [🚧 `constrained` - Limit Widget Sizes](#-constrained--add-size-limits-to-widgets)  
 [🟥 `coloredBox` - Wrap in a Colored Box](#-coloredbox--add-background-color-to-any-widget)  
 [🎨 `decoratedBox` - Borders, Gradients & Effects](#-decoratedbox--add-backgrounds-borders-gradients--effects)  
@@ -74,7 +75,7 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 #### Widget Creation
 
 [📝 `text` - String to Widget](#-text--turn-any-string-into-a-text-widget)  
-[🎛️ `styled text` - style text fast](#️-styled-text---modify-and-style-text-widgets-easily)  
+[🎛️ `styled text` - Style Text](#️-styled-text---modify-and-style-text-widgets-easily)  
 [🔣 `icon` - Create and Style Icons](#-icon--quickly-create-and-style-icons)
 
 > `exui` is built on **pure Flutter** (`flutter/widgets.dart`) and avoids bundling unnecessary Material or Cupertino designs by default. For convenience, optional libraries are provided for those who want seamless integration with Flutter’s built-in design systems.
@@ -101,51 +102,150 @@ Stop wasting time on widget nesting and boilerplate. **`exui`** is a modern, zer
 
 ### `exui` Vision
 
-What if every widget in your Flutter app could instantly do more, with less code?
+**`exui`** is a practical toolkit for Flutter UI development — focused on saving time, reducing boilerplate, and writing layout code that’s readable, consistent, and fun.
 
-That’s the bold vision behind **`exui`**: to radically streamline UI development by extending **every core Flutter widget** with powerful, chainable, and expressive enhancements. No wrappers. No boilerplate. Just pure Flutter.
+This isn’t about replacing widgets — it’s about using **concise, chainable extensions** to help you build better UIs faster. You stay in full control of your widget tree and design system.
 
-While most packages offer a handful of helpers or rely on custom widget trees, `exui` takes a more ambitious approach:
+Whether you're working on layout, spacing, visibility, or sizing, `exui` gives you expressive helpers for the most common tasks — with zero dependencies and seamless integration into any codebase.
 
-> **A zero-dependency extension library with over 200 chainable utilities—designed to accelerate development, reduce clutter, and bring elegance to every line of UI code.**
+### Here are just a few examples:
 
-Whether you're prototyping ideas or building production-grade applications, `exui` helps you move faster without sacrificing clarity or control.
+---
 
-```dart
-"Click me"
-  .text()
-  .paddingAll(12)
-  .redBox()
-  .clipCircular()
-  .onTap(() => print("Tapped!"));
-```
+#### 📏 Padding
 
-Each `.text()`, `.marginAll()`, or `.icon()` you use replaces multiple layers of nested widgets with a single, readable chain. Multiply that across an entire app—and the productivity gains are exponential.
-
-### Without `exui`
+**With `exui`:**
 
 ```dart
-BottomNavigationBarItem(
-  icon: Icon(Icons.home),
-  label: 'Page 1',
-),
-BottomNavigationBarItem(
-  icon: Icon(Icons.pages),
-  label: 'Page 2',
-),
+Text("Hello").paddingAll(16)
 ```
 
-### With `exui`
+**Without:**
 
 ```dart
-Icons.home.icon().bottomNavigationItem('Page 1'),
-Icons.pages.icon().bottomNavigationItem('Page 2'),
+Padding(
+  padding: EdgeInsets.all(16),
+  child: Text("Hello"),
+)
 ```
 
-> ⚡ **Stop wasting time on verbose nesting and boilerplate.**
-> ✨ **Start composing clean, maintainable UIs with ease.**
+With additional extensions for quickly adding specific padding: `paddingHorizontal`, `paddingVertical`, `paddingOnly`, `paddingSymmetric`, `paddingLeft`, `paddingRight`, `paddingTop`, `paddingBottom`
 
-This isn’t just a utility library. It’s a **declarative layer on top of Flutter**—one that feels native, scales cleanly, and fits seamlessly into any project.
+---
+
+#### ↔️ Expanded
+
+**With `exui`:**
+
+```dart
+Text("Stretch me").expanded3
+```
+
+**Without:**
+
+```dart
+Expanded(
+  flex: 3,
+  child: Text("Stretch me"),
+)
+```
+
+With additional extensions for quickly adding specific flex values: `expanded2`, `expanded3`, `expanded4`, `expanded5`, `expanded6`, `expanded7`, `expanded8` or `expandedFlex(int)`
+
+---
+
+#### 🎯 Center
+
+**With `exui`:**
+
+```dart
+Icon(Icons.star).center()
+```
+
+**Without:**
+
+```dart
+Center(
+  child: Icon(Icons.star),
+)
+```
+
+With additional extensions for quickly adding specific center factors: `centerWidth(double?)`, `centerHeight(double?)` or with parameters `center({widthFactor, heightFactor})`
+
+---
+
+#### ↕️ Gaps
+
+**With `exui`:**
+
+```dart
+Column(
+  children: [
+    Text("A"),
+    16.gapColumn,
+    Text("B"),
+  ],
+)
+```
+
+**Without:**
+
+```dart
+Column(
+  children: [
+    Text("A"),
+    SizedBox(height: 16),
+    Text("B"),
+  ],
+)
+```
+
+With additional extensions for quickly adding specific gap values: `gapRow`, `gapColumn` or with parameters `gap({row, column})` or `gapVertical` or `gapHorizontal` etc.
+
+---
+
+#### 👁️ Visibility
+
+**With `exui`:**
+
+```dart
+Text("Visible?").visibleIf(showText)
+```
+
+**Without:**
+
+```dart
+showText ? Text("Visible?") : const SizedBox.shrink()
+```
+
+With additional extensions for quickly adding specific visibility conditions: `hide()` `visibleIfNot(bool)` or `visibleIfNull(bool)` and more.
+
+---
+
+#### 🚧 Constraints
+
+**With `exui`:**
+
+```dart
+Image.asset("logo.png").maxWidth(200)
+```
+
+**Without:**
+
+```dart
+ConstrainedBox(
+  constraints: BoxConstraints(maxWidth: 200),
+  child: Image.asset("logo.png"),
+)
+```
+
+With additional extensions for quickly adding specific constraints: `constrainedWidth`, `constrainedHeight`, `minWidth`, `maxWidth`, `minHeight`, `maxHeight` or with parameters `constrained({minWidth, maxWidth, minHeight, maxHeight})` or `constrainedBox(BoxConstraints)`
+
+---
+
+These are just a few of the 200+ utilities in `exui`. Every method is chainable, production-safe, and built with clarity in mind.
+
+> **From layout to constraints, visibility to spacing — `exui` keeps your UI code clean, fast, and Flutter-native.**
 
 Welcome to **`exui`**.
 
@@ -619,9 +719,9 @@ _[⤴️ Back](#-all-exui-extensions) → All `exui` Extensions_
 
 ---
 
-### ↕️ `gap` - Add Spacing Using Double Extensions
+### ↕️ `gap` - Add Spacing Using Number Extensions
 
-Use doubles to create `SizedBox` widgets with clear, expressive syntax. These extensions turn raw numbers into layout spacing—perfect for columns, rows, and consistent vertical/horizontal gaps.
+Use doubles or ints to create `SizedBox` widgets with clear, expressive syntax. These extensions turn raw numbers into layout spacing—perfect for columns, rows, and consistent vertical/horizontal gaps.
 
 - `sizedWidth` — `SizedBox(width: this)`
 - `sizedHeight` — `SizedBox(height: this)`
@@ -634,22 +734,22 @@ All extensions return a `SizedBox` and are ideal for use in layouts to avoid mag
 
 ```dart
 // Horizontal space of 16
-16.0.gapHorizontal,
+16.gapHorizontal,
 ```
 
 ```dart
 // Vertical space of 8
-8.0.gapVertical,
+8.gapVertical,
 ```
 
 ```dart
 // SizedBox with explicit width
-24.0.sizedWidth,
+2.5.sizedWidth,
 ```
 
 ```dart
 // SizedBox with explicit height
-32.0.sizedHeight,
+32.sizedHeight,
 ```
 
 ```dart
@@ -657,7 +757,7 @@ All extensions return a `SizedBox` and are ideal for use in layouts to avoid mag
 Row(
   children: [
     WidgetOne(),
-    12.0.gapRow,
+    12.gapRow,
     WidgetTwo(),
   ],
 )
@@ -668,7 +768,7 @@ Row(
 Column(
   children: [
     WidgetOne(),
-    16.0.gapColumn,
+    16.gapColumn,
     WidgetTwo(),
   ],
 )
