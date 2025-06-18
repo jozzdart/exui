@@ -1,3 +1,8 @@
+## 1.0.4
+
+- Fixed `SizedBox` extensions to accept `int` values
+- Now you can create gaps with `int` values (e.g. `10.gapRow` or `10.gapColumn`)
+
 ## 1.0.3
 
 Added detailed tests for all extensions and fixed all issues found

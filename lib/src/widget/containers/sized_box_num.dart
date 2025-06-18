@@ -175,3 +175,85 @@ extension SizedBoxDoubleExtension on double {
   /// ```
   SizedBox get gapRow => sizedWidth;
 }
+
+/// Extension methods for [int] that provide convenient spacing and sizing functionality.
+///
+/// This extension adds methods to easily convert integer values into [SizedBox] widgets
+/// for creating spacing and gaps in layouts. All methods return [SizedBox] widgets
+/// with the int value used as either width or height.
+///
+/// The extension provides semantic methods for different spacing contexts:
+/// - Width/height sizing: sizedWidth, sizedHeight
+/// - Gap creation: gapHorizontal, gapVertical
+/// - Layout-specific gaps: gapColumn, gapRow
+///
+/// Example usage:
+/// ```dart
+/// Column(
+///   children: [
+///     Text('First item'),
+///     16.gapVertical,    // 16px vertical gap
+///     Text('Second item'),
+///     8.gapColumn,       // 8px gap in column
+///   ],
+/// );
+/// ```
+extension SizedBoxIntExtension on int {
+  /// Creates a [SizedBox] with this value as the width.
+  ///
+  /// Returns a [SizedBox] that has the specified width and no height constraint.
+  ///
+  /// Example:
+  /// ```dart
+  /// Row(
+  ///   children: [
+  ///     Text('Left'),
+  ///     20.sizedWidth,  // 20px wide spacer
+  ///     Text('Right'),
+  ///   ],
+  /// );
+  /// ```
+  SizedBox get sizedWidth => SizedBox(width: toDouble());
+
+  /// Creates a [SizedBox] with this value as the height.
+  ///
+  /// Returns a [SizedBox] that has the specified height and no width constraint.
+  ///
+  /// Example:
+  /// ```dart
+  /// Column(
+  ///   children: [
+  ///     Text('Top'),
+  ///     24.sizedHeight,  // 24px tall spacer
+  ///     Text('Bottom'),
+  ///   ],
+  /// );
+  /// ```
+  SizedBox get sizedHeight => SizedBox(height: toDouble());
+
+  /// Creates a horizontal gap (spacer) with this value as the width.
+  ///
+  /// Alias for [sizedWidth].
+  SizedBox get gapHorizontal => sizedWidth;
+
+  /// Creates a vertical gap (spacer) with this value as the height.
+  ///
+  /// Alias for [sizedHeight].
+  SizedBox get gapVertical => sizedHeight;
+
+  /// Creates a vertical gap specifically for use in columns.
+  ///
+  /// Alias for [sizedHeight].
+  SizedBox get gapHeight => sizedHeight;
+
+  /// Creates a horizontal gap specifically for use in rows.
+  ///
+  /// Alias for [sizedWidth].
+  SizedBox get gapWidth => sizedWidth;
+
+  /// Alias for [gapHeight], useful for semantic clarity in [Column] layouts.
+  SizedBox get gapColumn => sizedHeight;
+
+  /// Alias for [gapWidth], useful for semantic clarity in [Row] layouts.
+  SizedBox get gapRow => sizedWidth;
+}
