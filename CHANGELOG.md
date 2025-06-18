@@ -1,3 +1,7 @@
+## 1.0.6
+
+- Fixed outdated README documentation
+
 ## 1.0.5
 
 - Now the package is more focused on being an additional utility, I think it's more realistic to treat it as such, and not as a replacement for the widgets themselves

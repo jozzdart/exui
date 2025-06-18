@@ -170,7 +170,7 @@ Center(
 )
 ```
 
-With additional extensions for quickly adding specific center factors: `centerWidth(double?)`, `centerHeight(double?)` or with parameters `center({widthFactor, heightFactor})`
+With additional extensions for quickly adding specific center factors: `centerWidth(double)`, `centerHeight(double)` or with parameters `center({widthFactor, heightFactor})`
 
 ---
 
@@ -200,7 +200,7 @@ Column(
 )
 ```
 
-With additional extensions for quickly adding specific gap values: `gapRow`, `gapColumn` or with parameters `gap({row, column})` or `gapVertical` or `gapHorizontal` etc.
+With additional extensions for quickly adding specific gap values: `gapRow`, `gapColumn`, `gapVertical`, `gapHorizontal` etc.
 
 ---
 
@@ -247,7 +247,7 @@ These are just a few of the 200+ utilities in `exui`. Every method is chainable,
 
 > **From layout to constraints, visibility to spacing — `exui` keeps your UI code clean, fast, and Flutter-native.**
 
-Welcome to **`exui`**.
+Welcome to **`exui`**, I hope it'll save you time like it did for me (:
 
 ---
 
