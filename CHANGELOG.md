@@ -1,3 +1,8 @@
+## 1.0.5
+
+- Now the package is more focused on being an additional utility, I think it's more realistic to treat it as such, and not as a replacement for the widgets themselves
+- Updated package vision, description and explanations in the README
+
 ## 1.0.4
 
 - Fixed `SizedBox` extensions to accept `int` values
