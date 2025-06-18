@@ -6,3 +6,4 @@ export 'flexible.dart';
 export 'intrinsic.dart';
 export 'positioned.dart';
 export 'row.dart';
+export 'stack.dart';

@@ -4,6 +4,7 @@ export 'icons/icons.dart';
 export 'interact/interact.dart';
 export 'layout/layout.dart';
 export 'navigation/navigation.dart';
+export 'page_related/page_related.dart';
 export 'spacing/spacing.dart';
 export 'style/style.dart';
 export 'text/text.dart';

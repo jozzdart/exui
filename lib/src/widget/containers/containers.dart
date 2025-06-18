@@ -4,3 +4,4 @@ export 'constrained_box.dart';
 export 'container.dart';
 export 'decorated_box.dart';
 export 'sized_box.dart';
+export 'sized_box_num.dart';
