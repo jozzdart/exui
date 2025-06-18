@@ -15,11 +15,12 @@
   </a>
 </p>
 
-> **Accelerate your Flutter UI development — without compromising clarity.** > `exui` helps you build clean, maintainable UIs faster, with no wrappers and zero boilerplate.
+> **Accelerate your Flutter UI development, without compromising clarity.**  
+> `exui` helps you build clean, maintainable UIs faster, with no wrappers and zero boilerplate.
 
 **`exui`** is a lightweight, zero-dependency extension library for Flutter that enhances your UI code with expressive, chainable utilities. It streamlines common layout and styling patterns using pure Dart and Flutter, no reliance on Material, Cupertino, or third-party frameworks.
 
-Designed to work seamlessly in any project, `exui` makes your widget code more concise, readable, and efficient — all while keeping full control over your widget tree.
+Designed to work seamlessly in any project, `exui` makes your widget code more concise, readable, and efficient, all while keeping full control over your widget tree.
 
 ### ✅ Features
 
@@ -29,13 +30,12 @@ Designed to work seamlessly in any project, `exui` makes your widget code more c
 - **Zero dependencies** - Pure Dart. No bloat. Add it to any project safely.
 - **Battle-tested** - backed by **hundreds of unit tests** to ensure safety and reliability.
 - **Exceptional documentation** - every extension is well documented with clear examples and fast navigation.
-- **Amazing shorthands** - `.paddingAll`, `.center`, `.expanded`, `.sizedBox`, and more!
 
 ---
 
 ### ✨ All `exui` Extensions:
 
-`exui` includes a focused set of pure Flutter extensions, no Material or Cupertino dependencies - so you stay in control of your widget tree and design system. This core library contains **chainable, declarative enhancements** for layout, styling, interaction, and more. Each section below links to detailed documentation for a specific extension group. (Emojis only added to distinguish easily between extensions)
+Each section below links to detailed documentation for a specific extension group. (Emojis only added to distinguish easily between extensions)
 
 #### Layout Manipulation
 
@@ -108,7 +108,7 @@ This isn’t about replacing widgets — it’s about using **concise, chainable
 
 Whether you're working on layout, spacing, visibility, or sizing, `exui` gives you expressive helpers for the most common tasks — with zero dependencies and seamless integration into any codebase.
 
-Here are just a few examples:
+### Here are just a few examples:
 
 ---
 
