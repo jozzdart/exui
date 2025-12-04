@@ -1,3 +1,7 @@
+## 1.0.8
+
+- Fixed `ElevatedButton` extensions to align with the updated `ElevatedButton` API
+
 ## 1.0.7
 
 - Fixed missing export of `gap` extensions and additonal exports
