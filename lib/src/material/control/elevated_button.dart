@@ -469,7 +469,7 @@ extension ElevatedButtonWidgetExtensions on Widget {
     void Function(bool)? onFocusChange,
     ButtonStyle? style,
     FocusNode? focusNode,
-    bool? autofocus,
+    bool autofocus = false,
     Clip? clipBehavior,
     WidgetStatesController? statesController,
     Widget? icon,
