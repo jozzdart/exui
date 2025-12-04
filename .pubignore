@@ -30,4 +30,4 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 build/
 test/
-example/
+example/android/
