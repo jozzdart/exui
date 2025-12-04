@@ -1,3 +1,7 @@
+## 1.0.9
+
+- Modified `.pubignore` file to exclude example/android directory instead of the whole example directory, for displaying correctly on pub.dev
+
 ## 1.0.8
 
 - Fixed `ElevatedButton` extensions to align with the updated `ElevatedButton` API
