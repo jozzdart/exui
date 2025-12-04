@@ -1,6 +1,7 @@
 ## 1.0.8
 
 - Fixed `ElevatedButton` extensions to align with the updated `ElevatedButton` API
+- Added `.pubignore` file to exclude test and example directories from the package and reduce the package size
 
 ## 1.0.7
 
