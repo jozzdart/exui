@@ -1,3 +1,12 @@
+## 1.0.10
+
+
+- Resolved static analysis issue related to nullable autofocus parameter.
+- Improved compatibility with older Flutter SDK signatures.
+- Minor internal adjustments to ensure compatibility across Flutter stable versions.
+- Verified support for latest stable Dart and Flutter SDKs.
+- Pumped dev dependencies lint to 6.1.0
+
 ## 1.0.9
 
 - Modified `.pubignore` file to exclude example/android directory instead of the whole example directory, for displaying correctly on pub.dev
