@@ -1,6 +1,6 @@
 name: exui
 description: "Build your UI faster. No boilerplate, no dependencies. Just powerful widget extensions."
-version: 1.0.9
+version: 1.0.11
 homepage: https://github.com/jozzdart/exui
 repository: https://github.com/jozzdart/exui
 issue_tracker: https://github.com/jozzdart/exui/issues
@@ -22,6 +22,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
+  lints: ^6.1.0
 
 flutter:
