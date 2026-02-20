@@ -31,3 +31,6 @@ migrate_working_dir/
 build/
 test/
 example/android/
+.fvmrc
+.fvm/
+.vscode/

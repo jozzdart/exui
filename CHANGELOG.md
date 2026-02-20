@@ -1,3 +1,7 @@
+## 1.0.11
+
+- Fixed `ElevatedButton` extensions to use `??` operator for nullable parameters
+
 ## 1.0.10
 
 
